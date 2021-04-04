@@ -4,5 +4,8 @@ module.exports = {
 		extend: {},
 	},
 	variants: {},
-	plugins: [],
+	plugins: [
+		require("tailwindcss-debug-screens"),
+		require("@tailwindcss/forms"),
+	],
 };
