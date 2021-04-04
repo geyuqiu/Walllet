@@ -1,7 +1,7 @@
 {
-	"name": "react-electron-template",
+	"name": "Wallet",
 	"version": "1.0.0",
-	"author": "Lucio Rubens",
+	"author": "Ge, Yuqiu",
 	"license": "MIT",
 	"scripts": {
 		"dev": "electron-webpack dev",
@@ -10,6 +10,7 @@
 		"dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null",
 		"lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
 		"test": "jest --watch",
+		"test:coverage": "yarn test --watch=false --coverage",
 		"postinstall": "husky install",
 		"prepare": "husky install"
 	},
