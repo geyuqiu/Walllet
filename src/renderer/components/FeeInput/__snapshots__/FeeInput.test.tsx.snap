@@ -19,6 +19,7 @@ exports[`FeeInput should match snapshot 1`] = `
     role="slider"
     step="0.00000001"
     type="range"
+    value=""
   />
 </div>
 `;

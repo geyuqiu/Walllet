@@ -21,7 +21,7 @@ describe("FeeInput", () => {
 		expect(screen.getByRole("textbox")).toHaveValue("0.05678912");
 	});
 
-	test.skip("should update slide when editing input", () => {
+	it("should update slide when editing input", () => {
 		render(<FeeInput />);
 
 		fireEvent.change(screen.getByRole("textbox"), {

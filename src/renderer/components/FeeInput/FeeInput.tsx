@@ -14,7 +14,7 @@ export const FeeInput = ({ onChange }: Partial<FeeInputProps>) => {
 	};
 
 	const emitValueToSatoshi = (value: string) => {
-		onChange(String(Number(value) * Math.pow(10, 8)));
+		if (onChange) onChange(String(Number(value) * Math.pow(10, 8)));
 	};
 
 	return (
@@ -34,11 +34,12 @@ export const FeeInput = ({ onChange }: Partial<FeeInputProps>) => {
 				step="0.00000001"
 				role="slider"
 				onChange={handleSliderChange}
+				value={fee}
 			/>
 		</>
 	);
 };
 
 type FeeInputProps = {
-	onChange: any;
+	onChange: Function;
 };
