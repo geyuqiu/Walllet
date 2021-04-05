@@ -9,7 +9,7 @@ describe("FeeInput", () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	test.skip("should update input when editing slide", () => {
+	it("should update input when editing slide", () => {
 		render(<FeeInput />);
 
 		fireEvent.change(screen.getByRole("slider"), {

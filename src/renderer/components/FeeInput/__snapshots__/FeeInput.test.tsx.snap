@@ -2,8 +2,22 @@
 
 exports[`FeeInput should match snapshot 1`] = `
 <div>
-  <div>
-    FeeInput
-  </div>
+  <label
+    for="fee"
+  >
+    Fee:
+  </label>
+  <input
+    role="textbox"
+    value=""
+  />
+  <input
+    id="fee"
+    min="0"
+    name="fee"
+    role="slider"
+    step="0.00000001"
+    type="range"
+  />
 </div>
 `;
