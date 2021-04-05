@@ -1,20 +1,41 @@
 import React, { useState } from "react";
 
 export const FeeInput = ({ onChange }: Partial<FeeInputProps>) => {
-	const [fee, feeChange] = useState("");
+	const [fee, feeChange] = useState("0");
 	const handleSliderChange = (event: React.ChangeEvent<HTMLInputElement>) =>
 		feeChange(event.target.value);
 
 	const handleTextBoxChange = (
 		event: React.ChangeEvent<HTMLInputElement>
 	) => {
-		const value = event.target.value;
+		const value = parse(event.target.value);
 		feeChange(value);
 		emitValueToSatoshi(value);
 	};
 
-	const emitValueToSatoshi = (value: string) => {
+	const emitValueToSatoshi = (value: string): void => {
 		if (onChange) onChange(String(Number(value) * Math.pow(10, 8)));
+	};
+
+	const parse = (value: string): string => {
+		let replaced = value.replace(/,/g, ".");
+
+		replaced = replaceAt(replaced, /\./g, 2, "");
+		return replaced;
+	};
+
+	const replaceAt = (
+		s: string,
+		regex: RegExp,
+		index: number,
+		replacedWith: string
+	): string => {
+		let i = 0;
+		return s.replace(regex, (match: string) => {
+			i += 1;
+			if (i === index) return replacedWith;
+			return match;
+		});
 	};
 
 	return (

@@ -10,7 +10,7 @@ exports[`FeeInput should match snapshot 1`] = `
   <input
     placeholder="Simple Text"
     role="textbox"
-    value=""
+    value="0"
   />
   <input
     id="fee"
@@ -19,7 +19,7 @@ exports[`FeeInput should match snapshot 1`] = `
     role="slider"
     step="0.00000001"
     type="range"
-    value=""
+    value="0"
   />
 </div>
 `;

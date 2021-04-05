@@ -47,7 +47,7 @@ describe("FeeInput", () => {
 		expect(onChange).toHaveBeenCalledWith("12300000");
 	});
 
-	test.skip("should not show scientific notation", () => {
+	it("should not show scientific notation", () => {
 		render(<FeeInput />);
 
 		fireEvent.change(screen.getByRole("slider"), {
@@ -91,7 +91,7 @@ describe("FeeInput", () => {
 		expect(screen.getByRole("textbox")).toHaveValue("12345678.12");
 	});
 
-	test.skip("should not allow more than 1 separator", () => {
+	it("should not allow more than 1 separator", () => {
 		render(<FeeInput />);
 
 		fireEvent.input(screen.getByRole("textbox"), {
@@ -103,7 +103,7 @@ describe("FeeInput", () => {
 		expect(screen.getByRole("textbox")).toHaveValue("1.23456");
 	});
 
-	test.skip("should use comma as separator", () => {
+	it("should use comma as separator", () => {
 		render(<FeeInput />);
 
 		fireEvent.input(screen.getByRole("textbox"), {
