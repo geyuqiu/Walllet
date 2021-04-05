@@ -33,7 +33,7 @@ describe("FeeInput", () => {
 		expect(screen.getByRole("slider")).toHaveValue("0.05678912");
 	});
 
-	test.skip("should emit value in satoshi on input change", () => {
+	it("should emit value in satoshi on input change", () => {
 		const onChange = jest.fn();
 
 		render(<FeeInput onChange={onChange} />);

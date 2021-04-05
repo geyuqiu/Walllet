@@ -4,8 +4,18 @@ export const FeeInput = ({ onChange }: Partial<FeeInputProps>) => {
 	const [fee, feeChange] = useState("");
 	const handleSliderChange = (event: React.ChangeEvent<HTMLInputElement>) =>
 		feeChange(event.target.value);
-	const handleTextBoxChange = (event: React.ChangeEvent<HTMLInputElement>) =>
-		feeChange(event.target.value);
+
+	const handleTextBoxChange = (
+		event: React.ChangeEvent<HTMLInputElement>
+	) => {
+		const value = event.target.value;
+		feeChange(value);
+		emitValueToSatoshi(value);
+	};
+
+	const emitValueToSatoshi = (value: string) => {
+		onChange(String(Number(value) * Math.pow(10, 8)));
+	};
 
 	return (
 		<>

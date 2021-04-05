@@ -8,6 +8,7 @@ exports[`FeeInput should match snapshot 1`] = `
     Fee:
   </label>
   <input
+    placeholder="Simple Text"
     role="textbox"
     value=""
   />
