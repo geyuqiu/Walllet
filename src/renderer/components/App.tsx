@@ -1,4 +1,5 @@
 import React from "react";
+import { HashRouter } from "react-router-dom";
 
 import { Routing } from "../router/Routing";
 import { Footer } from "./Footer/Footer";
@@ -8,14 +9,16 @@ const notProd = process.env.NODE_ENV !== "production";
 
 export const App = () => {
 	const showDebugScreensOnDev: string = notProd
-		? "debug-screens flex flex-col min-h-screen"
+		? "debug-screens bg-white min-h-70vh"
 		: "";
 
 	return (
-		<main className={showDebugScreensOnDev} role="main">
+		<HashRouter>
 			<Header />
+			<main className={showDebugScreensOnDev} role="main">
+				<Routing />
+			</main>
 			<Footer />
-			<Routing />
-		</main>
+		</HashRouter>
 	);
 };
