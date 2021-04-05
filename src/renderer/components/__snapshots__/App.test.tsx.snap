@@ -5,15 +5,42 @@ exports[`App should match snapshot 1`] = `
   <section
     class="debug-screens"
     role="main"
-  />
-  <div>
-    Wallet
-    <br />
-    <a
-      href="/fee"
+  >
+    <header
+      class="bg-gray-100 p-6"
     >
-      to Fee
-    </a>
-  </div>
+      <div
+        class="flex items-center justify-between flex-wrap"
+      >
+        <nav
+          class="block"
+        >
+          <a
+            aria-current="page"
+            class="active"
+            href="/"
+          >
+            <span
+              class="inline-block text-gray-800 hover:text-gray-600 mr-4"
+            >
+              Wallet
+            </span>
+          </a>
+          <a
+            href="/fee"
+          >
+            <span
+              class="inline-block text-gray-800 hover:text-gray-600 mr-4"
+            >
+              Fee
+            </span>
+          </a>
+        </nav>
+      </div>
+    </header>
+    <div>
+      Wallet
+    </div>
+  </section>
 </div>
 `;

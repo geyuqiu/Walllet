@@ -4,12 +4,6 @@ exports[`Wallet should match snapshot 1`] = `
 <div>
   <div>
     Wallet
-    <br />
-    <a
-      href="/fee"
-    >
-      to Fee
-    </a>
   </div>
 </div>
 `;

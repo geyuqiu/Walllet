@@ -4,14 +4,6 @@ exports[`FeeInput should match snapshot 1`] = `
 <div>
   <div>
     FeeInput
-    <br />
-    <a
-      aria-current="page"
-      class="active"
-      href="/"
-    >
-      to Wallet
-    </a>
   </div>
 </div>
 `;
