@@ -59,6 +59,7 @@ export const FeeInput = ({ onChange }: Partial<FeeInputProps>) => {
 				id="fee"
 				name="fee"
 				min="0"
+				max="5"
 				step="0.00000001"
 				role="slider"
 				onChange={handleSliderChange}
