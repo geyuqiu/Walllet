@@ -3,7 +3,7 @@
 exports[`App should match snapshot 1`] = `
 <div>
   <header
-    class="bg-gray-100 p-6 min-h-20vh flex items-center justify-between flex-wrap"
+    class="bg-green-darkest p-6 min-h-20vh flex items-center justify-between flex-wrap"
   >
     <nav
       class="block"
