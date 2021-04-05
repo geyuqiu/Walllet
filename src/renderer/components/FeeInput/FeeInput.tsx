@@ -20,11 +20,11 @@ export const FeeInput = ({ onChange }: Partial<FeeInputProps>) => {
 	const parse = (value: string): string => {
 		let replaced = value.replace(/,/g, ".");
 
-		replaced = replaceAt(replaced, /\./g, 2, "");
+		replaced = replaceGreaterThan(replaced, /\./g, 2, "");
 		return replaced;
 	};
 
-	const replaceAt = (
+	const replaceGreaterThan = (
 		s: string,
 		regex: RegExp,
 		index: number,
@@ -33,7 +33,7 @@ export const FeeInput = ({ onChange }: Partial<FeeInputProps>) => {
 		let i = 0;
 		return s.replace(regex, (match: string) => {
 			i += 1;
-			if (i === index) return replacedWith;
+			if (i >= index) return replacedWith;
 			return match;
 		});
 	};

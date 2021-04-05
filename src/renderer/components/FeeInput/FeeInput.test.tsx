@@ -101,6 +101,14 @@ describe("FeeInput", () => {
 		});
 
 		expect(screen.getByRole("textbox")).toHaveValue("1.23456");
+
+		fireEvent.input(screen.getByRole("textbox"), {
+			target: {
+				value: "1.23.4.5.6",
+			},
+		});
+
+		expect(screen.getByRole("textbox")).toHaveValue("1.23456");
 	});
 
 	it("should use comma as separator", () => {
