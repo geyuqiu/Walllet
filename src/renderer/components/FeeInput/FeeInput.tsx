@@ -5,6 +5,8 @@ export const FeeInput = ({ onChange }: Partial<FeeInputProps>) => {
 	const handleSliderChange = (event: React.ChangeEvent<HTMLInputElement>) =>
 		feeChange(event.target.value);
 
+	const hundredMillion = Math.pow(10, 8);
+
 	const handleTextBoxChange = (
 		event: React.ChangeEvent<HTMLInputElement>
 	) => {
@@ -14,13 +16,18 @@ export const FeeInput = ({ onChange }: Partial<FeeInputProps>) => {
 	};
 
 	const emitValueToSatoshi = (value: string): void => {
-		if (onChange) onChange(String(Number(value) * Math.pow(10, 8)));
+		if (onChange) {
+			onChange(String(Number(value) * hundredMillion));
+		}
 	};
 
 	const parse = (value: string): string => {
 		let replaced = value.replace(/,/g, ".");
 
 		replaced = replaceGreaterThan(replaced, /\./g, 2, "");
+		replaced = String(
+			Math.round(Number(replaced) * hundredMillion) / hundredMillion
+		);
 		return replaced;
 	};
 
