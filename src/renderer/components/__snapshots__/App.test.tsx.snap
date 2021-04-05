@@ -41,7 +41,7 @@ exports[`App should match snapshot 1`] = `
     </div>
   </main>
   <footer
-    class="bg-gray-100 min-h-10vh flex items-center justify-center"
+    class="warning min-h-10vh flex items-center justify-center"
   >
     <span>
       2020 © ARK.io | All rights reserved

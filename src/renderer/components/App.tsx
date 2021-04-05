@@ -8,9 +8,10 @@ import { Header } from "./Header/Header";
 const notProd = process.env.NODE_ENV !== "production";
 
 export const App = () => {
+	const mainClassName = "bg-white min-h-70vh";
 	const showDebugScreensOnDev: string = notProd
-		? "debug-screens bg-white min-h-70vh"
-		: "";
+		? `debug-screens ${mainClassName}`
+		: mainClassName;
 
 	return (
 		<HashRouter>
