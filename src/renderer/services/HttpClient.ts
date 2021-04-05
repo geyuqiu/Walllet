@@ -8,7 +8,9 @@ export class HttpClient {
 			.then((resp) => resp.json())
 			.then((data) => data)
 			.catch((error) => {
-				console.error(error);
+				throw new Error(
+					`Received no response. This looks like a bug: ${error}`
+				);
 			});
 
 		return response;
