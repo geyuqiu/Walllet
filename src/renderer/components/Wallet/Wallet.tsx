@@ -1,3 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-export const Wallet = () => <div>Wallet</div>;
+import { httpClient } from "../../services/HttpClient";
+
+export const Wallet = () => {
+	useEffect(() => {
+		const fetchWallets = async () => {
+			const wallets = await httpClient.get(
+				"https://api.ark.io/api/wallets?page=1&limit=15"
+			);
+			// console.info(wallets);
+		};
+		fetchWallets();
+	}, []);
+
+	return <div>Wallet</div>;
+};
