@@ -9,10 +9,14 @@ export const Header = () => {
 			<div className="flex items-center justify-between flex-wrap">
 				<nav className="block">
 					<NavLink to="/">
-						<span className={linkClass}>Wallet</span>
+						<span className={linkClass} data-testid="link__wallet">
+							Wallet
+						</span>
 					</NavLink>
 					<NavLink to="/fee">
-						<span className={linkClass}>Fee</span>
+						<span className={linkClass} data-testid="link__fee">
+							Fee
+						</span>
 					</NavLink>
 				</nav>
 			</div>
