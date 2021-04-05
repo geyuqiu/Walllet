@@ -3,38 +3,34 @@
 exports[`Header should match snapshot 1`] = `
 <div>
   <header
-    class="bg-gray-100 p-6"
+    class="bg-gray-100 p-6 min-h-20vh flex items-center justify-between flex-wrap"
   >
-    <div
-      class="flex items-center justify-between flex-wrap"
+    <nav
+      class="block"
     >
-      <nav
-        class="block"
+      <a
+        aria-current="page"
+        class="active"
+        href="/"
       >
-        <a
-          aria-current="page"
-          class="active"
-          href="/"
+        <span
+          class="inline-block text-gray-800 hover:text-gray-600 mr-4"
+          data-testid="link__wallet"
         >
-          <span
-            class="inline-block text-gray-800 hover:text-gray-600 mr-4"
-            data-testid="link__wallet"
-          >
-            Wallet
-          </span>
-        </a>
-        <a
-          href="/fee"
+          Wallet
+        </span>
+      </a>
+      <a
+        href="/fee"
+      >
+        <span
+          class="inline-block text-gray-800 hover:text-gray-600 mr-4"
+          data-testid="link__fee"
         >
-          <span
-            class="inline-block text-gray-800 hover:text-gray-600 mr-4"
-            data-testid="link__fee"
-          >
-            Fee
-          </span>
-        </a>
-      </nav>
-    </div>
+          Fee
+        </span>
+      </a>
+    </nav>
   </header>
 </div>
 `;
