@@ -59,7 +59,7 @@ describe("FeeInput", () => {
 		expect(screen.getByRole("textbox")).not.toHaveValue("1e-8");
 	});
 
-	test.skip("should not allow non-numeric characters", () => {
+	it("should not allow non-numeric characters", () => {
 		render(<FeeInput />);
 
 		fireEvent.input(screen.getByRole("textbox"), {

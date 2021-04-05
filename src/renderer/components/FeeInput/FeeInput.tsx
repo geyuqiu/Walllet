@@ -22,7 +22,7 @@ export const FeeInput = ({ onChange }: Partial<FeeInputProps>) => {
 	};
 
 	const parse = (value: string): string => {
-		let replaced = value.replace(/,/g, ".");
+		let replaced = value.replace(/[^0-9.,]/g, "").replace(/,/g, ".");
 
 		replaced = replaceGreaterThan(replaced, /\./g, 2, "");
 		const split = replaced.split(".");
