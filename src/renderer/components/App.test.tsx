@@ -1,21 +1,25 @@
 import { render, screen } from "@testing-library/react";
 import React from "react";
+import { MemoryRouter } from "react-router-dom";
 
 import { App } from "./App";
 
 describe("App", () => {
-	it("should render heading", () => {
-		render(<App />);
-		expect(screen.getByRole("heading")).toHaveTextContent("Hello");
-	});
-
 	it("should match snapshot", () => {
-		const { container } = render(<App />);
+		const { container } = render(
+			<MemoryRouter>
+				<App />
+			</MemoryRouter>
+		);
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should show debug in TEST ENV", () => {
-		render(<App />);
+		render(
+			<MemoryRouter>
+				<App />
+			</MemoryRouter>
+		);
 		expect(screen.getByRole("main")).toHaveClass("debug-screens");
 	});
 });
