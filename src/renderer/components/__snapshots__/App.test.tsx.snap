@@ -3,7 +3,7 @@
 exports[`App should match snapshot 1`] = `
 <div>
   <main
-    class="debug-screens"
+    class="debug-screens flex flex-col min-h-screen"
     role="main"
   >
     <header
@@ -40,6 +40,17 @@ exports[`App should match snapshot 1`] = `
         </nav>
       </div>
     </header>
+    <footer
+      class="bg-gray-100 p-6"
+    >
+      <div
+        class="flex items-center"
+      >
+        <span>
+          2020 © ARK.io | All rights reserved
+        </span>
+      </div>
+    </footer>
     <div>
       Wallet
     </div>
