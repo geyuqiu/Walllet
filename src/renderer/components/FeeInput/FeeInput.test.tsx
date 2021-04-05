@@ -71,7 +71,7 @@ describe("FeeInput", () => {
 		expect(screen.getByRole("textbox")).toHaveValue("0129");
 	});
 
-	it("should not allow more than 8 decimals (truncates the number)", () => {
+	it("should not allow more than 8 decimals (rounds the number)", () => {
 		render(<FeeInput />);
 
 		fireEvent.input(screen.getByRole("textbox"), {
@@ -88,7 +88,7 @@ describe("FeeInput", () => {
 			},
 		});
 
-		expect(screen.getByRole("textbox")).toHaveValue("0.00000044");
+		expect(screen.getByRole("textbox")).toHaveValue("0.00000045");
 
 		fireEvent.input(screen.getByRole("textbox"), {
 			target: {
@@ -117,6 +117,14 @@ describe("FeeInput", () => {
 		});
 
 		expect(screen.getByRole("textbox")).toHaveValue("1.23456");
+
+		fireEvent.input(screen.getByRole("textbox"), {
+			target: {
+				value: "123456",
+			},
+		});
+
+		expect(screen.getByRole("textbox")).toHaveValue("123456");
 
 		fireEvent.input(screen.getByRole("textbox"), {
 			target: {

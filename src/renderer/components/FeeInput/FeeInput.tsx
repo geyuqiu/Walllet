@@ -25,9 +25,9 @@ export const FeeInput = ({ onChange }: Partial<FeeInputProps>) => {
 		let replaced = value.replace(/,/g, ".");
 
 		replaced = replaceGreaterThan(replaced, /\./g, 2, "");
-		replaced = String(
-			Math.round(Number(replaced) * hundredMillion) / hundredMillion
-		);
+		const split = replaced.split(".");
+		if (split.length > 1 && split[1].length > 8)
+			replaced = Number(replaced).toFixed(8);
 		return replaced;
 	};
 
