@@ -1,2 +1,10 @@
 # Wallet
 
+```
+➜  Walllet git:(main) node -v
+v12.22.0
+➜  Walllet git:(main) yarn -v
+1.22.10
+➜  Walllet git:(main) yarn run dev
+➜  Walllet git:(main) yarn test
+```
