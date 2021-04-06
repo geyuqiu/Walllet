@@ -135,12 +135,20 @@ describe("FeeInput should", () => {
 		expect(screen.getByRole("textbox")).toHaveValue("1.23456");
 	});
 
-	it("use dot for decimals and comma for thousands as separator", () => {
+	it("take the first separator", () => {
 		render(<FeeInput />);
 
 		fireEvent.input(screen.getByRole("textbox"), {
 			target: {
 				value: "1,234.56",
+			},
+		});
+
+		expect(screen.getByRole("textbox")).toHaveValue("1.23456");
+
+		fireEvent.input(screen.getByRole("textbox"), {
+			target: {
+				value: "1.234,56",
 			},
 		});
 
