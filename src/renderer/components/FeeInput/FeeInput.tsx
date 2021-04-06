@@ -50,9 +50,9 @@ export const FeeInput = ({ onChange }: Partial<FeeInputProps>) => {
 			<label htmlFor="fee">Fee:</label>
 			<input
 				role="textbox"
-				value={fee}
 				placeholder="Simple Text"
 				onChange={handleTextBoxChange}
+				value={fee}
 			/>
 			<input
 				type="range"

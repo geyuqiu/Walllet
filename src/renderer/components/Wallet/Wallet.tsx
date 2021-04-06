@@ -6,7 +6,7 @@ export const Wallet = () => {
 	useEffect(() => {
 		const fetchWallets = async () => {
 			const wallets = await httpClient.get(
-				"https://dwallets.ark.io/api/wallets?page=1&limit=15"
+				"https://dwallets.ark.io/api/wallets?page=1&limit=5"
 			);
 			// console.info(wallets);
 		};
