@@ -36,7 +36,9 @@ exports[`App should match snapshot 1`] = `
     class="debug-screens bg-white min-h-70vh"
     role="main"
   >
-    <div />
+    <div>
+      []
+    </div>
   </main>
   <footer
     class="bg-gray-100 min-h-10vh flex items-center justify-center"

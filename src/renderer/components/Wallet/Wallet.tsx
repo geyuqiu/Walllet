@@ -1,17 +1,9 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 
-import {httpClient} from "../../services/HttpClient";
+import {useFetch} from '../../hooks/useFetch';
 
 export const Wallet = () => {
-	const [wallets, setWallets] = useState([]);
-	useEffect(() => {
-		const fetchWallets = async () => {
-			setWallets(await httpClient.get(
-				"https://dwallets.ark.io/api/wallets?page=1&limit=5"
-			));
-		};
-		fetchWallets();
-	}, []);
+	const {wallets} = useFetch();
 
 	return <div>{JSON.stringify(wallets)}</div>;
 };
