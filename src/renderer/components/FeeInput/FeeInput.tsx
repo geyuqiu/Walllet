@@ -7,9 +7,7 @@ export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 
 	const hundredMillion = Math.pow(10, 8);
 
-	const handleTextBoxChange = (
-		event: React.ChangeEvent<HTMLInputElement>
-	) => {
+	const handleTextBoxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		const value = parse(event.target.value);
 		feeChange(value);
 		emitValueToSatoshi(value);
@@ -31,12 +29,7 @@ export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 		return replaced;
 	};
 
-	const replaceGreaterThan = (
-		s: string,
-		regex: RegExp,
-		index: number,
-		replacedWith: string
-	): string => {
+	const replaceGreaterThan = (s: string, regex: RegExp, index: number, replacedWith: string): string => {
 		let i = 0;
 		return s.replace(regex, (match: string) => {
 			i += 1;
