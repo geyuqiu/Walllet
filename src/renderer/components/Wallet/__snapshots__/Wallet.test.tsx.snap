@@ -2,8 +2,13 @@
 
 exports[`Wallet should match snapshot 1`] = `
 <div>
-  <div>
+  <p>
     []
-  </div>
+  </p>
+  );
+  <p>
+    []
+  </p>
+  );
 </div>
 `;
