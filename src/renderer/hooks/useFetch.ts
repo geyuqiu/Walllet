@@ -5,15 +5,20 @@ import { httpClient } from "../services/HttpClient";
 const baseUrl = "https://dwallets.ark.io/api";
 
 export const useFetch = () => {
-	const [wallets, setWallets] = useState([]);
+	const [addresses, setAddresses] = useState<string[]>([]);
 	useEffect(() => {
 		const fetchWallets = async () => {
-			setWallets(
-				await httpClient.get(baseUrl + "/wallets?page=1&limit=5")
+			const wallets = await httpClient.get(
+				baseUrl + "/wallets?page=1&limit=5"
 			);
+			const result: string[] = [];
+			wallets?.data.forEach((data: any) => {
+				result.push(data.address);
+			});
+			setAddresses(result);
 		};
 		fetchWallets();
 	}, []);
 
-	return { wallets };
+	return { addresses };
 };
