@@ -10,13 +10,13 @@ type TransactionRowProps = {
 
 export const TransactionRow = ({transaction}: TransactionRowProps) => (
 	<TableRow>
-		<TableCell innerClassName="justify-center">
+		<TableCell innerClassName="justify-start">
 			{transaction.id}
 		</TableCell>
-		<TableCell innerClassName="justify-center">
+		<TableCell innerClassName="justify-start">
 			{transaction.sender}
 		</TableCell>
-		<TableCell innerClassName="justify-center">
+		<TableCell innerClassName="justify-start">
 			{transaction.recipient}
 		</TableCell>
 		<TableCell innerClassName="justify-center">
