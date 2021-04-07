@@ -15,7 +15,7 @@ export const WalletView = () => {
 	const {wallets, transactions} = useFetch(wallet);
 
 	return (
-		<section className="m-12">
+		<section className="m-3 sm:m-12">
 			{wallets.length
 				? <div>{wallet!.address} {wallet!.balance}</div>
 				: <div/>
