@@ -1,34 +1,43 @@
+import moment from "moment";
 import {useEffect, useState} from "react";
 
+import {Wallet} from '../components/Wallet/model';
 import {httpClient} from "../services/HttpClient";
+import {Transaction} from '../components/TransactionRow/model';
 
 const walletBaseUrl = 'https://dwallets.ark.io/api/wallets/';
+const dateFormat = 'DD.MM.YYYY';
 
-export const useFetch = (address: string) => {
-	const [addresses, setAddresses] = useState<string[]>([]);
+export const useFetch = (wallet: Wallet | null) => {
+	const [wallets, setWallets] = useState<string[]>([]);
 	useEffect(() => {
 		const fetchWallets = async () => {
 			const response = await httpClient.get(walletBaseUrl + "top?page=1&limit=5");
-			const result: string[] = [];
+			console.log('top wallets: ', response);
+			const result: any[] = [];
 			response?.data.forEach((data: any) => {
-				result.push(data.address);
+				result.push({
+					address: data.address,
+					balance: data.balance
+				});
 			});
-			setAddresses(result);
+			setWallets(result);
 		};
 		fetchWallets();
-	}, [address]);
+	}, [wallet]);
 
-	const [transactions, setTransactions] = useState<any[]>([]);
+	const [transactions, setTransactions] = useState<Transaction[]>([]);
 	useEffect(() => {
 		const fetchTransaction = async () => {
-			const response = await httpClient.get(`${walletBaseUrl}${address}/transactions?page=1&limit=15`);
+			const response = await httpClient.get(`${walletBaseUrl}${wallet!.address}/transactions?page=1&limit=15`);
+			console.log('transactions: ', response);
 			response?.data.forEach((data: any) => {
-				data.timestamp = data.timestamp.human;
+				data.timestamp = moment(data.timestamp.human).format(dateFormat);
 			});
 			setTransactions(response.data);
 		};
-		fetchTransaction();
+		if (wallet) fetchTransaction();
 	}, []);
 
-	return { addresses, transactions };
+	return { wallets, transactions };
 };

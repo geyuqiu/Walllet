@@ -3,7 +3,6 @@ import {HashRouter} from "react-router-dom";
 
 import {Routing} from "../router/Routing";
 import {Footer} from "./Footer/Footer";
-import {Header} from "./Header/Header";
 
 const notProd = process.env.NODE_ENV !== "production";
 
@@ -15,7 +14,7 @@ export const App = () => {
 
 	return (
 		<HashRouter>
-			<Header />
+			{/*<Header />*/}
 			<main className={showDebugScreensOnDev} role="main">
 				<Routing />
 			</main>

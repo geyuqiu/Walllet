@@ -5,13 +5,21 @@ import {Table} from '../Table/Table';
 import {tableColumns} from '../Table/TableColumns';
 import {Transaction} from '../TransactionRow/model';
 import {TransactionRow} from '../TransactionRow/TransactionRow';
+import {Wallet} from './model';
 
-export const Wallet = () => {
-	const [addressSelected, setAddressSelected] = useState<string>('D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax');
-	const {addresses, transactions} = useFetch(addressSelected);
+export const WalletView = () => {
+	const [wallet, setWallet] = useState<Wallet | null >({
+		address: 'D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax',
+		balance: '0'
+	});
+	const {wallets, transactions} = useFetch(wallet);
 
 	return (
 		<>
+			{wallets.length
+				? <div>{wallet!.address} {wallet!.balance}</div>
+				: <div/>
+			}
 			{transactions.length
 				? <Table columns={tableColumns} data={transactions}>
 						{(transaction: Transaction, index: number) => (
