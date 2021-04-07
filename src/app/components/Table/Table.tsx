@@ -49,7 +49,7 @@ export const Table = ({children, data, columns, hideHeader, className, initialSt
 					<thead>
 					{headerGroups.map((headerGroup: any, index: number) => (
 						<tr
-							className="border-b border-theme-secondary-300 dark:border-theme-secondary-800"
+							className="border border-theme-secondary-300 dark:border-theme-secondary-800"
 							key={index}
 							{...headerGroup.getHeaderGroupProps()}
 						>

@@ -4,7 +4,6 @@ export const tableStyle = `
 		padding: 0;
 		width: 100%;
 		border: none;
-		border-collapse: collapse;
 
 		thead {
 			th.hasBorder:not(:last-child):after {

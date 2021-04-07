@@ -7,7 +7,7 @@ const baseStyle = tw`transition-colors duration-100`;
 const getCursorStyles = (onClick?: TableRowFunction): any => (onClick ? tw`cursor-pointer` : "");
 
 const getBorderStyles = (border?: boolean): any =>
-	border ? tw`border-b last:border-b-0 border-dashed border-theme-secondary-300 dark:border-theme-secondary-800` : "";
+	border ? tw`border-b last:border-b-0 border-solid border-theme-secondary-300 dark:border-theme-secondary-800` : "";
 
 const getHoverStyles = (isSelected?: boolean): any =>
 	css`
