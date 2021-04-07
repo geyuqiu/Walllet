@@ -14,36 +14,22 @@ function TestViewportComponent() {
 }
 
 describe('useViewport', () => {
-	it('useViewport listen to window resize and set viewport size responsively', () => {
-		const {container, rerender} = render(<TestViewportComponent/>);
-		const span = container.firstChild;
+	it.each([
+			{width: 320, viewport: "extra-small"},
+			{width: 641, viewport: "small"},
+			{width: 800, viewport: "medium"},
+			{width: 1000, viewport: "large"},
+			{width: 1026, viewport: "extra-large"},
+			{width: 1329, viewport: "huge"},
+	])
+		('useViewport listen to window resize and set viewport size responsively',
+		(testCase: any) => {
+			const {container, rerender} = render(<TestViewportComponent/>);
+			const span = container.firstChild;
 
-		fireResize(320);
+			fireResize(testCase.width);
 
-		rerender(<TestViewportComponent/>);
-		expect(span!.textContent).toBe('extra-small');
-		fireResize(641)
-
-		rerender(<TestViewportComponent/>);
-		expect(span!.textContent).toBe('small');
-		fireResize(800)
-
-		rerender(<TestViewportComponent/>);
-		expect(span!.textContent).toBe('medium');
-
-		fireResize(1000);
-
-		rerender(<TestViewportComponent/>);
-		expect(span!.textContent).toBe('large');
-
-		fireResize(1026);
-
-		rerender(<TestViewportComponent/>);
-		expect(span!.textContent).toBe('extra-large');
-
-		fireResize(1329);
-
-		rerender(<TestViewportComponent/>);
-		expect(span!.textContent).toBe('huge');
-	})
+			rerender(<TestViewportComponent/>);
+			expect(span!.textContent).toBe(testCase.viewport);
+	});
 });
