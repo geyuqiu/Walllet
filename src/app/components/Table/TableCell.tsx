@@ -1,7 +1,7 @@
 import React from "react";
-import { styled } from "twin.macro";
+import {styled} from "twin.macro";
 
-import { getStyles } from "./TableCell.styles";
+import {getStyles} from "./TableCell.styles";
 
 type TableCellProps = {
 	variant?: "start" | "middle" | "end";

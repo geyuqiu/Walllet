@@ -1,7 +1,7 @@
 import React from "react";
-import { styled } from "twin.macro";
+import {styled} from "twin.macro";
 
-import { getStyles } from "./TableRow.styles";
+import {getStyles} from "./TableRow.styles";
 
 export type TableRowFunction = (event: React.MouseEvent<HTMLTableRowElement, MouseEvent>) => void;
 

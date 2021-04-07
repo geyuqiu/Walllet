@@ -1,6 +1,6 @@
-import tw, { css } from "twin.macro";
+import tw, {css} from "twin.macro";
 
-import { TableRowFunction } from "./TableRow";
+import {TableRowFunction} from "./TableRow";
 
 const baseStyle = tw`transition-colors duration-100`;
 

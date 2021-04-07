@@ -1,5 +1,5 @@
 // Assets
-import { SvgCollection } from "app/assets/svg";
+import {SvgCollection} from "app/assets/svg";
 import React from "react";
 import styled from "styled-components";
 
