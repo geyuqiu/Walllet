@@ -235,5 +235,5 @@ module.exports = {
 		opacity: [...defaultConfig.variants.opacity, "group-hover"],
 		padding: [...defaultConfig.variants.padding, "first", "last"],
 	},
-	plugins: [require("@tailwindcss/forms")],
+	plugins: [require("@tailwindcss/forms"), require("tailwindcss-debug-screens")],
 };
