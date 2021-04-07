@@ -30,10 +30,13 @@ export default function useViewport(toggleHideColumn: Function) {
 	};
 
 	useEffect(() => {
-		window.addEventListener('resize', handleResize)
+		window.addEventListener('resize', handleResize);
+
+		handleResize();
+
 		return () => {
 			window.removeEventListener('resize', handleResize)
-		}
+		};
 	})
 
 	return viewport;
