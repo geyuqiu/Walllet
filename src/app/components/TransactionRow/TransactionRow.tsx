@@ -27,7 +27,7 @@ export const TransactionRow = ({transaction, address}: TransactionRowProps) => {
 				>{trimLongText(transaction.recipient)}</a>
 			</TableCell>
 			<TableCell innerClassName="justify-center border-l border-theme-secondary-300"
-			           className="hidden lg:table-cell"
+			           className="hidden xl:table-cell"
 			>
 				{transaction.timestamp}
 			</TableCell>
