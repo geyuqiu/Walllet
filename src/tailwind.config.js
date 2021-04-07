@@ -13,6 +13,13 @@ module.exports = {
 		fontFamily: {
 			sans: ["Inter", ...defaultConfig.theme.fontFamily.sans],
 		},
+		minHeight: {
+			0: "0",
+			"10vh": "10vh",
+			"20vh": "20vh",
+			"70vh": "70vh",
+			full: "100vh",
+		},
 		colors: {
 			warning: "#FBC457",
 			error: "#C93A3A",

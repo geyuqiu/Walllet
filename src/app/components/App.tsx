@@ -1,14 +1,14 @@
 import React from "react";
-import { HashRouter } from "react-router-dom";
+import {HashRouter} from "react-router-dom";
 
-import { Routing } from "../router/Routing";
-import { Footer } from "./Footer/Footer";
-import { Header } from "./Header/Header";
+import {Routing} from "../router/Routing";
+import {Footer} from "./Footer/Footer";
+import {Header} from "./Header/Header";
 
 const notProd = process.env.NODE_ENV !== "production";
 
 export const App = () => {
-	const mainClassName = "bg-white";
+	const mainClassName = "bg-white min-h-70vh";
 	const showDebugScreensOnDev: string = notProd
 		? `debug-screens ${mainClassName}`
 		: mainClassName;
