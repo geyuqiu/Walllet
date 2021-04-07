@@ -26,7 +26,7 @@ export const WalletView = () => {
 							<TransactionRow transaction={transaction} address={wallet!.address}/>
 						)}
 				</Table>
-				: <div/>
+				: <p>No transactions were found for this wallet!</p>
 			}
 		</section>
 	);
