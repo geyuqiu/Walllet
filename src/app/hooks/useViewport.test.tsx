@@ -1,7 +1,8 @@
 import {render} from "@testing-library/react";
 import React from 'react'
 
-import useViewport from './useViewport'
+import useViewport, {toggleTimeStamp} from './useViewport'
+import {timestampAccessor} from '../components/Table/TableColumns';
 
 function fireResize(width: number) {
 	window.innerWidth = width;
@@ -32,4 +33,21 @@ describe('useViewport', () => {
 			rerender(<TestViewportComponent/>);
 			expect(span!.textContent).toBe(testCase.viewport);
 	});
+});
+
+
+describe("based on window innerwidth", () => {
+	it.each([
+		{width: 1280, called: false},
+		{width: 1281, called: false},
+		{width: 1279, called: true},
+	])
+	('show and hide column',
+		(testCase: any) => {
+			const toggleHideColumn = jest.fn();
+
+			toggleTimeStamp(toggleHideColumn, testCase.width);
+
+			expect(toggleHideColumn).toHaveBeenCalledWith(timestampAccessor, testCase.called);
+		});
 });

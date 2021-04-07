@@ -2,12 +2,16 @@ import {useEffect, useState} from 'react'
 
 import {timestampAccessor} from '../components/Table/TableColumns';
 
+export const toggleTimeStamp = (toggleHideColumn: Function, innerWidth: number) => {
+	toggleHideColumn(timestampAccessor, innerWidth >= 1280 ? false : true);
+};
+
 export default function useViewport(toggleHideColumn: Function) {
 	const [viewport, setViewport] = useState('');
 
 	const handleResize = () => {
 		const innerWidth = window.innerWidth;
-		toggleHideColumn(timestampAccessor, innerWidth >= 1280 ? false : true);
+		toggleTimeStamp(toggleHideColumn, innerWidth);
 
 		if (innerWidth > 1280) {
 			setViewport('huge');
