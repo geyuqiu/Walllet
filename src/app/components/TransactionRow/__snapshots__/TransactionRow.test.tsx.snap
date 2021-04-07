@@ -13,9 +13,10 @@ exports[`Footer should match snapshot 1`] = `
         class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hLlKXb justify-start flex flex-inline align-top justify-end flex-row-reverse"
       >
         <a
+          class="text-green-dark"
           href="https://explorer.ark.io/transaction/77a740c7517ae164b35e4e28da7251543d9d98e34e90d3baf604fc582159c352"
         >
-          77a740c7517ae164b35e4e28da7251543d9d98e34e90d3baf604fc582159c352
+          77a74...9c352
         </a>
       </div>
     </td>
@@ -23,17 +24,29 @@ exports[`Footer should match snapshot 1`] = `
       <div
         class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hLlKXb justify-start border-l border-theme-secondary-300"
       >
-        AReY3W6nTv3utiG2em5nefKEsGQeqEVPN4
+        <a
+          class=""
+          href="https://explorer.ark.io/wallets/AReY3W6nTv3utiG2em5nefKEsGQeqEVPN4"
+        >
+          AReY3...EVPN4
+        </a>
       </div>
     </td>
     <td>
       <div
         class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hLlKXb justify-start border-l border-theme-secondary-300"
       >
-        AdzbhuDTyhnfAqepZzVcVsgd1Ym6FgETuW
+        <a
+          class=""
+          href="https://explorer.ark.io/wallets/AdzbhuDTyhnfAqepZzVcVsgd1Ym6FgETuW"
+        >
+          Adzbh...gETuW
+        </a>
       </div>
     </td>
-    <td>
+    <td
+      class="hidden lg:table-cell"
+    >
       <div
         class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hLlKXb justify-center border-l border-theme-secondary-300"
       >

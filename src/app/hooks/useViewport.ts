@@ -1,19 +1,29 @@
 import {useEffect, useState} from 'react'
 
-export default function useViewport() {
+import {timestampAccessor} from '../components/Table/TableColumns';
+
+export default function useViewport(toggleHideColumn: Function) {
 	const [viewport, setViewport] = useState('');
 
 	const handleResize = () => {
-		if (window.innerWidth > 1024) {
-			setViewport('extra-large')
+		if (window.innerWidth > 1280) {
+			setViewport('huge');
+			toggleHideColumn(timestampAccessor, false);
+		} else if (window.innerWidth > 1024) {
+			setViewport('extra-large');
+			toggleHideColumn(timestampAccessor, false);
 		} else if (window.innerWidth > 992) {
-			setViewport('large')
+			setViewport('large');
+			toggleHideColumn(timestampAccessor, true);
 		} else if (window.innerWidth > 768) {
-			setViewport('medium')
+			setViewport('medium');
+			toggleHideColumn(timestampAccessor, true);
 		} else if (window.innerWidth > 640) {
-			setViewport('small')
+			setViewport('small');
+			toggleHideColumn(timestampAccessor, true);
 		} else {
-			setViewport('extra-small')
+			setViewport('extra-small');
+			toggleHideColumn(timestampAccessor, true);
 		}
 	};
 

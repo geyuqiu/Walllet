@@ -1,3 +1,5 @@
+export const timestampAccessor = 'timestamp';
+
 export const tableColumns = [
 	{
 		Header: 'Txid',
@@ -13,7 +15,7 @@ export const tableColumns = [
 	},
 	{
 		Header: 'Timestamp',
-		accessor: 'timestamp',
+		accessor: timestampAccessor,
 		className: "justify-center"
 	},
 	{

@@ -3,6 +3,7 @@ import React, {useMemo} from "react";
 import {useSortBy, useTable} from "react-table";
 import {styled} from "twin.macro";
 
+import useViewport from '../../hooks/useViewport';
 import {Icon} from "../Icon";
 import {tableStyle} from "./Table.styles";
 
@@ -23,7 +24,7 @@ export const Table = ({children, data, columns, hideHeader, className, initialSt
 	const tableData = useMemo(() => data, [data]);
 	const tableColumns = useMemo(() => columns, [columns]);
 
-	const {getTableProps, getTableBodyProps, headerGroups, rows, prepareRow} = useTable(
+	const {getTableProps, getTableBodyProps, headerGroups, rows, prepareRow, toggleHideColumn} = useTable(
 		{
 			data: tableData,
 			columns: tableColumns,
@@ -34,6 +35,8 @@ export const Table = ({children, data, columns, hideHeader, className, initialSt
 		},
 		useSortBy,
 	);
+
+	useViewport(toggleHideColumn);
 
 	const renderChildNode = (data: any, index: number) => {
 		if (typeof children === "function") {
