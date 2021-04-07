@@ -3,7 +3,8 @@ export const tableStyle = `
 		margin: 0;
 		padding: 0;
 		width: 100%;
-		border: none;
+		border-color: var(--theme-color-secondary-300);
+		border-bottom-width: 1px;
 
 		thead {
 			th.hasBorder:not(:last-child):after {

@@ -7,6 +7,7 @@ import {httpClient} from "../services/HttpClient";
 
 const walletBaseUrl = 'https://dwallets.ark.io/api/wallets/';
 const dateFormat = 'DD.MM.YYYY';
+const currency = 'DARK';
 
 export const useFetch = (wallet: Wallet | null) => {
 	const [wallets, setWallets] = useState<string[]>([]);
@@ -39,6 +40,8 @@ export const useFetch = (wallet: Wallet | null) => {
 		if (wallet) fetchTransaction();
 	}, []);
 
+	const dollarToBtn = (amount: string, roundTo: number) => (Number(amount) * 0.000018).toFixed(roundTo);
+
 	const parseTransaction = (response: any) => {
 		console.log('transactions: ', response);
 		response?.data.forEach((data: any) => {
@@ -46,6 +49,8 @@ export const useFetch = (wallet: Wallet | null) => {
 			data.sender = trimLongText(data.sender);
 			data.recipient = trimLongText(data.recipient);
 			data.timestamp = moment(data.timestamp.human).format(dateFormat);
+			data.amount = `${dollarToBtn(data.amount, 7)} ${currency}`;
+			data.fee = `${dollarToBtn(data.fee, 8)} ${currency}`;
 		});
 		setTransactions(response.data);
 	};

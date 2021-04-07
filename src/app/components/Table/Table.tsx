@@ -57,7 +57,7 @@ export const Table = ({children, data, columns, hideHeader, className, initialSt
 								<th
 									key={thIndex}
 									className={cn(
-										"group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold",
+										"group border text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold",
 										{hasBorder: !column.className?.includes("no-border")},
 										{"w-1": column.minimumWidth},
 										{
