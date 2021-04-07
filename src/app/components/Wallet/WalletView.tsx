@@ -9,7 +9,7 @@ import {Wallet} from './model';
 
 export const WalletView = () => {
 	const [wallet, setWallet] = useState<Wallet | null >({
-		address: 'D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax',
+		address: 'AdzbhuDTyhnfAqepZzVcVsgd1Ym6FgETuW',
 		balance: '0'
 	});
 	const {wallets, transactions} = useFetch(wallet);
@@ -23,7 +23,7 @@ export const WalletView = () => {
 			{transactions.length
 				? <Table columns={tableColumns} data={transactions}>
 						{(transaction: Transaction, index: number) => (
-							<TransactionRow transaction={transaction}/>
+							<TransactionRow transaction={transaction} address={wallet!.address}/>
 						)}
 				</Table>
 				: <div/>

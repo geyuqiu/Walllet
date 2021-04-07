@@ -3,47 +3,53 @@
 exports[`Footer should match snapshot 1`] = `
 <div>
   <tr
-    class="TableRow__TableRowStyled-sc-1p89o19-0 iluOTr"
+    class="TableRow__TableRowStyled-sc-1p89o19-0 kVFemh"
     data-testid="TableRow"
   >
-    <td>
+    <td
+      class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+    >
       <div
-        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 jLJwRp"
+        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hLlKXb justify-start flex flex-inline align-top justify-end flex-row-reverse"
       >
-        77a740c7517ae164b35e4e28da7251543d9d98e34e90d3baf604fc582159c352
+        <a
+          href="https://explorer.ark.io/transaction/77a740c7517ae164b35e4e28da7251543d9d98e34e90d3baf604fc582159c352"
+        >
+          77a740c7517ae164b35e4e28da7251543d9d98e34e90d3baf604fc582159c352
+        </a>
       </div>
     </td>
     <td>
       <div
-        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 jLJwRp"
+        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hLlKXb justify-start border-l border-theme-secondary-300"
       >
         AReY3W6nTv3utiG2em5nefKEsGQeqEVPN4
       </div>
     </td>
     <td>
       <div
-        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 jLJwRp"
+        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hLlKXb justify-start border-l border-theme-secondary-300"
       >
         AdzbhuDTyhnfAqepZzVcVsgd1Ym6FgETuW
       </div>
     </td>
     <td>
       <div
-        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 jLJwRp"
+        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hLlKXb justify-center border-l border-theme-secondary-300"
       >
         2021-04-01T11:41:20.000Z
       </div>
     </td>
     <td>
       <div
-        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 jLJwRp"
+        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hLlKXb justify-end border-l border-theme-secondary-300"
       >
         100000000000000
       </div>
     </td>
     <td>
       <div
-        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 jLJwRp"
+        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hLlKXb justify-end border-l border-theme-secondary-300"
       >
         1000000
       </div>
