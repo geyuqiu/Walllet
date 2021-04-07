@@ -12,7 +12,7 @@ export default function useViewport(toggleHideColumn: Function) {
 	const handleResize = () => {
 		const innerWidth = window.innerWidth;
 		toggleColumn(toggleHideColumn, innerWidth, timestampAccessor, 1280);
-		toggleColumn(toggleHideColumn, innerWidth, feeAccessor, 768);
+		toggleColumn(toggleHideColumn, innerWidth, feeAccessor, 1024);
 
 		if (innerWidth > 1280) {
 			setViewport('huge');

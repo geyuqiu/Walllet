@@ -16,7 +16,20 @@ exports[`Footer should match snapshot 1`] = `
           class="text-green-dark"
           href="https://explorer.ark.io/transaction/77a740c7517ae164b35e4e28da7251543d9d98e34e90d3baf604fc582159c352"
         >
-          77a74...9c352
+          <span
+            class="hidden lg:table-cell"
+          >
+            77a74...9c352
+          </span>
+          <div
+            class="sc-bdfBwQ iyevwF table-cell lg:hidden"
+            height="20"
+            width="20"
+          >
+            <svg>
+              txid.svg
+            </svg>
+          </div>
         </a>
       </div>
     </td>
@@ -61,7 +74,7 @@ exports[`Footer should match snapshot 1`] = `
       </div>
     </td>
     <td
-      class="hidden md:table-cell"
+      class="hidden lg:table-cell"
     >
       <div
         class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hLlKXb justify-end border-l border-theme-secondary-300"

@@ -1,5 +1,6 @@
 import React from "react";
 
+import {Icon} from '../Icon';
 import {TableCell} from '../Table/TableCell';
 import {TableRow} from "../Table/TableRow";
 import {Transaction} from './model';
@@ -14,7 +15,11 @@ export const TransactionRow = ({transaction, address}: TransactionRowProps) => {
 	return (
 		<TableRow>
 			<TableCell innerClassName="justify-start flex flex-inline align-top justify-end flex-row-reverse" className="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 m-0 p-3 first:pl-0 last:pr-0 font-semibold">
-				<a href={'https://explorer.ark.io/transaction/' + transaction.id} className="text-green-dark">{trimLongText(transaction.id)}</a>
+				<a href={'https://explorer.ark.io/transaction/' + transaction.id}
+				   className="text-green-dark">
+					<span className="hidden lg:table-cell">{trimLongText(transaction.id)}</span>
+					<Icon name="Txid" width={20} height={20} className="table-cell lg:hidden"/>
+				</a>
 			</TableCell>
 			<TableCell innerClassName="justify-start border-l border-theme-secondary-300">
 				<a href={'https://explorer.ark.io/wallets/' + transaction.sender}
@@ -35,7 +40,7 @@ export const TransactionRow = ({transaction, address}: TransactionRowProps) => {
 				{transaction.amount}
 			</TableCell>
 			<TableCell innerClassName="justify-end border-l border-theme-secondary-300"
-			           className="hidden md:table-cell"
+			           className="hidden lg:table-cell"
 			>
 				{transaction.fee}
 			</TableCell>
