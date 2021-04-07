@@ -1,9 +1,9 @@
 import moment from "moment";
 import {useEffect, useState} from "react";
 
+import {Transaction} from '../components/TransactionRow/model';
 import {Wallet} from '../components/Wallet/model';
 import {httpClient} from "../services/HttpClient";
-import {Transaction} from '../components/TransactionRow/model';
 
 const walletBaseUrl = 'https://dwallets.ark.io/api/wallets/';
 const dateFormat = 'DD.MM.YYYY';
