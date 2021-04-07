@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer should match snapshot 1`] = `
+<div>
+  <tr
+    class="TableRow__TableRowStyled-sc-1p89o19-0 iluOTr"
+    data-testid="TableRow"
+  >
+    <td>
+      <div
+        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 jLJwRp"
+      >
+        77a740c7517ae164b35e4e28da7251543d9d98e34e90d3baf604fc582159c352
+      </div>
+    </td>
+    <td>
+      <div
+        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 jLJwRp"
+      >
+        AReY3W6nTv3utiG2em5nefKEsGQeqEVPN4
+      </div>
+    </td>
+    <td>
+      <div
+        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 jLJwRp"
+      >
+        AdzbhuDTyhnfAqepZzVcVsgd1Ym6FgETuW
+      </div>
+    </td>
+    <td>
+      <div
+        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 jLJwRp"
+      >
+        2021-04-01T11:41:20.000Z
+      </div>
+    </td>
+    <td>
+      <div
+        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 jLJwRp"
+      >
+        100000000000000
+      </div>
+    </td>
+    <td>
+      <div
+        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 jLJwRp"
+      >
+        1000000
+      </div>
+    </td>
+  </tr>
+</div>
+`;

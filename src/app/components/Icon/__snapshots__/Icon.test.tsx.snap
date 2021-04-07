@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon should render 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-bdfBwQ fPrsah"
+    height="1em"
+    width="1em"
+  />
+</DocumentFragment>
+`;
+
+exports[`Icon should render fallbackk 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-bdfBwQ fPrsah"
+    height="1em"
+    width="1em"
+  >
+    <span>
+      Not found
+    </span>
+  </div>
+</DocumentFragment>
+`;

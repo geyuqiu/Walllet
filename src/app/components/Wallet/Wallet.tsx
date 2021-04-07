@@ -1,8 +1,10 @@
 import React, {useState} from "react";
 
 import {useFetch} from '../../hooks/useFetch';
-import {Table} from './Table/Table';
-import {tableColumns} from './Table/TableColumns';
+import {Table} from '../Table/Table';
+import {tableColumns} from '../Table/TableColumns';
+import {Transaction} from '../TransactionRow/model';
+import {TransactionRow} from '../TransactionRow/TransactionRow';
 
 export const Wallet = () => {
 	const [addressSelected, setAddressSelected] = useState<string>('D6Z26L69gdk9qYmTv5uzk3uGepigtHY4ax');
@@ -11,7 +13,11 @@ export const Wallet = () => {
 	return (
 		<>
 			{transactions.length
-				? <Table columns={tableColumns} transactions={transactions}/>
+				? <Table columns={tableColumns} data={transactions}>
+						{(transaction: Transaction, index: number) => (
+							<TransactionRow transaction={transaction}/>
+						)}
+				</Table>
 				: <div/>
 			}
 		</>

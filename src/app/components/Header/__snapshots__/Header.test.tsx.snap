@@ -3,7 +3,7 @@
 exports[`Header should match snapshot 1`] = `
 <div>
   <header
-    class="bg-green-700 p-6 flex items-center justify-between flex-wrap"
+    class="bg-green-700 p-6 min-h-20vh flex items-center justify-between flex-wrap"
   >
     <nav
       class="block"
