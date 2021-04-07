@@ -14,13 +14,16 @@ export const tableColumns = [
 	{
 		Header: 'Timestamp',
 		accessor: 'timestamp',
+		className: "justify-center"
 	},
 	{
 		Header: 'Amount',
 		accessor: 'amount',
+		className: "justify-end"
 	},
 	{
 		Header: 'Fee',
 		accessor: 'fee',
+		className: "justify-end"
 	}
 ];

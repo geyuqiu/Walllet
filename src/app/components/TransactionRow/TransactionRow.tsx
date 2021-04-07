@@ -10,22 +10,22 @@ type TransactionRowProps = {
 
 export const TransactionRow = ({transaction}: TransactionRowProps) => (
 	<TableRow>
-		<TableCell>
+		<TableCell innerClassName="justify-center">
 			{transaction.id}
 		</TableCell>
-		<TableCell>
+		<TableCell innerClassName="justify-center">
 			{transaction.sender}
 		</TableCell>
-		<TableCell>
+		<TableCell innerClassName="justify-center">
 			{transaction.recipient}
 		</TableCell>
-		<TableCell>
+		<TableCell innerClassName="justify-center">
 			{transaction.timestamp}
 		</TableCell>
-		<TableCell>
+		<TableCell innerClassName="justify-end">
 			{transaction.amount}
 		</TableCell>
-		<TableCell>
+		<TableCell innerClassName="justify-end">
 			{transaction.fee}
 		</TableCell>
 	</TableRow>
