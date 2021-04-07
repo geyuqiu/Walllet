@@ -14,11 +14,11 @@ export const TransactionRow = ({transaction, address}: TransactionRowProps) => {
 	const trimLongText = (id: string) => `${id.substring(0, 5)}...${id.substring(id.length - 5, id.length)}`
 	return (
 		<TableRow>
-			<TableCell innerClassName="justify-start flex flex-inline align-top justify-end flex-row-reverse" className="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 m-0 p-3 first:pl-0 last:pr-0 font-semibold">
+			<TableCell innerClassName="justify-start" className="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 m-0 p-3 first:pl-0 last:pr-0 font-semibold">
 				<a href={'https://explorer.ark.io/transaction/' + transaction.id}
 				   className="text-green-dark">
-					<span className="hidden lg:table-cell">{trimLongText(transaction.id)}</span>
-					<Icon name="Txid" width={20} height={20} className="table-cell lg:hidden"/>
+					<span className="table-cell lg:table-cell sm:hidden">{trimLongText(transaction.id)}</span>
+					<Icon name="Txid" width={20} height={20} className="hidden lg:hidden sm:table-cell"/>
 				</a>
 			</TableCell>
 			<TableCell innerClassName="justify-start border-l border-theme-secondary-300">
