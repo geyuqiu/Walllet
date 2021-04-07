@@ -1,4 +1,5 @@
 export const timestampAccessor = 'timestamp';
+export const feeAccessor = 'fee';
 
 export const tableColumns = [
 	{
@@ -25,7 +26,7 @@ export const tableColumns = [
 	},
 	{
 		Header: 'Fee',
-		accessor: 'fee',
+		accessor: feeAccessor,
 		className: "justify-end"
 	}
 ];

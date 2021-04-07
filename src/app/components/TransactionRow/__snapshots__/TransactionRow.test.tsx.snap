@@ -45,7 +45,7 @@ exports[`Footer should match snapshot 1`] = `
       </div>
     </td>
     <td
-      class="hidden lg:table-cell"
+      class="hidden xl:table-cell"
     >
       <div
         class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hLlKXb justify-center border-l border-theme-secondary-300"
@@ -60,7 +60,9 @@ exports[`Footer should match snapshot 1`] = `
         100000000000000
       </div>
     </td>
-    <td>
+    <td
+      class="hidden md:table-cell"
+    >
       <div
         class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hLlKXb justify-end border-l border-theme-secondary-300"
       >

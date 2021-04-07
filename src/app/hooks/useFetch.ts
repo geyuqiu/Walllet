@@ -32,7 +32,7 @@ export const useFetch = (wallet: Wallet | null) => {
 };
 
 export const parseWallets = (response: any) => {
-	console.log('top wallets: ', response);
+	// console.log('top wallets: ', response);
 	const result: any[] = [];
 	response?.data.forEach((data: any) => {
 		result.push({
@@ -46,7 +46,7 @@ export const parseWallets = (response: any) => {
 export const dollarToBtn = (amount: string, roundTo: number) => (Number(amount) * 0.000018).toFixed(roundTo);
 
 export const parseTransaction = (response: any) => {
-	console.log('transactions: ', response);
+	// console.log('transactions: ', response);
 	response?.data.forEach((data: any) => {
 		data.timestamp = moment(data.timestamp.human).format(dateFormat);
 		data.amount = `${dollarToBtn(data.amount, 7)} ${currency}`;

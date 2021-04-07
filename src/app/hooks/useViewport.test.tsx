@@ -1,8 +1,8 @@
 import {render} from "@testing-library/react";
 import React from 'react'
 
-import useViewport, {toggleTimeStamp} from './useViewport'
-import {timestampAccessor} from '../components/Table/TableColumns';
+import useViewport, {toggleColumn} from './useViewport'
+import {feeAccessor, timestampAccessor} from '../components/Table/TableColumns';
 
 function fireResize(width: number) {
 	window.innerWidth = width;
@@ -42,12 +42,26 @@ describe("based on window innerwidth", () => {
 		{width: 1281, called: false},
 		{width: 1279, called: true},
 	])
-	('show and hide column',
+	('show and hide column timestamp',
 		(testCase: any) => {
 			const toggleHideColumn = jest.fn();
 
-			toggleTimeStamp(toggleHideColumn, testCase.width);
+			toggleColumn(toggleHideColumn, testCase.width, timestampAccessor, 1280);
 
 			expect(toggleHideColumn).toHaveBeenCalledWith(timestampAccessor, testCase.called);
+		});
+
+	it.each([
+		{width: 769, called: false},
+		{width: 768, called: false},
+		{width: 767, called: true},
+	])
+	('show and hide column fee',
+		(testCase: any) => {
+			const toggleHideColumn = jest.fn();
+
+			toggleColumn(toggleHideColumn, testCase.width, feeAccessor, 768);
+
+			expect(toggleHideColumn).toHaveBeenCalledWith(feeAccessor, testCase.called);
 		});
 });
