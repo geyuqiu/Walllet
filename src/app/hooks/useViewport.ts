@@ -37,7 +37,7 @@ export default function useViewport(toggleHideColumn: Function) {
 		return () => {
 			window.removeEventListener('resize', handleResize)
 		};
-	})
+	}, [])
 
 	return viewport;
 }
