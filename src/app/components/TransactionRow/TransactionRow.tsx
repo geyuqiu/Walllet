@@ -14,7 +14,8 @@ export const TransactionRow = ({transaction, address}: TransactionRowProps) => {
 	const trimLongText = (id: string) => `${id.substring(0, 5)}...${id.substring(id.length - 5, id.length)}`
 	return (
 		<TableRow>
-			<TableCell innerClassName="justify-start" className="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 m-0 p-3 first:pl-0 last:pr-0 font-semibold">
+			<TableCell innerClassName="justify-start"
+			           className="sm:text-sm sm:p-3 sm:first:pl-0 sm:last:pr-0">
 				<a href={'https://explorer.ark.io/transaction/' + transaction.id}
 				   className="text-green-dark">
 					<span className="table-cell lg:table-cell sm:hidden">{trimLongText(transaction.id)}</span>
