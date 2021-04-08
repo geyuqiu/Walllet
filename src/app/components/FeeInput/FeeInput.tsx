@@ -1,6 +1,12 @@
 import React, {useState} from "react";
+import {styled} from "twin.macro";
 
 import {hundredMillion, parse} from './FeeParser';
+import {sliderStyle} from './Slider.styles';
+
+const SliderWrapper = styled.div`
+	${sliderStyle}
+`;
 
 export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 	const [fee, feeChange] = useState("0");
@@ -25,10 +31,12 @@ export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 			<input role="textbox" placeholder="Simple Text"
 				onChange={handleTextBoxChange} value={fee}
 			/>
-			<input type="range" id="fee" name="fee" min="0" max="5" step="0.00000001" role="slider"
-				onChange={handleSliderChange}
-				value={fee}
-			/>
+			<SliderWrapper>
+				<input type="range" id="fee" name="fee" min="0" max="5" step="0.00000001" role="slider"
+					onChange={handleSliderChange}
+					value={fee}
+				/>
+			</SliderWrapper>
 		</>
 	);
 };
