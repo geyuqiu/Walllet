@@ -7,10 +7,10 @@ import {WalletView} from "../pages/Wallet/WalletView";
 export const Routing = () => (
 	<Switch>
 		<Route path="/fee">
-			<FeeInput />
+			<WalletView />
 		</Route>
 		<Route path="/">
-			<WalletView />
+			<FeeInput />
 		</Route>
 	</Switch>
 );
