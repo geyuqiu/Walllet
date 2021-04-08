@@ -14,7 +14,7 @@ export const inputRangeStyle = `
 	  height: 16px;
 	  width: 6px;
 	  border-radius: 22px;
-	  background: #E8FBFF;
+	  background: #029383;
 	  cursor: pointer;
 	  -webkit-appearance: none;
 	  margin-top: -6.5px;
