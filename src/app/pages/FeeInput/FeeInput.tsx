@@ -38,10 +38,8 @@ export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 	};
 
 	const setTextBoxColor = () => {
-		const textBox = textBoxRef.current;
-		textBox.style.color = '#1F2121';
+		textBoxRef.current.style.color = '#1F2121';
 	};
-
 
 	const onTextBoxHover = () => {
 		labelRef.current.style.color = '#046E62';
