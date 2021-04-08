@@ -3,18 +3,38 @@
 exports[`App should match snapshot 1`] = `
 <div>
   <main
-    class="debug-screens bg-white min-h-70vh"
+    class="debug-screens bg-white min-h-full"
     role="main"
   >
-    <section
-      class="m-12"
+    <label
+      class="text-black-dark"
+      for="fee"
     >
-      <div />
-      <div />
-    </section>
+      Fee:
+    </label>
+    <input
+      class="p-4 text-gray-darkest hover:border-green-darkest border-gray-darkest border border-solid rounded-full w-full focus:outline-none"
+      placeholder="Simple Text"
+      role="textbox"
+      value="0 DARK"
+    />
+    <div
+      class="FeeInput__SliderWrapper-sc-1tci9nq-0 kMhBBq"
+    >
+      <input
+        id="fee"
+        max="5"
+        min="0"
+        name="fee"
+        role="slider"
+        step="0.00000001"
+        type="range"
+        value="0"
+      />
+    </div>
   </main>
   <footer
-    class="bg-gray-100 min-h-10vh flex items-center justify-center"
+    class="bg-gray-light flex items-center justify-center p-4 fixed bottom-0 w-full z-100 text-black-dark"
   >
     <span>
       2020 © ARK.io | All rights reserved

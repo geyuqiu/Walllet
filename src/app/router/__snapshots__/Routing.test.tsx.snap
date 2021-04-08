@@ -2,11 +2,31 @@
 
 exports[`Routing should match snapshot 1`] = `
 <div>
-  <section
-    class="m-12"
+  <label
+    class="text-black-dark"
+    for="fee"
   >
-    <div />
-    <div />
-  </section>
+    Fee:
+  </label>
+  <input
+    class="p-4 text-gray-darkest hover:border-green-darkest border-gray-darkest border border-solid rounded-full w-full focus:outline-none"
+    placeholder="Simple Text"
+    role="textbox"
+    value="0 DARK"
+  />
+  <div
+    class="FeeInput__SliderWrapper-sc-1tci9nq-0 kMhBBq"
+  >
+    <input
+      id="fee"
+      max="5"
+      min="0"
+      name="fee"
+      role="slider"
+      step="0.00000001"
+      type="range"
+      value="0"
+    />
+  </div>
 </div>
 `;

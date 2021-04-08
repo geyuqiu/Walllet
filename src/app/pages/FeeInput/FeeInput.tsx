@@ -38,8 +38,8 @@ export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 
 	return (
 		<>
-			<label htmlFor="fee" className="text-black-dark">Fee:</label>
-			<input role="textbox" placeholder="Simple Text"
+			<label htmlFor="fee" className="text-black-dark">Fee</label>
+			<input role="textbox" placeholder="currency: DARK"
         className="p-4 text-gray-darkest hover:border-green-darkest border-gray-darkest border border-solid rounded-full w-full focus:outline-none"
 				onChange={handleTextBoxChange} value={fee}
         ref={textBoxRef}
