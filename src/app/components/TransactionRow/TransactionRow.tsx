@@ -15,14 +15,14 @@ export const TransactionRow = ({transaction, address}: TransactionRowProps) => {
 	return (
 		<TableRow>
 			<TableCell innerClassName="justify-end sm:justify-start"
-			           className="sm:text-sm sm:p-3 sm:first:pl-0 sm:last:pr-0">
+			           className="sm:text-sm sm:pt-3 sm:pb-3">
 				<a href={'https://explorer.ark.io/transaction/' + transaction.id}
 				   className="text-green-dark">
 					<span className="table-cell lg:table-cell sm:hidden">{trimLongText(transaction.id)}</span>
 					<Icon name="Txid" width={20} height={20} className="hidden lg:hidden sm:table-cell"/>
 				</a>
 			</TableCell>
-			<TableCell innerClassName="justify-end sm:justify-start sm:border-l border-theme-secondary-300">
+			<TableCell innerClassName="justify-end sm:justify-start sm:border-l border-theme-secondary-300 pl-5 pr-5">
 				<a href={'https://explorer.ark.io/wallets/' + transaction.sender}
 					 className={address === transaction.sender ? "text-green-dark" : ""}
 				>{trimLongText(transaction.sender)}</a>

@@ -1,6 +1,6 @@
 import tw from "twin.macro";
 
-const baseStyle = tw`flex items-center px-3 my-1 transition-colors duration-100`;
+const baseStyle = tw`flex items-center px-5 my-1 transition-colors duration-100`;
 
 const getHeight = () => tw`h-6`;
 
