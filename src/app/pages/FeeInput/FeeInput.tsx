@@ -7,10 +7,11 @@ import {inputRangeStyle} from './InputRangeStyle';
 const SliderWrapper = styled.div`
 	${inputRangeStyle}
 `;
+const initialValue = '0';
 
 export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
-	const [fee, setFee] = useState("0");
-	const [sliderValue, setSliderValue] = useState('0');
+	const [fee, setFee] = useState(initialValue);
+	const [sliderValue, setSliderValue] = useState(initialValue);
 	const [textBoxValue, setTextBoxValue] = useState('currency: DARK');
 	const onInputRangeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		const value = event.target.value;
@@ -26,11 +27,12 @@ export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 		setTextBoxValue(value);
 		console.log('value', value);
 		if (!value.endsWith('.')) {
-			setSliderValue(value);
-			setFee(value);
+			const nullSafe = !value ? initialValue : value;
+			setSliderValue(nullSafe);
+			setFee(nullSafe);
 			setInputRangeColor('#046E62', Number(value));
+			emitValueToSatoshi(nullSafe);
 		}
-		emitValueToSatoshi(value);
 	};
 
 	const emitValueToSatoshi = (value: string): void => {
@@ -45,8 +47,6 @@ export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 	const setInputRangeColor = (colorBeforeThumb: string, value: number) => {
 		const inputRange = inputRangeRef.current;
 		const newValue = (value - inputRange.min) / (inputRange.max - inputRange.min) * 100;
-		console.log(newValue);
-		console.log(sliderValue);
 		inputRange.style.background = `linear-gradient(to right, ${colorBeforeThumb} 0%, ${colorBeforeThumb} ${newValue}%, #C7C9CD ${newValue}%, #C7C9CD 100%)`
 	};
 
