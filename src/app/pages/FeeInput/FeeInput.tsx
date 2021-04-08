@@ -25,7 +25,6 @@ export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 	const handleTextBoxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		const value = parse(event.target.value);
 		setTextBoxValue(value);
-		console.log('value', value);
 		if (!value.endsWith('.')) {
 			const nullSafe = !value ? initialValue : value;
 			setSliderValue(nullSafe);
@@ -50,17 +49,11 @@ export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 		inputRange.style.background = `linear-gradient(to right, ${colorBeforeThumb} 0%, ${colorBeforeThumb} ${newValue}%, #C7C9CD ${newValue}%, #C7C9CD 100%)`
 	};
 
-	const setTextBoxColor = () => {
-		textBoxRef.current.style.color = '#1F2121';
-	};
+	const setTextBoxColor = () => textBoxRef.current.style.color = '#1F2121';
 
-	const onTextBoxHover = () => {
-		labelRef.current.style.color = '#046E62';
-	}
+	const onTextBoxHover = () => labelRef.current.style.color = '#046E62';
 
-	const exitTextBoxHover = () => {
-		labelRef.current.style.color = '#1F2121';
-	}
+	const exitTextBoxHover = () => labelRef.current.style.color = '#1F2121';
 
 	return (
 		<>
