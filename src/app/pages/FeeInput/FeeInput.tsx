@@ -12,13 +12,14 @@ export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 	const [fee, updateFee] = useState("0");
 	const onInputRangeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		updateFee(event.target.value);
-		setInputRangeColor();
+		setInputRangeColor('#FBC457');
 		setTextBoxColor();
 	}
 
 	const handleTextBoxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		const value = parse(event.target.value);
 		updateFee(value);
+		setInputRangeColor('#046E62');
 		emitValueToSatoshi(value);
 	};
 
@@ -31,10 +32,10 @@ export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 	const textBoxRef = useRef<any>(null);
 	const labelRef = useRef<any>(null);
 
-	const setInputRangeColor = () => {
+	const setInputRangeColor = (colorBeforeThumb: string) => {
 		const inputRange = inputRangeRef.current;
 		const newValue = (inputRange.value - inputRange.min) / (inputRange.max - inputRange.min) * 100;
-		inputRange.style.background = `linear-gradient(to right, #FBC457 0%, #FBC457 ${newValue}%, #C7C9CD ${newValue}%, #C7C9CD 100%)`
+		inputRange.style.background = `linear-gradient(to right, ${colorBeforeThumb} 0%, ${colorBeforeThumb} ${newValue}%, #C7C9CD ${newValue}%, #C7C9CD 100%)`
 	};
 
 	const setTextBoxColor = () => {
