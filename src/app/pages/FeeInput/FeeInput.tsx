@@ -28,6 +28,7 @@ export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 	};
 	const inputRangeRef = useRef<any>(null);
 	const textBoxRef = useRef<any>(null);
+	const labelRef = useRef<any>(null);
 
 	const setInputRangeColor = () => {
 		const elem = inputRangeRef.current;
@@ -35,16 +36,25 @@ export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 		elem.style.background = `linear-gradient(to right, #FBC457 0%, #FBC457 ${newValue}%, #C7C9CD ${newValue}%, #C7C9CD 100%)`
 	};
 
+	const onTextBoxHover = () => {
+		labelRef.current.style.color = '#046E62';
+	}
+
+	const exitTextBoxHover = () => {
+		labelRef.current.style.color = '#1F2121';
+	}
+
 	useEffect(() => {
 		textBoxRef.current.value = '';
 	}, []);
 
 	return (
 		<>
-			<label htmlFor="fee" className="text-black-dark">Fee</label>
+			<label htmlFor="fee" className="text-black-dark focus:outline-none"
+			       ref={labelRef}>Fee</label>
 			<input role="textbox" placeholder="currency: DARK"
         className="p-4 text-gray-darkest hover:border-green-darkest border-gray-darkest border border-solid rounded-full w-full focus:outline-none"
-				onChange={handleTextBoxChange} value={fee}
+				onChange={handleTextBoxChange} value={fee} onMouseEnter={onTextBoxHover} onMouseLeave={exitTextBoxHover}
         ref={textBoxRef}
 			/>
 			<SliderWrapper>
