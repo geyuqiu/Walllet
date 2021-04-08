@@ -64,7 +64,7 @@ describe("FeeInput should", () => {
 
 		fireEvent.input(screen.getByRole("textbox"), {
 			target: {
-				value: "abc012@#9", // go against the design 0.03974945
+				value: "abc012@#9", // go against the design 0.03974945 DARK when sliding the inputRange
 			},
 		});
 

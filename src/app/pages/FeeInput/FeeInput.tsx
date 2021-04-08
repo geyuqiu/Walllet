@@ -10,8 +10,10 @@ const SliderWrapper = styled.div`
 
 export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 	const [fee, updateFee] = useState("0");
-	const handleSliderChange = (event: React.ChangeEvent<HTMLInputElement>) =>
+	const onInputRangeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		updateFee(event.target.value);
+		setInputRangeColor();
+	}
 
 	const handleTextBoxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		const value = parse(event.target.value);
@@ -25,13 +27,14 @@ export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 		}
 	};
 	const inputRangeRef = useRef<any>(null);
-	const onInput = () => {
+	const textBoxRef = useRef<any>(null);
+
+	const setInputRangeColor = () => {
 		const elem = inputRangeRef.current;
 		const newValue = (elem.value - elem.min) / (elem.max - elem.min) * 100;
 		elem.style.background = `linear-gradient(to right, #FBC457 0%, #FBC457 ${newValue}%, #C7C9CD ${newValue}%, #C7C9CD 100%)`
 	};
 
-	const textBoxRef = useRef<any>(null);
 	useEffect(() => {
 		textBoxRef.current.value = '';
 	}, []);
@@ -46,8 +49,8 @@ export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 			/>
 			<SliderWrapper>
 				<input type="range" id="fee" name="fee" min="0" max="5" step="0.00000001" role="slider"
-					onChange={handleSliderChange} value={fee}
-				  ref={inputRangeRef} onInput={onInput} onFocus={onInput}
+					onChange={onInputRangeChange} value={fee}
+				  ref={inputRangeRef}
 				/>
 			</SliderWrapper>
 		</>
