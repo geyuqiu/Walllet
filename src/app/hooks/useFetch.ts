@@ -1,8 +1,8 @@
 import moment from "moment";
 import {useEffect, useState} from "react";
 
-import {Transaction} from '../components/TransactionRow/model';
-import {Wallet} from '../components/Wallet/model';
+import {Transaction} from '../pages/Wallet/TransactionRow/model';
+import {Wallet} from '../pages/Wallet/model';
 import {httpClient} from "../services/HttpClient";
 
 const walletBaseUrl = 'https://api.ark.io/api/wallets/';

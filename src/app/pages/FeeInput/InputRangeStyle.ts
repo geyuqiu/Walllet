@@ -1,6 +1,6 @@
-export const sliderStyle = `
+export const inputRangeStyle = `
 	input[type='range'] {
-    background: linear-gradient(to right, #FBC457 0%, #FBC457 50%, #C7C9CD 50%, #C7C9CD 100%);
+    background: linear-gradient(to right, #FBC457 0%, #FBC457 0%, #C7C9CD 0%, #C7C9CD 100%);
 	  border-radius: 8px;
     width: 100%;
 	  outline: none;

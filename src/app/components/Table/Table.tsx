@@ -28,7 +28,6 @@ export const Table = ({children, data, columns, hideHeader, className, initialSt
 		{
 			data: tableData,
 			columns: tableColumns,
-			// @ts-ignore
 			autoResetSortBy: false,
 			disableSortRemove: true,
 			initialState,

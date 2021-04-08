@@ -1,8 +1,8 @@
 import React from "react";
 import {Route, Switch} from "react-router-dom";
 
-import {FeeInput} from "../components/FeeInput/FeeInput";
-import {WalletView} from "../components/Wallet/WalletView";
+import {FeeInput} from "../pages/FeeInput/FeeInput";
+import {WalletView} from "../pages/Wallet/WalletView";
 
 export const Routing = () => (
 	<Switch>

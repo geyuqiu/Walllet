@@ -1,10 +1,10 @@
 import React, {useState} from "react";
 
 import {useFetch} from '../../hooks/useFetch';
-import {Table} from '../Table/Table';
-import {tableColumns} from '../Table/TableColumns';
-import {Transaction} from '../TransactionRow/model';
-import {TransactionRow} from '../TransactionRow/TransactionRow';
+import {Table} from '../../components/Table/Table';
+import {tableColumns} from '../../components/Table/TableColumns';
+import {Transaction} from './TransactionRow/model';
+import {TransactionRow} from './TransactionRow/TransactionRow';
 import {Wallet} from './model';
 
 export const WalletView = () => {

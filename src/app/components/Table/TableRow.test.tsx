@@ -2,13 +2,18 @@ import {render} from "@testing-library/react";
 import React from "react";
 
 import {TableRow} from "./TableRow";
+import {TableCell} from './TableCell';
 
 describe("TableRow", () => {
 	it("should render with border", () => {
 		const { container } = render(
 			<table>
 				<tbody>
-					<TableRow border={true} />
+					<TableRow border={true}>
+						<TableCell>
+							something
+						</TableCell>
+					</TableRow>
 				</tbody>
 			</table>,
 		);
@@ -19,7 +24,11 @@ describe("TableRow", () => {
 		const { container } = render(
 			<table>
 				<tbody>
-					<TableRow border={false} />
+					<TableRow border={false} >
+						<TableCell>
+							something
+						</TableCell>
+					</TableRow>
 				</tbody>
 			</table>,
 		);

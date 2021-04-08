@@ -1,5 +1,5 @@
-import {Transaction} from '../components/TransactionRow/model';
-import {Wallet} from '../components/Wallet/model';
+import {Transaction} from '../pages/Wallet/TransactionRow/model';
+import {Wallet} from '../pages/Wallet/model';
 import {dollarToBtn, parseTransaction, parseWallets} from './useFetch';
 
 describe("parseWallets should ", () => {

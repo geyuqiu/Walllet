@@ -1,8 +1,8 @@
 import React from "react";
 
-import {Icon} from '../Icon';
-import {TableCell} from '../Table/TableCell';
-import {TableRow} from "../Table/TableRow";
+import {Icon} from '../../../components/Icon';
+import {TableCell} from '../../../components/Table/TableCell';
+import {TableRow} from "../../../components/Table/TableRow";
 import {Transaction} from './model';
 
 type TransactionRowProps = {

@@ -16,7 +16,7 @@ describe("Footer", () => {
 		} as Transaction;
 
 		const { container } = render(
-				<TransactionRow transaction={transaction}/>
+				<TransactionRow transaction={transaction} address={''}/>
 		);
 
 		expect(container).toMatchSnapshot();
