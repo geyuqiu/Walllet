@@ -1,7 +1,6 @@
 export const sliderStyle = `
 	input[type='range'] {
-    background: linear-gradient(to right, #82CFD0 0%, #82CFD0 50%, #fff 50%, #fff 100%);
-	  border: solid 1px #82CFD0;
+    background: linear-gradient(to right, #FBC457 0%, #FBC457 50%, #C7C9CD 50%, #C7C9CD 100%);
 	  border-radius: 8px;
     width: 100%;
 	  outline: none;
@@ -18,11 +17,12 @@ export const sliderStyle = `
 	  background: #E8FBFF;
 	  cursor: pointer;
 	  -webkit-appearance: none;
-	  margin-top: -6px;
+	  margin-top: -6.5px;
+	}
+	input[type=range]:hover::-webkit-slider-thumb{
+	  background: #FBC457;
 	}
 	input[type=range]::-webkit-slider-runnable-track {
-		box-shadow: 1px 1px 1px #000000;
 	  height: 4px;
-	  border: 1px solid #FFFAF5;
 	}
 `;
