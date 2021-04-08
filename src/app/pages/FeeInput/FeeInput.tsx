@@ -9,13 +9,13 @@ const SliderWrapper = styled.div`
 `;
 
 export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
-	const [fee, feeChange] = useState("0");
+	const [fee, updateFee] = useState("0");
 	const handleSliderChange = (event: React.ChangeEvent<HTMLInputElement>) =>
-		feeChange(event.target.value);
+		updateFee(event.target.value);
 
 	const handleTextBoxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		const value = parse(event.target.value);
-		feeChange(value);
+		updateFee(value);
 		emitValueToSatoshi(value);
 	};
 
@@ -33,7 +33,7 @@ export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 
 	return (
 		<>
-			<label htmlFor="fee">Fee:</label>
+			<label htmlFor="fee" className="text-black-dark">Fee:</label>
 			<input role="textbox" placeholder="Simple Text"
 				onChange={handleTextBoxChange} value={fee}
 			/>
