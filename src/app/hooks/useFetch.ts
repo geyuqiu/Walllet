@@ -22,7 +22,7 @@ export const useFetch = (wallet: Wallet | null) => {
 	const [transactions, setTransactions] = useState<Transaction[]>([]);
 	useEffect(() => {
 		const fetchTransaction = async () => {
-			const response = await httpClient.get(`${walletBaseUrl}${wallet!.address}/transactions?page=1&limit=10`);
+			const response = await httpClient.get(`${walletBaseUrl}${wallet!.address}/transactions?page=1&limit=11`);
 			setTransactions(parseTransaction(response));
 		};
 		if (wallet) fetchTransaction();

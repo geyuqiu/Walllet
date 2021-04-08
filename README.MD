@@ -9,8 +9,5 @@ v12.22.0
 ➜  Walllet git:(main) yarn test
 ```
 
-```
-// uncomment following to show the navigation links to fee
-{/*<Header />*/}
-// replace {/*<Header />*/} with <Header />
-```
+switch line 10 with line 13 under `Routing.tsx` to enable feeInput
+

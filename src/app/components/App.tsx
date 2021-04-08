@@ -14,7 +14,6 @@ export const App = () => {
 
 	return (
 		<HashRouter>
-			{/*<Header />*/}
 			<main className={showDebugScreensOnDev} role="main">
 				<Routing />
 			</main>
