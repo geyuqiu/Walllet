@@ -7,7 +7,7 @@ import {Footer} from "./Footer/Footer";
 const notProd = process.env.NODE_ENV !== "production";
 
 export const App = () => {
-	const mainClassName = "bg-white min-h-70vh";
+	const mainClassName = "bg-white min-h-full";
 	const showDebugScreensOnDev: string = notProd
 		? `debug-screens ${mainClassName}`
 		: mainClassName;

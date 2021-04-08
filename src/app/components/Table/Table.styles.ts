@@ -34,6 +34,10 @@ export const tableStyle = `
 			left: -9999px;
 		}
 		
+		table tr:last-child { 
+		  margin-bottom: 5rem
+	  }
+		
     tr {
       margin: 0 0 1rem 0;
       padding: 1rem 0 1rem 0;

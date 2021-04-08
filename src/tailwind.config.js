@@ -4,6 +4,10 @@ module.exports = {
 	purge: false,
 	darkMode: "media",
 	theme: {
+		zIndex: {
+			'100': 100,
+			'auto': 'auto',
+		},
 		screens: {
 			sm: "640px",
 			md: "768px",
