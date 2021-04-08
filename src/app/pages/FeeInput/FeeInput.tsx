@@ -52,17 +52,19 @@ export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 		<>
 			<label htmlFor="fee" className="text-black-dark focus:outline-none"
 			       ref={labelRef}>Fee</label>
-			<input role="textbox" placeholder="currency: DARK"
-        className="p-4 text-gray-darkest hover:border-green-darkest border-gray-darkest border border-solid rounded-full w-full focus:outline-none"
-				onChange={handleTextBoxChange} value={fee} onMouseEnter={onTextBoxHover} onMouseLeave={exitTextBoxHover}
-        ref={textBoxRef}
-			/>
-			<SliderWrapper>
-				<input type="range" id="fee" name="fee" min="0" max="5" step="0.00000001" role="slider"
-					onChange={onInputRangeChange} value={fee}
-				  ref={inputRangeRef}
+			<section onMouseEnter={onTextBoxHover} onMouseLeave={exitTextBoxHover}>
+				<input role="textbox" placeholder="currency: DARK"
+	        className="p-4 text-gray-darkest hover:border-green-darkest border-gray-darkest border border-solid rounded-full w-full focus:outline-none"
+					onChange={handleTextBoxChange} value={fee}
+	        ref={textBoxRef}
 				/>
-			</SliderWrapper>
+				<SliderWrapper>
+					<input type="range" id="fee" name="fee" min="0" max="5" step="0.00000001" role="slider"
+						onChange={onInputRangeChange} value={fee}
+					  ref={inputRangeRef}
+					/>
+				</SliderWrapper>
+			</section>
 		</>
 	);
 };
