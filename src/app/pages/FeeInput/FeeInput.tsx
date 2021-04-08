@@ -13,6 +13,7 @@ export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 	const onInputRangeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		updateFee(event.target.value);
 		setInputRangeColor();
+		setTextBoxColor();
 	}
 
 	const handleTextBoxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -31,10 +32,16 @@ export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 	const labelRef = useRef<any>(null);
 
 	const setInputRangeColor = () => {
-		const elem = inputRangeRef.current;
-		const newValue = (elem.value - elem.min) / (elem.max - elem.min) * 100;
-		elem.style.background = `linear-gradient(to right, #FBC457 0%, #FBC457 ${newValue}%, #C7C9CD ${newValue}%, #C7C9CD 100%)`
+		const inputRange = inputRangeRef.current;
+		const newValue = (inputRange.value - inputRange.min) / (inputRange.max - inputRange.min) * 100;
+		inputRange.style.background = `linear-gradient(to right, #FBC457 0%, #FBC457 ${newValue}%, #C7C9CD ${newValue}%, #C7C9CD 100%)`
 	};
+
+	const setTextBoxColor = () => {
+		const textBox = textBoxRef.current;
+		textBox.style.color = '#1F2121';
+	};
+
 
 	const onTextBoxHover = () => {
 		labelRef.current.style.color = '#046E62';
