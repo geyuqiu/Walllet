@@ -3,7 +3,7 @@
 exports[`Routing should match snapshot 1`] = `
 <div>
   <label
-    class="text-black-dark focus:outline-none"
+    class="text-black-dark"
     for="fee"
   >
     Fee

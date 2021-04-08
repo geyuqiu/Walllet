@@ -7,7 +7,7 @@ exports[`App should match snapshot 1`] = `
     role="main"
   >
     <label
-      class="text-black-dark focus:outline-none"
+      class="text-black-dark"
       for="fee"
     >
       Fee

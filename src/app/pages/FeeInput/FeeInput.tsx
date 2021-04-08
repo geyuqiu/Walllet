@@ -17,7 +17,7 @@ export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 		updateSliderValue(value);
 		updateFee(value);
 		updateTextBoxValue(value);
-		setInputRangeColor('#FBC457');
+		setInputRangeColor('#FBC457', Number(value));
 		setTextBoxColor();
 	}
 
@@ -25,9 +25,10 @@ export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 		const value = parse(event.target.value);
 		updateTextBoxValue(value);
 		console.log('value', value);
-		if (Number(value) > 0) {
+		if (!value.endsWith('.')) {
 			updateFee(value);
-			setInputRangeColor('#046E62');
+			setInputRangeColor('#046E62', Number(value));
+			updateSliderValue(value);
 		}
 		emitValueToSatoshi(value);
 	};
@@ -41,9 +42,10 @@ export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 	const textBoxRef = useRef<any>(null);
 	const labelRef = useRef<any>(null);
 
-	const setInputRangeColor = (colorBeforeThumb: string) => {
+	const setInputRangeColor = (colorBeforeThumb: string, value: number) => {
 		const inputRange = inputRangeRef.current;
-		const newValue = (inputRange.value - inputRange.min) / (inputRange.max - inputRange.min) * 100;
+		const newValue = (value - inputRange.min) / (inputRange.max - inputRange.min) * 100;
+		console.log(newValue);
 		inputRange.style.background = `linear-gradient(to right, ${colorBeforeThumb} 0%, ${colorBeforeThumb} ${newValue}%, #C7C9CD ${newValue}%, #C7C9CD 100%)`
 	};
 
