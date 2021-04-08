@@ -1,4 +1,4 @@
-import React, {useRef, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import {styled} from "twin.macro";
 
 import {hundredMillion, parse} from './FeeParser';
@@ -31,11 +31,17 @@ export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 		elem.style.background = `linear-gradient(to right, #FBC457 0%, #FBC457 ${newValue}%, #C7C9CD ${newValue}%, #C7C9CD 100%)`
 	};
 
+	const textBoxRef = useRef<any>(null);
+	useEffect(() => {
+		textBoxRef.current.value = '';
+	}, []);
+
 	return (
 		<>
 			<label htmlFor="fee" className="text-black-dark">Fee:</label>
 			<input role="textbox" placeholder="Simple Text"
 				onChange={handleTextBoxChange} value={fee}
+        ref={textBoxRef}
 			/>
 			<SliderWrapper>
 				<input type="range" id="fee" name="fee" min="0" max="5" step="0.00000001" role="slider"
