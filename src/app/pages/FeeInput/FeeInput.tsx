@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from "react";
+import React, {useRef, useState} from "react";
 import {styled} from "twin.macro";
 
 import {hundredMillion, parse} from './FeeParser';
@@ -10,16 +10,25 @@ const SliderWrapper = styled.div`
 
 export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 	const [fee, updateFee] = useState("0");
+	const [sliderValue, updateSliderValue] = useState('0');
+	const [textBoxValue, updateTextBoxValue] = useState('currency: DARK');
 	const onInputRangeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-		updateFee(event.target.value);
+		const value = event.target.value;
+		updateSliderValue(value);
+		updateFee(value);
+		updateTextBoxValue(value);
 		setInputRangeColor('#FBC457');
 		setTextBoxColor();
 	}
 
 	const handleTextBoxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		const value = parse(event.target.value);
-		updateFee(value);
-		setInputRangeColor('#046E62');
+		updateTextBoxValue(value);
+		console.log('value', value);
+		if (Number(value) > 0) {
+			updateFee(value);
+			setInputRangeColor('#046E62');
+		}
 		emitValueToSatoshi(value);
 	};
 
@@ -50,23 +59,19 @@ export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 		labelRef.current.style.color = '#1F2121';
 	}
 
-	useEffect(() => {
-		textBoxRef.current.value = '';
-	}, []);
-
 	return (
 		<>
-			<label htmlFor="fee" className="text-black-dark focus:outline-none"
+			<label htmlFor="fee" className="text-black-dark"
 			       ref={labelRef}>Fee</label>
 			<section onMouseEnter={onTextBoxHover} onMouseLeave={exitTextBoxHover}>
 				<input role="textbox" placeholder="currency: DARK"
 	        className="p-4 text-gray-darkest hover:border-green-darkest border-gray-darkest border border-solid rounded-full w-full focus:outline-none"
-					onChange={handleTextBoxChange} value={fee}
+					onChange={handleTextBoxChange} value={textBoxValue}
 	        ref={textBoxRef}
 				/>
 				<SliderWrapper>
 					<input type="range" id="fee" name="fee" min="0" max="5" step="0.00000001" role="slider"
-						onChange={onInputRangeChange} value={fee}
+						onChange={onInputRangeChange} value={sliderValue}
 					  ref={inputRangeRef}
 					/>
 				</SliderWrapper>
