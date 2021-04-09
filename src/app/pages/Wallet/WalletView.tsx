@@ -49,7 +49,7 @@ export const WalletView = () => {
 	return (
 		<>
 			<Card className="bg-green-dark">
-				<Card className="bg-black-darkest text-white">
+				<Card className="bg-black-darkest text-white rounded-lg">
 					<div className="flex items-center my-auto">
 						<LogoContainer>
 							<Logo width={44}/>
@@ -75,7 +75,7 @@ export const WalletView = () => {
 					<div> {wallet!.balance}</div>
 				</Card>
 			</Card>
-			<section className="mx-3 sm:mx-12 pt-12">
+			<section className="sm:mx-8 ml-6 mr-3 pt-12">
 				{isLoadingTransactions && <p>Loading!</p>}
 				{!isLoadingTransactions && !transactions.length && <p>No transactions were found for this wallet!</p>}
 				{!isLoadingTransactions && transactions.length &&
