@@ -7,22 +7,22 @@ exports[`Footer should match snapshot 1`] = `
     data-testid="TableRow"
   >
     <td
-      class="group relative text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+      class="sm:pt-3 sm:pb-3"
     >
       <div
-        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hLlKXb justify-start flex flex-inline align-top justify-end flex-row-reverse"
+        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 dbZfon justify-end sm:justify-start"
       >
         <a
-          class="text-green-dark"
+          class="text-green-dark hover:text-green-darkest active:text-green-light font-semibold hover:underline"
           href="https://explorer.ark.io/transaction/77a740c7517ae164b35e4e28da7251543d9d98e34e90d3baf604fc582159c352"
         >
           <span
-            class="hidden lg:table-cell"
+            class="table-cell lg:table-cell sm:hidden"
           >
             77a74...9c352
           </span>
           <div
-            class="sc-bdfBwQ iyevwF table-cell lg:hidden"
+            class="sc-bdfBwQ iyevwF hidden lg:hidden sm:table-cell"
             height="20"
             width="20"
           >
@@ -35,7 +35,7 @@ exports[`Footer should match snapshot 1`] = `
     </td>
     <td>
       <div
-        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hLlKXb justify-start border-l border-theme-secondary-300"
+        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 dbZfon justify-end sm:justify-start sm:border-l border-theme-secondary-300 pl-5 pr-5"
       >
         <a
           class=""
@@ -47,7 +47,7 @@ exports[`Footer should match snapshot 1`] = `
     </td>
     <td>
       <div
-        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hLlKXb justify-start border-l border-theme-secondary-300"
+        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 dbZfon justify-end sm:justify-start sm:border-l border-theme-secondary-300"
       >
         <a
           class=""
@@ -61,14 +61,15 @@ exports[`Footer should match snapshot 1`] = `
       class="hidden xl:table-cell"
     >
       <div
-        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hLlKXb justify-center border-l border-theme-secondary-300"
+        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 dbZfon justify-end sm:justify-center sm:border-l border-theme-secondary-300"
       >
         2021-04-01T11:41:20.000Z
       </div>
     </td>
+    ´
     <td>
       <div
-        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hLlKXb justify-end border-l border-theme-secondary-300"
+        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 dbZfon justify-end sm:border-l border-theme-secondary-300"
       >
         100000000000000
       </div>
@@ -77,7 +78,7 @@ exports[`Footer should match snapshot 1`] = `
       class="hidden lg:table-cell"
     >
       <div
-        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hLlKXb justify-end border-l border-theme-secondary-300"
+        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 dbZfon justify-end sm:border-l border-theme-secondary-300"
       >
         1000000
       </div>

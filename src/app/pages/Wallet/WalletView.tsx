@@ -8,11 +8,12 @@ import {TransactionRow} from './TransactionRow/TransactionRow';
 import {Wallet} from './model';
 
 export const WalletView = () => {
+	const [isLoadingTransactions, setIsLoadingTransactions] = useState(true);
 	const [wallet, setWallet] = useState<Wallet | null >({
 		address: 'AdzbhuDTyhnfAqepZzVcVsgd1Ym6FgETuW',
 		balance: '0'
 	});
-	const {wallets, transactions} = useFetch(wallet);
+	const {wallets, transactions} = useFetch(wallet, setIsLoadingTransactions);
 
 	return (
 		<section className="mx-3 sm:mx-12">
@@ -20,13 +21,14 @@ export const WalletView = () => {
 				? <div>{wallet!.address} {wallet!.balance}</div>
 				: <div/>
 			}
-			{transactions.length
-				? <Table columns={tableColumns} data={transactions}>
-						{(transaction: Transaction, index: number) => (
-							<TransactionRow transaction={transaction} address={wallet!.address}/>
-						)}
+			{isLoadingTransactions && <p>Loading!</p>}
+			{!isLoadingTransactions && !transactions.length && <p>No transactions were found for this wallet!</p>}
+			{!isLoadingTransactions && transactions.length &&
+				<Table columns={tableColumns} data={transactions}>
+					{(transaction: Transaction, index: number) => (
+						<TransactionRow transaction={transaction} address={wallet!.address}/>
+					)}
 				</Table>
-				: <p>No transactions were found for this wallet!</p>
 			}
 		</section>
 	);

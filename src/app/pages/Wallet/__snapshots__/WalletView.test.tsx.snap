@@ -3,10 +3,12 @@
 exports[`WalletView should match snapshot 1`] = `
 <div>
   <section
-    class="m-12"
+    class="mx-3 sm:mx-12"
   >
     <div />
-    <div />
+    <p>
+      No transactions were found for this wallet!
+    </p>
   </section>
 </div>
 `;
