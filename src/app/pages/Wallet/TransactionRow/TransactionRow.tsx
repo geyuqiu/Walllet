@@ -1,9 +1,10 @@
+import {Icon} from "app/components/Icon/Icon";
 import React from "react";
 
-import {Icon} from '../../../components/Icon';
 import {TableCell} from '../../../components/Table/TableCell';
 import {TableRow} from "../../../components/Table/TableRow";
 import {Transaction} from './model';
+import {Link} from '../../../components/Link/Link';
 
 type TransactionRowProps = {
 	transaction: Transaction;
@@ -17,11 +18,11 @@ export const TransactionRow = ({transaction, address}: TransactionRowProps) => {
 
 			<TableCell innerClassName="justify-end sm:justify-start"
 			           className="sm:pt-3 sm:pb-3">
-				<a href={'https://explorer.ark.io/transaction/' + transaction.id}
-				   className="text-green-dark hover:text-green-darkest active:text-green-light font-semibold hover:underline">
+				<Link href={'https://explorer.ark.io/transaction/' + transaction.id}
+				      className="text-green-dark hover:text-green-darkest active:text-green-light font-semibold hover:underline">
 					<span className="table-cell lg:table-cell sm:hidden">{trimLongText(transaction.id)}</span>
 					<Icon name="Txid" width={20} height={20} className="hidden lg:hidden sm:table-cell"/>
-				</a>
+				</Link>
 			</TableCell>
 
 			<TableCell innerClassName="justify-end sm:justify-start sm:border-l border-theme-secondary-300 pl-5 pr-5">

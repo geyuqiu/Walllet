@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link should render 1`] = `
+<div>
+  <a
+    class="text-green-dark hover:text-green-darkest active:text-green-light font-semibold hover:underline"
+    href="https://test.de"
+  >
+    link
+  </a>
+</div>
+`;

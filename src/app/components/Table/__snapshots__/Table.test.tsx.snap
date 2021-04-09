@@ -3,7 +3,7 @@
 exports[`Table should render 1`] = `
 <div>
   <div
-    class="Table__TableWrapper-ck3yk8-0 jSDTXo -mt-3"
+    class="Table__TableWrapper-ck3yk8-0 Crzoj -mt-3"
     role="table"
   >
     <table
@@ -16,7 +16,7 @@ exports[`Table should render 1`] = `
           role="row"
         >
           <th
-            class="group border text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-1"
+            class="group border text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 pl-5 pr-5 font-semibold hasBorder w-1"
             colspan="1"
             data-testid="table__th--0"
             role="columnheader"
@@ -46,7 +46,7 @@ exports[`Table should render 1`] = `
             </div>
           </th>
           <th
-            class="group border text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+            class="group border text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 pl-5 pr-5 font-semibold"
             colspan="1"
             data-testid="table__th--1"
             role="columnheader"
@@ -76,7 +76,7 @@ exports[`Table should render 1`] = `
             </div>
           </th>
           <th
-            class="group border text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+            class="group border text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 pl-5 pr-5 font-semibold hasBorder"
             colspan="1"
             data-testid="table__th--2"
             role="columnheader"
@@ -127,7 +127,7 @@ exports[`Table should render 1`] = `
 exports[`Table should render empty rows if template not provided 1`] = `
 <div>
   <div
-    class="Table__TableWrapper-ck3yk8-0 jSDTXo -mt-3"
+    class="Table__TableWrapper-ck3yk8-0 Crzoj -mt-3"
     role="table"
   >
     <table
@@ -140,7 +140,7 @@ exports[`Table should render empty rows if template not provided 1`] = `
           role="row"
         >
           <th
-            class="group border text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder w-1"
+            class="group border text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 pl-5 pr-5 font-semibold hasBorder w-1"
             colspan="1"
             data-testid="table__th--0"
             role="columnheader"
@@ -170,7 +170,7 @@ exports[`Table should render empty rows if template not provided 1`] = `
             </div>
           </th>
           <th
-            class="group border text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold"
+            class="group border text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 pl-5 pr-5 font-semibold"
             colspan="1"
             data-testid="table__th--1"
             role="columnheader"
@@ -200,7 +200,7 @@ exports[`Table should render empty rows if template not provided 1`] = `
             </div>
           </th>
           <th
-            class="group border text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 first:pl-0 last:pr-0 font-semibold hasBorder"
+            class="group border text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 dark:text-theme-secondary-700 dark:border-theme-secondary-800 m-0 p-3 pl-5 pr-5 font-semibold hasBorder"
             colspan="1"
             data-testid="table__th--2"
             role="columnheader"

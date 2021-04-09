@@ -7,7 +7,7 @@ exports[`WalletView should match snapshot 1`] = `
   >
     <div />
     <p>
-      No transactions were found for this wallet!
+      Loading!
     </p>
   </section>
 </div>

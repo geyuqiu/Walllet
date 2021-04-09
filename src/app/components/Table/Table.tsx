@@ -4,9 +4,9 @@ import {useSortBy, useTable} from "react-table";
 import {styled} from "twin.macro";
 
 import useViewport from '../../hooks/useViewport';
-import {Icon} from "../Icon";
-import {tableStyle} from "./Table.styles";
 import {HideColumnsResponsive} from '../../pages/Wallet/WalletView';
+import {Icon} from "../Icon/Icon";
+import {tableStyle} from "./Table.styles";
 
 type TableProps = {
 	children?: any;
