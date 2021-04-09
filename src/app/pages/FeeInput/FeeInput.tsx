@@ -10,13 +10,11 @@ const SliderWrapper = styled.div`
 const initialValue = '0';
 
 export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
-	const [fee, setFee] = useState(initialValue);
 	const [sliderValue, setSliderValue] = useState(initialValue);
 	const [textBoxValue, setTextBoxValue] = useState('currency: DARK');
 	const onInputRangeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		const value = event.target.value;
 		setSliderValue(value);
-		setFee(value);
 		setTextBoxValue(value);
 		setInputRangeColor('#FBC457', Number(value));
 		setTextBoxColor();
@@ -28,7 +26,6 @@ export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 		if (!value.endsWith('.')) {
 			const nullSafe = !value ? initialValue : value;
 			setSliderValue(nullSafe);
-			setFee(nullSafe);
 			setInputRangeColor('#046E62', Number(value));
 			emitValueToSatoshi(nullSafe);
 		}
