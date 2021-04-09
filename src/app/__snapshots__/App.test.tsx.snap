@@ -6,33 +6,41 @@ exports[`App should match snapshot 1`] = `
     class="debug-screens bg-white min-h-full"
     role="main"
   >
-    <label
-      class="text-black-dark"
-      for="fee"
+    <section
+      class="p-12"
     >
-      Fee
-    </label>
-    <section>
-      <input
-        class="p-4 text-gray-darkest hover:border-green-darkest border-gray-darkest border border-solid rounded-full w-full focus:outline-none"
-        placeholder="currency: DARK"
-        role="textbox"
-        value="currency: DARK"
-      />
-      <div
-        class="FeeInput__SliderWrapper-sc-1tci9nq-0 kMhBBq"
+      <label
+        class="text-black-dark pl-6"
+        for="fee"
       >
+        Fee
+      </label>
+      <section>
         <input
-          id="fee"
-          max="5"
-          min="0"
-          name="fee"
-          role="slider"
-          step="0.00000001"
-          type="range"
-          value="0"
+          class="p-4 text-gray-darkest hover:border-green-darkest border-gray-darkest border border-solid rounded-full w-full focus:outline-none"
+          placeholder="currency: DARK"
+          role="textbox"
+          value="currency: DARK"
         />
-      </div>
+        <section
+          class="pl-6"
+        >
+          <div
+            class="FeeInput__SliderWrapper-sc-1tci9nq-0 kMhBBq"
+          >
+            <input
+              id="fee"
+              max="5"
+              min="0"
+              name="fee"
+              role="slider"
+              step="0.00000001"
+              type="range"
+              value="0"
+            />
+          </div>
+        </section>
+      </section>
     </section>
   </main>
   <footer

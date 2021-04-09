@@ -53,21 +53,23 @@ export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 	const exitTextBoxHover = () => labelRef.current.style.color = '#1F2121';
 
 	return (
-		<section className="p-12">
-			<label htmlFor="fee" className="text-black-dark"
+		<section className="p-12 w-1/2">
+			<label htmlFor="fee" className="text-black-dark pl-6"
 			       ref={labelRef}>Fee</label>
 			<section onMouseEnter={onTextBoxHover} onMouseLeave={exitTextBoxHover}>
 				<input role="textbox" placeholder="currency: DARK"
-	        className="p-4 text-gray-darkest hover:border-green-darkest border-gray-darkest border border-solid rounded-full w-full focus:outline-none"
+	        className="p-4 text-gray-darkest hover:border-green-darkest border-gray-darkest border border-solid rounded-50vh w-full focus:outline-none"
 					onChange={handleTextBoxChange} value={textBoxValue}
 	        ref={textBoxRef}
 				/>
-				<SliderWrapper>
-					<input type="range" id="fee" name="fee" min="0" max="5" step="0.00000001" role="slider"
-						onChange={onInputRangeChange} value={sliderValue}
-					  ref={inputRangeRef}
-					/>
-				</SliderWrapper>
+				<section className="px-6">
+					<SliderWrapper>
+						<input type="range" id="fee" name="fee" min="0" max="5" step="0.00000001" role="slider"
+							onChange={onInputRangeChange} value={sliderValue}
+						  ref={inputRangeRef}
+						/>
+					</SliderWrapper>
+				</section>
 			</section>
 		</section>
 	);
