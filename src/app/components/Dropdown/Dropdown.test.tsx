@@ -1,9 +1,9 @@
-import { act } from "@testing-library/react-hooks";
-import { clickOutsideHandler } from "app/hooks/click-outside";
+import {act} from "@testing-library/react-hooks";
+import {clickOutsideHandler} from "app/hooks/click-outside";
 import React from "react";
-import { fireEvent, render } from "testing-library";
+import {fireEvent, render} from "testing-library";
 
-import { Dropdown, DropdownOptionGroup } from "./Dropdown";
+import {Dropdown, DropdownOptionGroup} from "./Dropdown";
 
 const options = [
 	{ label: "Option 1", value: "1" },

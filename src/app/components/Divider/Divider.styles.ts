@@ -1,4 +1,4 @@
-import tw, { css } from "twin.macro";
+import tw, {css} from "twin.macro";
 
 const baseStyle = [tw`border-t border-solid`];
 

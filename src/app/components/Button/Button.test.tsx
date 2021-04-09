@@ -1,7 +1,7 @@
-import {fireEvent,render} from '@testing-library/react';
+import {fireEvent, render} from '@testing-library/react';
 import React from "react";
 
-import { Button } from "./Button";
+import {Button} from "./Button";
 
 describe.skip("Button", () => {
 	it("should render", () => {

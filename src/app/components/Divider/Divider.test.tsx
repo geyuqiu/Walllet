@@ -1,7 +1,7 @@
 import React from "react";
-import { render } from "testing-library";
+import {render} from "testing-library";
 
-import { Divider } from "./Divider";
+import {Divider} from "./Divider";
 
 describe("Divider", () => {
 	it("should render", () => {

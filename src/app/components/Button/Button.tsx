@@ -1,10 +1,10 @@
-import { Spinner } from "app/components/Spinner";
+import {Spinner} from "app/components/Spinner";
 import React from "react";
-import { styled } from "twin.macro";
-import { Size } from "types";
+import {styled} from "twin.macro";
+import {Size} from "types";
 
 import {Icon} from '../Icon/Icon';
-import { getStyles } from "./Button.styles";
+import {getStyles} from "./Button.styles";
 
 type ButtonProps = {
 	size?: Size;

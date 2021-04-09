@@ -1,5 +1,5 @@
-import tw, { css } from "twin.macro";
-import { ButtonVariant, Size } from "types";
+import tw, {css} from "twin.macro";
+import {ButtonVariant, Size} from "types";
 
 const baseStyle = [
 	tw`inline-flex items-center justify-center font-semibold text-center transition-all duration-100 ease-linear rounded leading-tight focus:ring-inset focus:ring-2 focus:ring-theme-secondary-300 focus:outline-none`,
