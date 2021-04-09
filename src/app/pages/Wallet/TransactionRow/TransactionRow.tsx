@@ -40,7 +40,7 @@ export const TransactionRow = ({transaction, address}: TransactionRowProps) => {
 			           className="hidden xl:table-cell"
 			>
 				{transaction.timestamp}
-			</TableCell>´
+			</TableCell>
 
 			<TableCell innerClassName="justify-end sm:border-l border-theme-secondary-300">
 				{transaction.amount}
