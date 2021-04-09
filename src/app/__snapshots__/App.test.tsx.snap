@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match snapshot 1`] = `
+<div>
+  <main
+    class="debug-screens bg-white min-h-full"
+    role="main"
+  >
+    <label
+      class="text-black-dark"
+      for="fee"
+    >
+      Fee
+    </label>
+    <section>
+      <input
+        class="p-4 text-gray-darkest hover:border-green-darkest border-gray-darkest border border-solid rounded-full w-full focus:outline-none"
+        placeholder="currency: DARK"
+        role="textbox"
+        value="currency: DARK"
+      />
+      <div
+        class="FeeInput__SliderWrapper-sc-1tci9nq-0 kMhBBq"
+      >
+        <input
+          id="fee"
+          max="5"
+          min="0"
+          name="fee"
+          role="slider"
+          step="0.00000001"
+          type="range"
+          value="0"
+        />
+      </div>
+    </section>
+  </main>
+  <footer
+    class="bg-gray-light flex items-center justify-center p-4 fixed bottom-0 w-full z-100 text-black-dark"
+  >
+    <span>
+      2020 © ARK.io | All rights reserved
+    </span>
+  </footer>
+</div>
+`;

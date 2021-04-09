@@ -53,7 +53,7 @@ export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 	const exitTextBoxHover = () => labelRef.current.style.color = '#1F2121';
 
 	return (
-		<>
+		<section className="p-12">
 			<label htmlFor="fee" className="text-black-dark"
 			       ref={labelRef}>Fee</label>
 			<section onMouseEnter={onTextBoxHover} onMouseLeave={exitTextBoxHover}>
@@ -69,7 +69,7 @@ export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 					/>
 				</SliderWrapper>
 			</section>
-		</>
+		</section>
 	);
 };
 
