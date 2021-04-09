@@ -4,7 +4,6 @@ import {Wrapper} from "./Card.styles";
 
 type CardProps = {
 	children: React.ReactNode;
-	addonIcons?: React.ReactNode;
 	className?: string;
 };
 
