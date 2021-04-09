@@ -51,8 +51,8 @@ export const parseTransaction = (response: any) => {
 	// console.log('transactions: ', response);
 	response?.data.forEach((data: any) => {
 		data.timestamp = moment(data.timestamp.human).format(dateFormat);
-		data.amount = `${dollarToBtn(data.amount, 7)} ${currency}`;
-		data.fee = `${dollarToBtn(data.fee, 8)} ${currency}`;
+		data.amount = `${dollarToBtn(data.amount, 2)} ${currency}`;
+		data.fee = `${dollarToBtn(data.fee, 2)} ${currency}`;
 	});
 	return response.data;
 };
