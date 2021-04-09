@@ -49,29 +49,31 @@ export const WalletView = () => {
 	return (
 		<>
 			<Card className="bg-green-dark">
-				<div className="flex items-center my-auto">
-					<LogoContainer>
-						<Logo width={44}/>
-					</LogoContainer>
+				<Card className="bg-black-darkest text-white">
+					<div className="flex items-center my-auto">
+						<LogoContainer>
+							<Logo width={44}/>
+						</LogoContainer>
 
-					<span className="text-2xl font-bold">ARK Wallet</span>
-				</div>
-				<div className="mx-8 -my-2">
-					<Divider className="border-theme-secondary-300 dark:border-theme-secondary-600"/>
-				</div>
-				<Dropdown
-					toggleContent={
-						<div className="relative">
-							<Button size="icon" className="text-left" icon="Address">
-								{wallet!.address}
-								<Icon name="ChevronDown" width={20} height={20}/>
-							</Button>
-						</div>
-					}
-					options={walletDisplayOptions}
-					dropdownClass="top-3 text-left"
-				/>
-				<div> {wallet!.balance}</div>
+						<span className="text-2xl font-bold">ARK Wallet</span>
+					</div>
+					<div className="mx-8 -my-2">
+						<Divider className="border-theme-secondary-300 dark:border-theme-secondary-600"/>
+					</div>
+					<Dropdown
+						toggleContent={
+							<div className="relative">
+								<Button size="icon" className="text-left" icon="Address">
+									{wallet!.address}
+									<Icon name="ChevronDown" width={20} height={20}/>
+								</Button>
+							</div>
+						}
+						options={walletDisplayOptions}
+						dropdownClass="top-3 text-left"
+					/>
+					<div> {wallet!.balance}</div>
+				</Card>
 			</Card>
 			<section className="mx-3 sm:mx-12 pt-12">
 				{isLoadingTransactions && <p>Loading!</p>}
