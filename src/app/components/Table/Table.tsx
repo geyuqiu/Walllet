@@ -14,7 +14,7 @@ type TableProps = {
 	columns: any[];
 	hideHeader?: boolean;
 	initialState?: Record<string, any>;
-	hideColumnsAtBreakpoint: any[];
+	hideColumnsAtBreakpoint?: any[];
 };
 
 const TableWrapper = styled.div`
