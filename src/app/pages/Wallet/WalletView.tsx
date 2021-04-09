@@ -1,7 +1,11 @@
-import { Dropdown } from "app/components/Dropdown";
+import {Dropdown} from "app/components/Dropdown";
 import React, {useState} from "react";
+import styled from 'styled-components';
+import tw from 'twin.macro';
 
+import {SvgCollection} from "../../assets/svg";
 import {Button} from '../../components/Button';
+import {Divider} from '../../components/Divider';
 import {Icon} from '../../components/Icon/Icon';
 import {Table} from '../../components/Table/Table';
 import {feeAccessor, tableColumns, timestampAccessor} from '../../components/Table/TableColumns';
@@ -9,7 +13,6 @@ import {useFetch} from '../../hooks/useFetch';
 import {Wallet} from './model';
 import {Transaction} from './TransactionRow/model';
 import {TransactionRow} from './TransactionRow/TransactionRow';
-import {Divider} from '../../components/Divider';
 
 export interface HideColumnsResponsive {
 	accessor: string;
@@ -20,6 +23,14 @@ const hideColumnsAtBreakpoint: HideColumnsResponsive[] = [
 	{accessor: timestampAccessor, breakPoint: 1280},
 	{accessor: feeAccessor, breakPoint: 1024}
 ];
+
+const LogoContainer = styled.div`
+	${tw`flex items-center justify-center mr-2 rounded-sm text-theme-background bg-theme-secondary-500 dark:bg-theme-secondary-700`};
+	width: 18px;
+	height: 18px;
+`;
+
+const {Logo} = SvgCollection;
 
 export const WalletView = () => {
 	const [isLoadingTransactions, setIsLoadingTransactions] = useState(true);
@@ -37,7 +48,13 @@ export const WalletView = () => {
 	return (
 		<section className="mx-3 sm:mx-12 pt-12">
 			<section className="mb-12 bg-green-dark">
-				<section>ARK Wallet</section>
+				<div className="flex items-center my-auto">
+					<LogoContainer>
+						<Logo width={44}/>
+					</LogoContainer>
+
+					<span className="text-2xl font-bold">ARK Wallet</span>
+				</div>
 				<div className="mx-8 -my-2">
 					<Divider className="border-theme-secondary-300 dark:border-theme-secondary-600"/>
 				</div>
