@@ -6,12 +6,12 @@ export const toggleColumn = (toggleHideColumn: Function, innerWidth: number, col
 	toggleHideColumn(columnAccessor, innerWidth >= breakPoint ? false : true);
 };
 
-export default function useViewport(toggleHideColumn: Function, hideColumnsAtBreakpoint: HideColumnsResponsive[]) {
+export default function useViewport(toggleHideColumn: Function, hideColumnsAtBreakpoint?: HideColumnsResponsive[]) {
 	const [viewport, setViewport] = useState('');
 
 	const handleResize = () => {
 		const innerWidth = window.innerWidth;
-		hideColumnsAtBreakpoint.forEach((hideColumnAtBreakpoint: HideColumnsResponsive) =>
+		hideColumnsAtBreakpoint?.forEach((hideColumnAtBreakpoint: HideColumnsResponsive) =>
 			toggleColumn(toggleHideColumn, innerWidth, hideColumnAtBreakpoint.accessor, hideColumnAtBreakpoint.breakPoint)
 		);
 
