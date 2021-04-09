@@ -58,7 +58,7 @@ export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 
 	return (
 		<section className="p-12 w-1/2">
-			<label htmlFor="fee" className="text-black-dark pl-6 leading-relaxed font-semibold"
+			<label className="text-black-dark pl-6 leading-relaxed font-semibold"
 			       ref={labelRef}>Fee</label>
 			<section onMouseEnter={onTextBoxHover} onMouseLeave={exitTextBoxHover}>
 				<input role="textbox" placeholder="currency: DARK"
