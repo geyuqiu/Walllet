@@ -14,13 +14,14 @@ type TableProps = {
 	columns: any[];
 	hideHeader?: boolean;
 	initialState?: Record<string, any>;
+	hideColumnsAtBreakpoint: any[];
 };
 
 const TableWrapper = styled.div`
 	${tableStyle}
 `;
 
-export const Table = ({children, data, columns, hideHeader, className, initialState}: TableProps) => {
+export const Table = ({children, data, columns, hideHeader, className, initialState, hideColumnsAtBreakpoint}: TableProps) => {
 	const tableData = useMemo(() => data, [data]);
 	const tableColumns = useMemo(() => columns, [columns]);
 
@@ -35,7 +36,7 @@ export const Table = ({children, data, columns, hideHeader, className, initialSt
 		useSortBy,
 	);
 
-	useViewport(toggleHideColumn);
+	useViewport(toggleHideColumn, hideColumnsAtBreakpoint);
 
 	const renderChildNode = (data: any, index: number) => {
 		if (typeof children === "function") {
@@ -123,5 +124,5 @@ export const Table = ({children, data, columns, hideHeader, className, initialSt
 Table.defaultProps = {
 	data: [],
 	columns: [],
-	hideColumns: false,
+	hideColumns: false
 };

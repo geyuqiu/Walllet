@@ -1,11 +1,21 @@
 import React, {useState} from "react";
 
-import {useFetch} from '../../hooks/useFetch';
 import {Table} from '../../components/Table/Table';
-import {tableColumns} from '../../components/Table/TableColumns';
+import {feeAccessor, tableColumns, timestampAccessor} from '../../components/Table/TableColumns';
+import {useFetch} from '../../hooks/useFetch';
+import {Wallet} from './model';
 import {Transaction} from './TransactionRow/model';
 import {TransactionRow} from './TransactionRow/TransactionRow';
-import {Wallet} from './model';
+
+export interface HideColumnsResponsive {
+	accessor: string;
+	breakPoint: number;
+}
+
+const hideColumnsAtBreakpoint: HideColumnsResponsive[] = [
+	{accessor: timestampAccessor, breakPoint: 1280},
+	{accessor: feeAccessor, breakPoint: 1024}
+];
 
 export const WalletView = () => {
 	const [isLoadingTransactions, setIsLoadingTransactions] = useState(true);
@@ -24,7 +34,7 @@ export const WalletView = () => {
 			{isLoadingTransactions && <p>Loading!</p>}
 			{!isLoadingTransactions && !transactions.length && <p>No transactions were found for this wallet!</p>}
 			{!isLoadingTransactions && transactions.length &&
-				<Table columns={tableColumns} data={transactions}>
+				<Table columns={tableColumns} data={transactions} hideColumnsAtBreakpoint={hideColumnsAtBreakpoint}>
 					{(transaction: Transaction, index: number) => (
 						<TransactionRow transaction={transaction} address={wallet!.address}/>
 					)}

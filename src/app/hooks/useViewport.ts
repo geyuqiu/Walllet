@@ -1,18 +1,19 @@
 import {useEffect, useState} from 'react'
 
-import {feeAccessor, timestampAccessor} from '../components/Table/TableColumns';
+import {HideColumnsResponsive} from '../pages/Wallet/WalletView';
 
 export const toggleColumn = (toggleHideColumn: Function, innerWidth: number, columnAccessor: string, breakPoint: number) => {
 	toggleHideColumn(columnAccessor, innerWidth >= breakPoint ? false : true);
 };
 
-export default function useViewport(toggleHideColumn: Function) {
+export default function useViewport(toggleHideColumn: Function, hideColumnsAtBreakpoint: any[]) {
 	const [viewport, setViewport] = useState('');
 
 	const handleResize = () => {
 		const innerWidth = window.innerWidth;
-		toggleColumn(toggleHideColumn, innerWidth, timestampAccessor, 1280);
-		toggleColumn(toggleHideColumn, innerWidth, feeAccessor, 1024);
+		hideColumnsAtBreakpoint.forEach((hideColumnAtBreakpoint: HideColumnsResponsive) =>
+			toggleColumn(toggleHideColumn, innerWidth, hideColumnAtBreakpoint.accessor, hideColumnAtBreakpoint.breakPoint)
+		);
 
 		if (innerWidth > 1280) {
 			setViewport('huge');

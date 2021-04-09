@@ -10,7 +10,8 @@ function fireResize(width: number) {
 }
 
 function TestViewportComponent() {
-	const viewport = useViewport((columnName: string, hide: boolean) => {});
+	const viewport = useViewport((columnName: string, hide: boolean) => {
+	}, hideColumns);
 	return <span>{viewport}</span>;
 }
 
