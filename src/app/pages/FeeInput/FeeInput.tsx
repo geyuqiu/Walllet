@@ -16,13 +16,14 @@ export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 		const value = event.target.value;
 		setSliderValue(value);
 		setTextBoxValue(value);
+		setTextBoxStyles();
 		setInputRangeColor('#FBC457', Number(value));
-		setTextBoxColor();
 	}
 
 	const handleTextBoxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		const value = parse(event.target.value);
 		setTextBoxValue(value);
+		setTextBoxStyles();
 		if (!value.endsWith('.')) {
 			const nullSafe = !value ? initialValue : value;
 			setSliderValue(nullSafe);
@@ -46,7 +47,10 @@ export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 		inputRange.style.background = `linear-gradient(to right, ${colorBeforeThumb} 0%, ${colorBeforeThumb} ${newValue}%, #C7C9CD ${newValue}%, #C7C9CD 100%)`
 	};
 
-	const setTextBoxColor = () => textBoxRef.current.style.color = '#1F2121';
+	const setTextBoxStyles = () => {
+		textBoxRef.current.style.color = '#1F2121';
+		textBoxRef.current.style.fontWeight = '600';
+	}
 
 	const onTextBoxHover = () => labelRef.current.style.color = '#046E62';
 
@@ -54,7 +58,7 @@ export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 
 	return (
 		<section className="p-12 w-1/2">
-			<label htmlFor="fee" className="text-black-dark pl-6"
+			<label htmlFor="fee" className="text-black-dark pl-6 leading-relaxed font-semibold"
 			       ref={labelRef}>Fee</label>
 			<section onMouseEnter={onTextBoxHover} onMouseLeave={exitTextBoxHover}>
 				<input role="textbox" placeholder="currency: DARK"
