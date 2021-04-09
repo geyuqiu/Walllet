@@ -37,24 +37,14 @@ exports[`Footer should match snapshot 1`] = `
       <div
         class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 dbZfon justify-end sm:justify-start sm:border-l border-theme-secondary-300 pl-5 pr-5"
       >
-        <a
-          class=""
-          href="https://explorer.ark.io/wallets/AReY3W6nTv3utiG2em5nefKEsGQeqEVPN4"
-        >
-          AReY3...EVPN4
-        </a>
+        AReY3...EVPN4
       </div>
     </td>
     <td>
       <div
         class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 dbZfon justify-end sm:justify-start sm:border-l border-theme-secondary-300"
       >
-        <a
-          class=""
-          href="https://explorer.ark.io/wallets/AdzbhuDTyhnfAqepZzVcVsgd1Ym6FgETuW"
-        >
-          Adzbh...gETuW
-        </a>
+        Adzbh...gETuW
       </div>
     </td>
     <td

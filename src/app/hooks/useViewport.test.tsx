@@ -3,6 +3,7 @@ import React from 'react'
 
 import {feeAccessor, timestampAccessor} from '../components/Table/TableColumns';
 import useViewport, {toggleColumn} from './useViewport'
+import {HideColumnsResponsive} from '../pages/Wallet/WalletView';
 
 function fireResize(width: number) {
 	window.innerWidth = width;
@@ -10,8 +11,7 @@ function fireResize(width: number) {
 }
 
 function TestViewportComponent() {
-	const viewport = useViewport((columnName: string, hide: boolean) => {
-	}, hideColumns);
+	const viewport = useViewport((columnName: string, hide: boolean, hideColumnsAtBreakpoint: HideColumnsResponsive[]) => {});
 	return <span>{viewport}</span>;
 }
 
