@@ -123,6 +123,5 @@ export const Table = ({children, data, columns, hideHeader, className, initialSt
 
 Table.defaultProps = {
 	data: [],
-	columns: [],
-	hideColumns: false
+	columns: []
 };
