@@ -5,6 +5,7 @@ import tw from 'twin.macro';
 
 import {SvgCollection} from "../../assets/svg";
 import {Button} from '../../components/Button';
+import {Card} from '../../components/Card/Card';
 import {Divider} from '../../components/Divider';
 import {Icon} from '../../components/Icon/Icon';
 import {Table} from '../../components/Table/Table';
@@ -47,7 +48,7 @@ export const WalletView = () => {
 
 	return (
 		<>
-			<section className="mb-12 bg-green-dark">
+			<Card className="bg-green-dark">
 				<div className="flex items-center my-auto">
 					<LogoContainer>
 						<Logo width={44}/>
@@ -71,7 +72,7 @@ export const WalletView = () => {
 					dropdownClass="top-3 text-left"
 				/>
 				<div> {wallet!.balance}</div>
-			</section>
+			</Card>
 			<section className="mx-3 sm:mx-12 pt-12">
 				{isLoadingTransactions && <p>Loading!</p>}
 				{!isLoadingTransactions && !transactions.length && <p>No transactions were found for this wallet!</p>}
