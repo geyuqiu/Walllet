@@ -57,8 +57,11 @@ export const WalletView = () => {
 
 						<span className="text-2xl font-bold">ARK Wallet</span>
 					</div>
-					<div className="mx-8 -my-2">
-						<Divider className="border-theme-secondary-300 dark:border-theme-secondary-600"/>
+					<div className="mx-8 -my-2 lg:hidden">
+						<Divider className="border-theme-secondary-300 dark:border-theme-secondary-600" type="horizontal"/>
+					</div>
+					<div className="mx-8 -my-2 lg:block hidden">
+						<Divider className="border-theme-secondary-300 dark:border-theme-secondary-600" type="vertical"/>
 					</div>
 					<Dropdown
 						toggleContent={
