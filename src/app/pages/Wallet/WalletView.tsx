@@ -63,7 +63,7 @@ export const WalletView = () => {
 					<Dropdown
 						toggleContent={
 							<div className="relative">
-								<Button size="icon" className="text-left" icon="Address">
+								<Button size="icon" className="text-left" icon="Address" fill='#000000' stroke='#FBC457'>
 									{wallet!.address}
 									<Icon name="ChevronDown" width={20} height={20}/>
 								</Button>
@@ -72,7 +72,10 @@ export const WalletView = () => {
 						options={walletDisplayOptions}
 						dropdownClass="top-3 text-left"
 					/>
-					<div> {wallet!.balance}</div>
+					<div>
+						<Icon name="Balance" width={20} height={20} fill='#000000' stroke='#FBC457'/>
+						{wallet!.balance}
+					</div>
 				</Card>
 			</Card>
 			<section className="sm:mx-8 ml-6 mr-3 pt-12">
