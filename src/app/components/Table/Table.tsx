@@ -6,6 +6,7 @@ import {styled} from "twin.macro";
 import useViewport from '../../hooks/useViewport';
 import {Icon} from "../Icon";
 import {tableStyle} from "./Table.styles";
+import {HideColumnsResponsive} from '../../pages/Wallet/WalletView';
 
 type TableProps = {
 	children?: any;
@@ -14,7 +15,7 @@ type TableProps = {
 	columns: any[];
 	hideHeader?: boolean;
 	initialState?: Record<string, any>;
-	hideColumnsAtBreakpoint?: any[];
+	hideColumnsAtBreakpoint?: HideColumnsResponsive[];
 };
 
 const TableWrapper = styled.div`

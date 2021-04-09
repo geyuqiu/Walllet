@@ -6,7 +6,7 @@ export const toggleColumn = (toggleHideColumn: Function, innerWidth: number, col
 	toggleHideColumn(columnAccessor, innerWidth >= breakPoint ? false : true);
 };
 
-export default function useViewport(toggleHideColumn: Function, hideColumnsAtBreakpoint: any[]) {
+export default function useViewport(toggleHideColumn: Function, hideColumnsAtBreakpoint: HideColumnsResponsive[]) {
 	const [viewport, setViewport] = useState('');
 
 	const handleResize = () => {
