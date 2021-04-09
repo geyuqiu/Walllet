@@ -1,8 +1,8 @@
 import React from "react";
 import {HashRouter} from "react-router-dom";
 
-import {Routing} from "../router/Routing";
-import {Footer} from "./Footer/Footer";
+import {Footer} from "./components/Footer/Footer";
+import {Routing} from "./router/Routing";
 
 const notProd = process.env.NODE_ENV !== "production";
 
