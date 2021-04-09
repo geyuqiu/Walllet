@@ -46,7 +46,7 @@ export const WalletView = () => {
 	];
 
 	return (
-		<section className="mx-3 sm:mx-12 pt-12">
+		<>
 			<section className="mb-12 bg-green-dark">
 				<div className="flex items-center my-auto">
 					<LogoContainer>
@@ -72,15 +72,17 @@ export const WalletView = () => {
 				/>
 				<div> {wallet!.balance}</div>
 			</section>
-			{isLoadingTransactions && <p>Loading!</p>}
-			{!isLoadingTransactions && !transactions.length && <p>No transactions were found for this wallet!</p>}
-			{!isLoadingTransactions && transactions.length &&
-				<Table columns={tableColumns} data={transactions} hideColumnsAtBreakpoint={hideColumnsAtBreakpoint}>
-					{(transaction: Transaction, index: number) => (
-						<TransactionRow transaction={transaction} address={wallet!.address}/>
-					)}
-				</Table>
-			}
-		</section>
+			<section className="mx-3 sm:mx-12 pt-12">
+				{isLoadingTransactions && <p>Loading!</p>}
+				{!isLoadingTransactions && !transactions.length && <p>No transactions were found for this wallet!</p>}
+				{!isLoadingTransactions && transactions.length &&
+					<Table columns={tableColumns} data={transactions} hideColumnsAtBreakpoint={hideColumnsAtBreakpoint}>
+						{(transaction: Transaction, index: number) => (
+							<TransactionRow transaction={transaction} address={wallet!.address}/>
+						)}
+					</Table>
+				}
+			</section>
+		</>
 	);
 };
