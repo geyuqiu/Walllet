@@ -1,23 +1,17 @@
 import {render} from '@testing-library/react';
-import {createMemoryHistory} from "history";
-import React from "react";
-import {Router} from "react-router-dom";
+import {createMemoryHistory, MemoryHistory} from 'history';
+import React from 'react';
+import {Router} from 'react-router-dom';
 
-const customRender = (component: React.ReactElement, options: any = {}) =>
-	render(component, {...options});
+interface RenderWithRouterProps {
+	route?: string;
+	history?: MemoryHistory;
+}
 
 export const renderWithRouter = (
-	component: React.ReactElement,
-	{
-		routes = ["/"],
-		history = createMemoryHistory({ initialEntries: routes })
-	} = {},
-) => {
-	const RouterWrapper = ({ children }: { children: React.ReactNode }) =>
-			<Router history={history}>{children}</Router>;
-
-	return {
-		...customRender(component, {wrapper: RouterWrapper}),
+	ui: React.ReactNode,
+	{route = '/', history = createMemoryHistory({initialEntries: [route]})}: RenderWithRouterProps = {},
+) => ({
+		...render(<Router history={history}>{ui}</Router>),
 		history,
-	};
-};
+	});
