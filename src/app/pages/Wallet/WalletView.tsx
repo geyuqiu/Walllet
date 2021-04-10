@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import tw from 'twin.macro';
 
 import {SvgCollection} from "../../assets/svg";
-import {Button} from '../../components/Button';
+import {Button} from '../../components/Button/Button';
 import {Card} from '../../components/Card/Card';
 import {Divider} from '../../components/Divider';
 import {Icon} from '../../components/Icon/Icon';
@@ -14,7 +14,7 @@ import {feeAccessor, tableColumns, timestampAccessor} from '../../components/Tab
 import {useFetch} from '../../hooks/useFetch';
 import {Wallet} from './model';
 import {Transaction} from './TransactionRow/model';
-import {TransactionRow} from './TransactionRow/TransactionRow';
+import {hideTextMiddle, TransactionRow} from './TransactionRow/TransactionRow';
 
 export interface HideColumnsResponsive {
 	accessor: string;
@@ -52,7 +52,7 @@ export const WalletView = () => {
 		<>
 			<Card className="bg-green-dark">
 				<section className="sm:flex sm:justify-center">
-					<Card className="bg-black-darkest text-white rounded-lg w-full max-w-screen-xl">
+					<Card className="bg-black-darkest text-white rounded-lg w-full max-w-screen-xl flex justify-center flex-col lg:flex-row">
 						<div className="flex items-center my-auto cursor-pointer" onClick={() => history.push('fee')}>
 							<LogoContainer>
 								<Logo width={44}/>
@@ -71,7 +71,7 @@ export const WalletView = () => {
 								<div className="relative">
 									<Button size="icon" className="text-left" icon="Address" fill='#000000' stroke='#FBC457'>
 										<span className="hidden sm:block">{wallet!.address}</span>
-										<span className="block sm:hidden">{wallet!.address}</span>
+										<span className="block sm:hidden">{hideTextMiddle(wallet!.address, 7, 8)}</span>
 										<Icon name="ChevronDown" width={20} height={20}/>
 									</Button>
 								</div>
