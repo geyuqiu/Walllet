@@ -23,4 +23,10 @@ describe("WalletCard", () => {
 
 		expect(container).toMatchSnapshot();
 	});
+
+	it("wallet is null", () => {
+		const {container} = render(<WalletCard wallet={null} wallets={[]}/>);
+
+		expect(container).toMatchSnapshot();
+	});
 });

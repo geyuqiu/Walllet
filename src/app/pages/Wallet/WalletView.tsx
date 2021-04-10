@@ -21,7 +21,7 @@ const hideColumnsAtBreakpoint: HideColumnsResponsive[] = [
 export const WalletView = () => {
 	const [isLoadingTransactions, setIsLoadingTransactions] = useState(true);
 	const [wallet, setWallet] = useState<Wallet | null>({
-		address: 'werwerer',
+		address: 'AdzbhuDTyhnfAqepZzVcVsgd1Ym6FgETuW',
 		balance: '0'
 	});
 	const {wallets, transactions} = useFetch(wallet, setIsLoadingTransactions);

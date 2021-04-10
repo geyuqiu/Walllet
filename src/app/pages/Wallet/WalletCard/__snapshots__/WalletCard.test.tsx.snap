@@ -1,6 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`WalletView should match snapshot 1`] = `
+exports[`WalletCard loading when wallet null 1`] = `
+<div>
+  <p>
+    Loading ...
+  </p>
+</div>
+`;
+
+exports[`WalletCard should match snapshot 1`] = `
 <div>
   <div
     class="Cardstyles__Wrapper-xnuhyv-0 iAsJMU bg-green-dark sm:flex sm:justify-center"
@@ -123,12 +131,13 @@ exports[`WalletView should match snapshot 1`] = `
       </div>
     </div>
   </div>
-  <section
-    class="ml-6 mr-3 sm:mx-8 sm:flex sm:justify-center pt-12"
-  >
-    <p>
-      Loading!
-    </p>
-  </section>
+</div>
+`;
+
+exports[`WalletCard wallet is null 1`] = `
+<div>
+  <p>
+    Loading ...
+  </p>
 </div>
 `;
