@@ -69,7 +69,6 @@ export const Table = ({children, data, columns, hideHeader, className, initialSt
 											!column.minimumWidth && column.cellWidth,
 										},
 									)}
-									data-testid={`table__th--${thIndex}`}
 									{...column.getHeaderProps(column.getSortByToggleProps())}
 								>
 									<div
@@ -78,7 +77,7 @@ export const Table = ({children, data, columns, hideHeader, className, initialSt
 												column.className?.includes("justify-end") && !column.disableSortBy,
 										})}
 									>
-										<div>{column.render("Header")}</div>
+										<div data-testid={`table__th--${thIndex}`}>{column.render("Header")}</div>
 										{column.canSort && (
 											<div
 												className={cn(

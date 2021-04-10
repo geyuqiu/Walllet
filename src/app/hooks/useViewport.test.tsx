@@ -1,7 +1,7 @@
 import {render} from "@testing-library/react";
 import React from 'react'
 
-import {feeAccessor, timestampAccessor} from '../components/Table/TableColumns';
+import {feeAccessor, timestampAccessor} from '../pages/Wallet/TransactionRow/TableColumns';
 import useViewport, {toggleColumn} from './useViewport'
 import {HideColumnsResponsive} from '../pages/Wallet/WalletView';
 

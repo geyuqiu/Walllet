@@ -28,7 +28,7 @@ const columns = [
 		Header: "Header 3",
 		accessor: "col3",
 		className: "justify-end",
-	},
+	}
 ];
 
 describe("Table", () => {

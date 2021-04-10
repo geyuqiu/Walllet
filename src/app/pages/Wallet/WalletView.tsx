@@ -10,7 +10,7 @@ import {Card} from '../../components/Card/Card';
 import {Divider} from '../../components/Divider';
 import {Icon} from '../../components/Icon/Icon';
 import {Table} from '../../components/Table/Table';
-import {feeAccessor, tableColumns, timestampAccessor} from '../../components/Table/TableColumns';
+import {feeAccessor, tableColumns, timestampAccessor} from './TransactionRow/TableColumns';
 import {useFetch} from '../../hooks/useFetch';
 import {Wallet} from './model';
 import {Transaction} from './TransactionRow/model';
@@ -58,7 +58,7 @@ export const WalletView = () => {
 								<Logo width={44}/>
 							</LogoContainer>
 
-							<span className="text-2xl font-bold">ARK Wallet</span>
+							<span className="text-2xl font-bold" data-testid="logo__text">ARK Wallet</span>
 						</div>
 						<div className="mx-8 -my-2 lg:hidden">
 							<Divider className="border-theme-secondary-300 dark:border-theme-secondary-600" type="horizontal"/>

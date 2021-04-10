@@ -7,6 +7,8 @@ v12.22.0
 1.22.10
 ➜  Walllet git:(main) yarn run dev
 ➜  Walllet git:(main) yarn test
+➜  Walllet git:(main) yarn run build
+➜  Walllet git:(main) yarn test:e2e
 ```
 
 switch line 10 with line 13 under `Routing.tsx` to enable feeInput
