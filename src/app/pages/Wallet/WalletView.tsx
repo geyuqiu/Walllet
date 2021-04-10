@@ -58,7 +58,7 @@ export const WalletView = () => {
 								<Logo width={44}/>
 							</LogoContainer>
 
-							<span className="text-2xl font-bold" data-testid="logo__text">ARK Wallet</span>
+							<span className="text-2xl font-bold lg:hidden xl:block" data-testid="logo__text">ARK Wallet</span>
 						</div>
 						<div className="lg:hidden">
 							<Divider className="border-black-light dark:border-theme-secondary-600" type="horizontal"/>
@@ -79,6 +79,9 @@ export const WalletView = () => {
 							options={walletDisplayOptions}
 							dropdownClass="top-3 text-left"
 						/>
+						<div className="lg:hidden">
+							<Divider className="border-black-light dark:border-theme-secondary-600" type="horizontal"/>
+						</div>
 						<div>
 							<Icon name="Balance" width={20} height={20} fill='#000000' stroke='#FBC457'/>
 							{wallet!.balance}
