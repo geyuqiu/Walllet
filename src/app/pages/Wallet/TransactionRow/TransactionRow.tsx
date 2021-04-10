@@ -34,18 +34,18 @@ export const TransactionRow = ({transaction, address}: TransactionRowProps) => {
 			<TableCell innerClassName="justify-end sm:justify-start sm:border-l border-theme-secondary-300 pl-5 pr-5">
 				{address === transaction.sender
 					? <Link href={'https://explorer.ark.io/wallets/' + transaction.sender} className={linkClassName}>
-						{trimLongText(transaction.sender, 5, 5)}
+						<ResponsiveText text={transaction.sender} prefixLength={5} suffixLength={5}/>
 					</Link>
-					: trimLongText(transaction.sender, 5, 6)
+					: <ResponsiveText text={transaction.sender} prefixLength={5} suffixLength={6}/>
 				}
 			</TableCell>
 
 			<TableCell innerClassName="justify-end sm:justify-start sm:border-l border-theme-secondary-300">
 				{address === transaction.recipient
 					? <Link href={'https://explorer.ark.io/wallets/' + transaction.recipient} className={linkClassName}>
-						{trimLongText(transaction.recipient, 5, 5)}
+						<ResponsiveText text={transaction.recipient} prefixLength={5} suffixLength={5}/>
 					</Link>
-					: trimLongText(transaction.recipient, 5, 6)
+					: <ResponsiveText text={transaction.recipient} prefixLength={5} suffixLength={6}/>
 				}
 			</TableCell>
 
@@ -67,3 +67,17 @@ export const TransactionRow = ({transaction, address}: TransactionRowProps) => {
 		</TableRow>
 	);
 }
+
+type ResponsiveTextProps = {
+	text: string;
+	prefixLength: number;
+	suffixLength: number;
+};
+
+export const ResponsiveText = ({text, prefixLength, suffixLength}: ResponsiveTextProps) =>
+	<>
+		<span className="hidden us:block sm:hidden">{text}</span>
+		<span className="block us:hidden sm:block">{trimLongText(text, prefixLength, suffixLength)}</span>
+		{/*<span className="hidden sm:block md:hidden">{text}</span>*/}
+		{/*<span className="block sm:hidden md:block">{trimLongText(text, prefixLength, suffixLength)}</span>*/}
+	</>
