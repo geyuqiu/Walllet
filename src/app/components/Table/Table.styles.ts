@@ -21,7 +21,7 @@ export const tableStyle = `
 	
 	@media
 	  only screen 
-    and (max-width: 640px) {
+    and (max-width: 768px) {
 
 		/* Force table to not be like tables anymore */
 		table, thead, tbody, th, td, tr {
