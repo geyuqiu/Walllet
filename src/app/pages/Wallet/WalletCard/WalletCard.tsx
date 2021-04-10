@@ -38,46 +38,44 @@ export const WalletCard = ({wallets, wallet}: WalletProps) => {
 		<>
 			{!wallet && <p>Loading ...</p>}
 			{wallet &&
-				<Card className="bg-green-dark">
-					<section className="sm:flex sm:justify-center">
-						<Card
-							className="bg-black-darkest text-white rounded-lg w-full max-w-screen-xl flex justify-center flex-col lg:flex-row">
-							<div className="flex items-center my-auto cursor-pointer" onClick={() => history.push('fee')}>
-								<LogoContainer>
-									<Logo width={44}/>
-								</LogoContainer>
+			<Card className="bg-green-dark sm:flex sm:justify-center">
+				<Card
+					className="bg-black-darkest text-white rounded-lg w-full max-w-screen-xl flex justify-center flex-col lg:flex-row">
+					<div className="flex items-center my-auto cursor-pointer" onClick={() => history.push('fee')}>
+						<LogoContainer>
+							<Logo width={44}/>
+						</LogoContainer>
 
-								<span className="text-2xl font-bold lg:hidden xl:block" data-testid="logo__text">ARK Wallet</span>
+						<span className="text-2xl font-bold lg:hidden xl:block" data-testid="logo__text">ARK Wallet</span>
+					</div>
+					<div className="lg:hidden">
+						<Divider className="border-black-light dark:border-theme-secondary-600" type="horizontal"/>
+					</div>
+					<div className="lg:contents hidden">
+						<Divider className="border-black-light dark:border-theme-secondary-600" type="vertical"/>
+					</div>
+					<Dropdown
+						toggleContent={
+							<div className="relative">
+								<Button size="icon" className="text-left" icon="Address" fill='#000000' stroke='#FBC457'>
+									<span className="hidden sm:block">{wallet.address}</span>
+									<span className="block sm:hidden">{hideTextMiddle(wallet.address, 7, 8)}</span>
+									<Icon name="ChevronDown" width={20} height={20}/>
+								</Button>
 							</div>
-							<div className="lg:hidden">
-								<Divider className="border-black-light dark:border-theme-secondary-600" type="horizontal"/>
-							</div>
-							<div className="lg:contents hidden">
-								<Divider className="border-black-light dark:border-theme-secondary-600" type="vertical"/>
-							</div>
-							<Dropdown
-								toggleContent={
-									<div className="relative">
-										<Button size="icon" className="text-left" icon="Address" fill='#000000' stroke='#FBC457'>
-											<span className="hidden sm:block">{wallet.address}</span>
-											<span className="block sm:hidden">{hideTextMiddle(wallet.address, 7, 8)}</span>
-											<Icon name="ChevronDown" width={20} height={20}/>
-										</Button>
-									</div>
-								}
-								options={walletDisplayOptions}
-								dropdownClass="top-3 text-left"
-							/>
-							<div className="lg:hidden">
-								<Divider className="border-black-light dark:border-theme-secondary-600" type="horizontal"/>
-							</div>
-							<div>
-								<Icon name="Balance" width={20} height={20} fill='#000000' stroke='#FBC457'/>
-								{wallet.balance}
-							</div>
-						</Card>
-					</section>
+						}
+						options={walletDisplayOptions}
+						dropdownClass="top-3 text-left"
+					/>
+					<div className="lg:hidden">
+						<Divider className="border-black-light dark:border-theme-secondary-600" type="horizontal"/>
+					</div>
+					<div>
+						<Icon name="Balance" width={20} height={20} fill='#000000' stroke='#FBC457'/>
+						{wallet.balance}
+					</div>
 				</Card>
+			</Card>
 			}
 		</>
 	);
