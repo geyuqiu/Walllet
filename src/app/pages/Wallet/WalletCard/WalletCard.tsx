@@ -83,7 +83,7 @@ export const WalletCard = ({wallets, wallet}: WalletProps) => {
 						<div className="flex flex-col">
 							<span className="text-gray-darkest">Balance</span>
 							<Amount
-								data-testid="BalanceAmount"
+								data-testid="balance__Amount"
 								value={BigNumber.make(wallet.balance)}
 								className="font-bold"
 							/>

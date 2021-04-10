@@ -5,9 +5,9 @@ import {Link} from '../../../components/Link/Link';
 import {TableCell} from '../../../components/Table/TableCell';
 import {TableRow} from "../../../components/Table/TableRow";
 import {Transaction} from './model';
+import {BigNumber} from '@arkecosystem/platform-sdk-support';
+import {Amount} from '../../../components/Amount/Amount';
 
-const currency = 'DARK';
-export const dollarToBtn = (amount: string, roundTo: number) => (Number(amount) * 0.000018).toFixed(roundTo);
 
 type TransactionRowProps = {
 	transaction: Transaction;
@@ -55,13 +55,20 @@ export const TransactionRow = ({transaction, address}: TransactionRowProps) => {
 			</TableCell>
 
 			<TableCell innerClassName="justify-end md:border-l border-theme-secondary-300">
-				<span>{`${dollarToBtn(transaction.amount, 8)} ${currency}`}</span>
-				{/*<span className="hidden lg:hidden md:table-cell">{`${dollarToBtn(transaction.amount, 2)} ${currency}`}</span>*/}
+				<Amount
+					data-testid="transaction__fee__Amount"
+					value={BigNumber.make(transaction.amount)}
+					className="font-bold"
+				/>
 			</TableCell>
 
 			<TableCell innerClassName="justify-end md:border-l border-theme-secondary-300"
 			           className="hidden lg:table-cell">
-				{`${dollarToBtn(transaction.fee, 8)} ${currency}`}
+				<Amount
+					data-testid="transaction__fee__Amount"
+					value={BigNumber.make(transaction.fee)}
+					className="font-bold"
+				/>
 			</TableCell>
 
 		</TableRow>

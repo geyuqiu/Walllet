@@ -11,10 +11,14 @@ const getBorderStyles = (border?: boolean): any =>
 
 const getHoverStyles = (isSelected?: boolean): any =>
 	css`
-		&:hover td > div {
-			${isSelected
-				? tw`bg-green-lightest`
-				: tw`bg-gray-lightest`}
+		@media
+		  only screen 
+	    and (min-width: 767px) {
+			&:hover td {
+				${isSelected
+					? tw`bg-green-lightest`
+					: tw`bg-gray-lightest`}
+			}
 		}
 	`;
 
