@@ -12,10 +12,11 @@ export const useFetch = (wallet: Wallet | null, setIsLoadingTransactions: Functi
 	const [wallets, setWallets] = useState<Wallet[]>([]);
 	useEffect(() => {
 		const fetchWallets = async () => {
-			setIsLoadingTransactions(true);
 			const response = await httpClient.get(walletBaseUrl + "top?page=1&limit=5");
-			setWallets(parseWallets(response));
-			setIsLoadingTransactions(false);
+			const wallets = parseWallets(response);
+			if (wallets.length) {
+				setWallets(wallets);
+			}
 		};
 		fetchWallets();
 	}, [wallet]);
@@ -23,8 +24,13 @@ export const useFetch = (wallet: Wallet | null, setIsLoadingTransactions: Functi
 	const [transactions, setTransactions] = useState<Transaction[]>([]);
 	useEffect(() => {
 		const fetchTransaction = async () => {
+			setIsLoadingTransactions(true);
 			const response = await httpClient.get(`${walletBaseUrl}${wallet!.address}/transactions?page=1&limit=15`);
-			setTransactions(parseTransaction(response));
+			const transactions = parseTransaction(response);
+			if (transactions) {
+				setTransactions(transactions);
+			}
+			setIsLoadingTransactions(false);
 		};
 		if (wallet) fetchTransaction();
 	}, []);
@@ -32,22 +38,30 @@ export const useFetch = (wallet: Wallet | null, setIsLoadingTransactions: Functi
 	return { wallets, transactions };
 };
 
-export const parseWallets = (response: any) => {
+export const parseWallets = (response: any): Wallet[] => {
 	// console.log('top wallets: ', response);
 	const result: any[] = [];
-	response?.data.forEach((data: any) => {
-		result.push({
-			address: data.address,
-			balance: data.balance
+	if (response && response.data) {
+		response?.data?.forEach((data: any) => {
+			result.push({
+				address: data.address,
+				balance: data.balance
+			});
 		});
-	});
-	return result;
+		return result;
+	} else {
+		return [];
+	}
 };
 
-export const parseTransaction = (response: any) => {
+export const parseTransaction = (response: any): Transaction[] => {
 	// console.log('transactions: ', response);
-	response?.data.forEach((data: any) => {
-		data.timestamp = moment(data.timestamp.human).format(dateFormat);
-	});
-	return response.data;
+	if (response && response.data) {
+		response?.data?.forEach((data: any) => {
+			data.timestamp = moment(data.timestamp.human).format(dateFormat);
+		});
+		return response.data;
+	} else {
+		return [];
+	}
 };

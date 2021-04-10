@@ -25,9 +25,29 @@ describe("parseWallets should ", () => {
 		expect(wallets[0].address).toEqual(address);
 		expect(wallets[0].balance).toEqual(balance);
 	});
+
+	it("parse wallet response return empty results", () => {
+		const response = {
+			"data": []
+		};
+
+		const wallets: Wallet[] = parseWallets(response);
+
+		expect(wallets.length).toBe(0);
+	});
 });
 
 describe("parseTransaction should", () => {
+	it("parse transaction response return empty results", () => {
+		const response = {
+			"data": []
+		};
+
+		const transactions: Transaction[] = parseTransaction(response);
+
+		expect(transactions.length).toBe(0);
+	});
+
 	it("parse transaction", () => {
 		const response = {
 			"data": [

@@ -3,119 +3,125 @@
 exports[`Routing should match snapshot 1`] = `
 <div>
   <div
-    class="Cardstyles__Wrapper-xnuhyv-0 iAsJMU bg-green-dark"
+    class="Cardstyles__Wrapper-xnuhyv-0 iAsJMU bg-green-dark sm:flex sm:justify-center"
     data-testid="Card"
   >
-    <section
-      class="sm:flex sm:justify-center"
+    <div
+      class="Cardstyles__Wrapper-xnuhyv-0 iAsJMU bg-black-darkest text-white rounded-lg w-full max-w-screen-xl flex justify-center flex-col lg:flex-row"
+      data-testid="Card"
     >
       <div
-        class="Cardstyles__Wrapper-xnuhyv-0 iAsJMU bg-black-darkest text-white rounded-lg w-full max-w-screen-xl"
-        data-testid="Card"
+        class="flex items-center my-auto cursor-pointer"
       >
         <div
-          class="flex items-center my-auto cursor-pointer"
+          class="sc-gsTCUz dXshFa"
+          width="57"
+        >
+          <svg
+            width="44"
+          >
+            logo.svg
+          </svg>
+        </div>
+        <span
+          class="text-2xl font-bold lg:hidden xl:block"
+          data-testid="logo__text"
+        >
+          ARK Wallet
+        </span>
+      </div>
+      <div
+        class="lg:hidden"
+      >
+        <div
+          class="Divider-sc-10xryrv-0 ijsPwK border-black-light dark:border-theme-secondary-600"
+          type="horizontal"
+        />
+      </div>
+      <div
+        class="lg:contents hidden"
+      >
+        <div
+          class="Divider-sc-10xryrv-0 dCquGe border-black-light dark:border-theme-secondary-600"
+          type="vertical"
+        />
+      </div>
+      <div
+        class="relative"
+      >
+        <span
+          data-testid="dropdown__toggle"
         >
           <div
-            class="sc-gsTCUz kgA-DMi"
+            class="relative"
           >
-            <svg
-              width="44"
+            <button
+              class="Button__StyledButton-f252gp-0 cyEhZE text-left"
+              type="button"
             >
-              logo.svg
-            </svg>
-          </div>
-          <span
-            class="text-2xl font-bold"
-          >
-            ARK Wallet
-          </span>
-        </div>
-        <div
-          class="mx-8 -my-2 lg:hidden"
-        >
-          <div
-            class="Divider-sc-10xryrv-0 ijsPwK border-theme-secondary-300 dark:border-theme-secondary-600"
-            type="horizontal"
-          />
-        </div>
-        <div
-          class="mx-8 -my-2 lg:block hidden"
-        >
-          <div
-            class="Divider-sc-10xryrv-0 gPMsKl border-theme-secondary-300 dark:border-theme-secondary-600"
-            type="vertical"
-          />
-        </div>
-        <div
-          class="relative"
-        >
-          <span
-            data-testid="dropdown__toggle"
-          >
-            <div
-              class="relative"
-            >
-              <button
-                class="Button__StyledButton-f252gp-0 cyEhZE text-left"
-                type="button"
+              <div
+                class="flex relative items-center space-x-2"
               >
                 <div
-                  class="flex relative items-center space-x-2"
+                  class="sc-bdfBwQ bfBhNR"
+                  height="14"
+                  width="14"
                 >
-                  <div
-                    class="sc-bdfBwQ bfBhNR"
-                    height="14"
-                    width="14"
+                  <svg
+                    fill="#000000"
+                    stroke="#FBC457"
                   >
-                    <svg
-                      fill="#000000"
-                      stroke="#FBC457"
-                    >
-                      address.svg
-                    </svg>
-                  </div>
-                  <span
-                    class="hidden sm:block"
-                  >
-                    AdzbhuDTyhnfAqepZzVcVsgd1Ym6FgETuW
-                  </span>
-                  <span
-                    class="block sm:hidden"
-                  >
-                    AdzbhuDTyhnfAqepZzVcVsgd1Ym6FgETuW
-                  </span>
-                  <div
-                    class="sc-bdfBwQ iyevwF"
-                    height="20"
-                    width="20"
-                  >
-                    <svg>
-                      chevron-down.svg
-                    </svg>
-                  </div>
+                    address.svg
+                  </svg>
                 </div>
-              </button>
-            </div>
-          </span>
-        </div>
-        <div>
-          <div
-            class="sc-bdfBwQ iyevwF"
-            height="20"
-            width="20"
-          >
-            <svg
-              fill="#000000"
-              stroke="#FBC457"
-            >
-              balance.svg
-            </svg>
+                <span
+                  class="hidden sm:block"
+                >
+                  werwerer
+                </span>
+                <span
+                  class="block sm:hidden"
+                >
+                  werwere...werwerer
+                </span>
+                <div
+                  class="sc-bdfBwQ iyevwF"
+                  height="20"
+                  width="20"
+                >
+                  <svg>
+                    chevron-down.svg
+                  </svg>
+                </div>
+              </div>
+            </button>
           </div>
-          0
-        </div>
+        </span>
       </div>
-    </section>
+      <div
+        class="hidden lg:block"
+      >
+        <div
+          class="Divider-sc-10xryrv-0 dCquGe border-black-light dark:border-theme-secondary-600"
+          type="vertical"
+        />
+      </div>
+      <div>
+        <div
+          class="sc-bdfBwQ iyevwF"
+          height="20"
+          width="20"
+        >
+          <svg
+            fill="#000000"
+            stroke="#FBC457"
+          >
+            balance.svg
+          </svg>
+        </div>
+        0
+      </div>
+    </div>
   </div>
   <section
     class="ml-6 mr-3 sm:mx-8 sm:flex sm:justify-center pt-12"

@@ -1,14 +1,10 @@
 import React, {useState} from "react";
-import {useHistory} from "react-router-dom";
-import styled from 'styled-components';
-import tw from 'twin.macro';
 
-import {SvgCollection} from "../../assets/svg";
 import {Table} from '../../components/Table/Table';
-import {feeAccessor, tableColumns, timestampAccessor} from './TransactionRow/TableColumns';
 import {useFetch} from '../../hooks/useFetch';
 import {Wallet} from './model';
 import {Transaction} from './TransactionRow/model';
+import {feeAccessor, tableColumns, timestampAccessor} from './TransactionRow/TableColumns';
 import {TransactionRow} from './TransactionRow/TransactionRow';
 import {WalletCard} from './WalletCard/WalletCard';
 
@@ -23,10 +19,9 @@ const hideColumnsAtBreakpoint: HideColumnsResponsive[] = [
 ];
 
 export const WalletView = () => {
-	const history = useHistory();
 	const [isLoadingTransactions, setIsLoadingTransactions] = useState(true);
-	const [wallet, setWallet] = useState<Wallet | null >({
-		address: 'AdzbhuDTyhnfAqepZzVcVsgd1Ym6FgETuW',
+	const [wallet, setWallet] = useState<Wallet | null>({
+		address: 'werwerer',
 		balance: '0'
 	});
 	const {wallets, transactions} = useFetch(wallet, setIsLoadingTransactions);
@@ -37,7 +32,7 @@ export const WalletView = () => {
 			<section className="ml-6 mr-3 sm:mx-8 sm:flex sm:justify-center pt-12">
 				{isLoadingTransactions && <p>Loading!</p>}
 				{!isLoadingTransactions && !transactions.length && <p>No transactions were found for this wallet!</p>}
-				{!isLoadingTransactions && transactions.length &&
+				{!isLoadingTransactions && transactions?.length > 0 &&
 					<Table columns={tableColumns} data={transactions} hideColumnsAtBreakpoint={hideColumnsAtBreakpoint}>
 						{(transaction: Transaction, index: number) => (
 							<TransactionRow transaction={transaction} address={wallet!.address}/>
