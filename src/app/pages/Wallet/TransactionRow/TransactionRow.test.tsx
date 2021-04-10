@@ -2,7 +2,7 @@ import {render} from "@testing-library/react";
 import React from "react";
 
 import {Transaction} from './model';
-import {dollarToBtn, TransactionRow} from "./TransactionRow";
+import {dollarToBtn, TransactionRow, trimLongText} from "./TransactionRow";
 
 describe("Footer", () => {
 	it("should match snapshot", () => {
@@ -28,5 +28,18 @@ describe("dollarToBtn should", () => {
 		const parsed = dollarToBtn("500", 8);
 
 		expect(parsed).toEqual("0.00900000");
+	});
+});
+
+describe("trimLongText", () => {
+	it("return 5 characters as prefix and 6 characters as suffx", () => {
+		const expected = trimLongText('AdzbhuDTyhnfAqepZzVcVsgd1Ym6FgETuW', 5, 6);
+
+		expect(expected).toEqual('Adzbh...FgETuW');
+	});
+	it("return same number of characters as prefix and as suffx", () => {
+		const expected = trimLongText('AdzbhuDTyhnfAqepZzVcVsgd1Ym6FgETuW', 5, 5);
+
+		expect(expected).toEqual('Adzbh...gETuW');
 	});
 });

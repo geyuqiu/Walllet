@@ -68,7 +68,8 @@ export const WalletView = () => {
 							toggleContent={
 								<div className="relative">
 									<Button size="icon" className="text-left" icon="Address" fill='#000000' stroke='#FBC457'>
-										{wallet!.address}
+										<span className="hidden sm:block">{wallet!.address}</span>
+										<span className="block sm:hidden">{wallet!.address}</span>
 										<Icon name="ChevronDown" width={20} height={20}/>
 									</Button>
 								</div>

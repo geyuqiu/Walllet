@@ -14,8 +14,10 @@ type TransactionRowProps = {
 	address: string
 };
 
+export const trimLongText = (id: string, prefixLength: number, suffixLength: number) =>
+	`${id.substring(0, prefixLength)}...${id.substring(id.length - suffixLength, id.length)}`
+
 export const TransactionRow = ({transaction, address}: TransactionRowProps) => {
-	const trimLongText = (id: string) => `${id.substring(0, 5)}...${id.substring(id.length - 5, id.length)}`
 	const linkClassName = "text-green-dark hover:text-green-darkest active:text-green-light font-semibold hover:underline";
 	return (
 		<TableRow className="text-base">
@@ -24,7 +26,7 @@ export const TransactionRow = ({transaction, address}: TransactionRowProps) => {
 			           className="sm:pt-3 sm:pb-3">
 				<Link href={'https://explorer.ark.io/transaction/' + transaction.id}
 				      className={linkClassName}>
-					<span className="table-cell lg:table-cell sm:hidden">{trimLongText(transaction.id)}</span>
+					<span className="table-cell lg:table-cell sm:hidden">{trimLongText(transaction.id, 5, 5)}</span>
 					<Icon name="Txid" width={20} height={20} className="hidden lg:hidden sm:table-cell"/>
 				</Link>
 			</TableCell>
@@ -32,18 +34,18 @@ export const TransactionRow = ({transaction, address}: TransactionRowProps) => {
 			<TableCell innerClassName="justify-end sm:justify-start sm:border-l border-theme-secondary-300 pl-5 pr-5">
 				{address === transaction.sender
 					? <Link href={'https://explorer.ark.io/wallets/' + transaction.sender} className={linkClassName}>
-						{trimLongText(transaction.sender)}
+						{trimLongText(transaction.sender, 5, 5)}
 					</Link>
-					: trimLongText(transaction.sender)
+					: trimLongText(transaction.sender, 5, 6)
 				}
 			</TableCell>
 
 			<TableCell innerClassName="justify-end sm:justify-start sm:border-l border-theme-secondary-300">
 				{address === transaction.recipient
 					? <Link href={'https://explorer.ark.io/wallets/' + transaction.recipient} className={linkClassName}>
-						{trimLongText(transaction.recipient)}
+						{trimLongText(transaction.recipient, 5, 5)}
 					</Link>
-					: trimLongText(transaction.recipient)
+					: trimLongText(transaction.recipient, 5, 6)
 				}
 			</TableCell>
 
