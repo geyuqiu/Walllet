@@ -49,37 +49,39 @@ export const WalletView = () => {
 	return (
 		<>
 			<Card className="bg-green-dark">
-				<Card className="bg-black-darkest text-white rounded-lg">
-					<div className="flex items-center my-auto">
-						<LogoContainer>
-							<Logo width={44}/>
-						</LogoContainer>
+				<section className="sm:flex sm:justify-center">
+					<Card className="bg-black-darkest text-white rounded-lg w-full max-w-screen-xl">
+						<div className="flex items-center my-auto">
+							<LogoContainer>
+								<Logo width={44}/>
+							</LogoContainer>
 
-						<span className="text-2xl font-bold">ARK Wallet</span>
-					</div>
-					<div className="mx-8 -my-2 lg:hidden">
-						<Divider className="border-theme-secondary-300 dark:border-theme-secondary-600" type="horizontal"/>
-					</div>
-					<div className="mx-8 -my-2 lg:block hidden">
-						<Divider className="border-theme-secondary-300 dark:border-theme-secondary-600" type="vertical"/>
-					</div>
-					<Dropdown
-						toggleContent={
-							<div className="relative">
-								<Button size="icon" className="text-left" icon="Address" fill='#000000' stroke='#FBC457'>
-									{wallet!.address}
-									<Icon name="ChevronDown" width={20} height={20}/>
-								</Button>
-							</div>
-						}
-						options={walletDisplayOptions}
-						dropdownClass="top-3 text-left"
-					/>
-					<div>
-						<Icon name="Balance" width={20} height={20} fill='#000000' stroke='#FBC457'/>
-						{wallet!.balance}
-					</div>
-				</Card>
+							<span className="text-2xl font-bold">ARK Wallet</span>
+						</div>
+						<div className="mx-8 -my-2 lg:hidden">
+							<Divider className="border-theme-secondary-300 dark:border-theme-secondary-600" type="horizontal"/>
+						</div>
+						<div className="mx-8 -my-2 lg:block hidden">
+							<Divider className="border-theme-secondary-300 dark:border-theme-secondary-600" type="vertical"/>
+						</div>
+						<Dropdown
+							toggleContent={
+								<div className="relative">
+									<Button size="icon" className="text-left" icon="Address" fill='#000000' stroke='#FBC457'>
+										{wallet!.address}
+										<Icon name="ChevronDown" width={20} height={20}/>
+									</Button>
+								</div>
+							}
+							options={walletDisplayOptions}
+							dropdownClass="top-3 text-left"
+						/>
+						<div>
+							<Icon name="Balance" width={20} height={20} fill='#000000' stroke='#FBC457'/>
+							{wallet!.balance}
+						</div>
+					</Card>
+				</section>
 			</Card>
 			<section className="ml-6 mr-3 sm:mx-8 sm:flex sm:justify-center pt-12">
 				{isLoadingTransactions && <p>Loading!</p>}
