@@ -39,8 +39,7 @@ export const WalletCard = ({wallets, wallet}: WalletProps) => {
 			{!wallet && <p>Loading ...</p>}
 			{wallet &&
 			<Card className="bg-green-dark sm:flex sm:justify-center">
-				<Card
-					className="bg-black-darkest text-white rounded-lg w-full max-w-screen-xl flex justify-center flex-col lg:flex-row">
+				<Card className="bg-black-darkest text-white rounded-lg w-full max-w-screen-xl flex justify-center flex-col lg:flex-row">
 					<div className="flex items-center my-auto cursor-pointer" onClick={() => history.push('fee')}>
 						<LogoContainer>
 							<Logo width={44}/>
@@ -67,8 +66,8 @@ export const WalletCard = ({wallets, wallet}: WalletProps) => {
 						options={walletDisplayOptions}
 						dropdownClass="top-3 text-left"
 					/>
-					<div className="lg:hidden">
-						<Divider className="border-black-light dark:border-theme-secondary-600" type="horizontal"/>
+					<div className="hidden lg:block">
+						<Divider className="border-black-light dark:border-theme-secondary-600" type="vertical"/>
 					</div>
 					<div>
 						<Icon name="Balance" width={20} height={20} fill='#000000' stroke='#FBC457'/>
