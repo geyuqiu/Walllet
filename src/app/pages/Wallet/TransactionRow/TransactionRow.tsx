@@ -6,6 +6,9 @@ import {TableCell} from '../../../components/Table/TableCell';
 import {TableRow} from "../../../components/Table/TableRow";
 import {Transaction} from './model';
 
+const currency = 'DARK';
+export const dollarToBtn = (amount: string, roundTo: number) => (Number(amount) * 0.000018).toFixed(roundTo);
+
 type TransactionRowProps = {
 	transaction: Transaction;
 	address: string
@@ -50,12 +53,13 @@ export const TransactionRow = ({transaction, address}: TransactionRowProps) => {
 			</TableCell>
 
 			<TableCell innerClassName="justify-end sm:border-l border-theme-secondary-300">
-				{transaction.amount}
+				<span className="sm:hidden lg:table-cell">{`${dollarToBtn(transaction.amount, 8)} ${currency}`}</span>
+				<span className="hidden lg:hidden sm:table-cell">{`${dollarToBtn(transaction.amount, 2)} ${currency}`}</span>
 			</TableCell>
 
 			<TableCell innerClassName="justify-end sm:border-l border-theme-secondary-300"
 			           className="hidden lg:table-cell">
-				{transaction.fee}
+				{`${dollarToBtn(transaction.fee, 8)} ${currency}`}
 			</TableCell>
 
 		</TableRow>

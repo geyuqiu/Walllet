@@ -1,13 +1,12 @@
 import moment from "moment";
 import {useEffect, useState} from "react";
 
-import {Transaction} from '../pages/Wallet/TransactionRow/model';
 import {Wallet} from '../pages/Wallet/model';
+import {Transaction} from '../pages/Wallet/TransactionRow/model';
 import {httpClient} from "../services/HttpClient";
 
 const walletBaseUrl = 'https://api.ark.io/api/wallets/';
 const dateFormat = 'DD.MM.YYYY';
-const currency = 'DARK';
 
 export const useFetch = (wallet: Wallet | null, setIsLoadingTransactions: Function) => {
 	const [wallets, setWallets] = useState<string[]>([]);
@@ -45,14 +44,10 @@ export const parseWallets = (response: any) => {
 	return result;
 };
 
-export const dollarToBtn = (amount: string, roundTo: number) => (Number(amount) * 0.000018).toFixed(roundTo);
-
 export const parseTransaction = (response: any) => {
 	// console.log('transactions: ', response);
 	response?.data.forEach((data: any) => {
 		data.timestamp = moment(data.timestamp.human).format(dateFormat);
-		data.amount = `${dollarToBtn(data.amount, 2)} ${currency}`;
-		data.fee = `${dollarToBtn(data.fee, 2)} ${currency}`;
 	});
 	return response.data;
 };

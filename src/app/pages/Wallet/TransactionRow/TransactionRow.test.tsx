@@ -2,7 +2,7 @@ import {render} from "@testing-library/react";
 import React from "react";
 
 import {Transaction} from './model';
-import {TransactionRow} from "./TransactionRow";
+import {dollarToBtn, TransactionRow} from "./TransactionRow";
 
 describe("Footer", () => {
 	it("should match snapshot", () => {
@@ -20,5 +20,13 @@ describe("Footer", () => {
 		);
 
 		expect(container).toMatchSnapshot();
+	});
+});
+
+describe("dollarToBtn should", () => {
+	it("parse dollar amount to bitcoin", () => {
+		const parsed = dollarToBtn("500", 8);
+
+		expect(parsed).toEqual("0.00900000");
 	});
 });

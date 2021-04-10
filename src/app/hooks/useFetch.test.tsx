@@ -1,6 +1,6 @@
-import {Transaction} from '../pages/Wallet/TransactionRow/model';
 import {Wallet} from '../pages/Wallet/model';
-import {dollarToBtn, parseTransaction, parseWallets} from './useFetch';
+import {Transaction} from '../pages/Wallet/TransactionRow/model';
+import {parseTransaction, parseWallets} from './useFetch';
 
 describe("parseWallets should ", () => {
 	it("parse wallet address and balance", () => {
@@ -58,15 +58,7 @@ describe("parseTransaction should", () => {
 		const transactions: Transaction[] = parseTransaction(response);
 
 		expect(transactions[0].timestamp).toEqual("27.10.2020");
-		expect(transactions[0].amount).toEqual("90000000.0000000 DARK");
-		expect(transactions[0].fee).toEqual("123.41946600 DARK");
-	});
-});
-
-describe("dollarToBtn should", () => {
-	it("parse dollar amount to bitcoin", () => {
-		const parsed = dollarToBtn("500", 8);
-
-		expect(parsed).toEqual("0.00900000");
+		expect(transactions[0].amount).toEqual("5000000000000");
+		expect(transactions[0].fee).toEqual("6856637");
 	});
 });
