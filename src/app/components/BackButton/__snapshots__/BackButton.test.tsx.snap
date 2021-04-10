@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BackButton should not redirect to given url when disabled 1`] = `
+<div>
+  <button
+    class="BackButton__StyledBackButton-tw1zv6-0 gOIBGp"
+    disabled=""
+  >
+    <div
+      class="sc-bdfBwQ iyevwF mx-auto"
+      height="20"
+      width="20"
+    >
+      <svg>
+        arrow-left.svg
+      </svg>
+    </div>
+  </button>
+</div>
+`;
+
+exports[`BackButton should not redirect to previous page when disabled 1`] = `
+<div>
+  <button
+    class="BackButton__StyledBackButton-tw1zv6-0 gOIBGp"
+    disabled=""
+  >
+    <div
+      class="sc-bdfBwQ iyevwF mx-auto"
+      height="20"
+      width="20"
+    >
+      <svg>
+        arrow-left.svg
+      </svg>
+    </div>
+  </button>
+</div>
+`;
+
+exports[`BackButton should redirect to given url 1`] = `
+<div>
+  <button
+    class="BackButton__StyledBackButton-tw1zv6-0 eIXjtA"
+  >
+    <div
+      class="sc-bdfBwQ iyevwF mx-auto"
+      height="20"
+      width="20"
+    >
+      <svg>
+        arrow-left.svg
+      </svg>
+    </div>
+  </button>
+</div>
+`;
+
+exports[`BackButton should redirect to previous page 1`] = `
+<div>
+  <button
+    class="BackButton__StyledBackButton-tw1zv6-0 eIXjtA"
+  >
+    <div
+      class="sc-bdfBwQ iyevwF mx-auto"
+      height="20"
+      width="20"
+    >
+      <svg>
+        arrow-left.svg
+      </svg>
+    </div>
+  </button>
+</div>
+`;
+
+exports[`BackButton should render 1`] = `
+<div>
+  <button
+    class="BackButton__StyledBackButton-tw1zv6-0 eIXjtA"
+  >
+    <div
+      class="sc-bdfBwQ iyevwF mx-auto"
+      height="20"
+      width="20"
+    >
+      <svg>
+        arrow-left.svg
+      </svg>
+    </div>
+  </button>
+</div>
+`;
+
+exports[`BackButton should render when disabled 1`] = `
+<div>
+  <button
+    class="BackButton__StyledBackButton-tw1zv6-0 gOIBGp"
+    disabled=""
+  >
+    <div
+      class="sc-bdfBwQ iyevwF mx-auto"
+      height="20"
+      width="20"
+    >
+      <svg>
+        arrow-left.svg
+      </svg>
+    </div>
+  </button>
+</div>
+`;

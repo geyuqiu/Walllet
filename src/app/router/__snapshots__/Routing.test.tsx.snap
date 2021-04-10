@@ -14,7 +14,7 @@ exports[`Routing should match snapshot 1`] = `
         data-testid="Card"
       >
         <div
-          class="flex items-center my-auto"
+          class="flex items-center my-auto cursor-pointer"
         >
           <div
             class="sc-gsTCUz kgA-DMi"

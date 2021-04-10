@@ -1,5 +1,6 @@
 import {Dropdown} from "app/components/Dropdown";
 import React, {useState} from "react";
+import {useHistory} from "react-router-dom";
 import styled from 'styled-components';
 import tw from 'twin.macro';
 
@@ -34,6 +35,7 @@ const LogoContainer = styled.div`
 const {Logo} = SvgCollection;
 
 export const WalletView = () => {
+	const history = useHistory();
 	const [isLoadingTransactions, setIsLoadingTransactions] = useState(true);
 	const [wallet, setWallet] = useState<Wallet | null >({
 		address: 'AdzbhuDTyhnfAqepZzVcVsgd1Ym6FgETuW',
@@ -51,7 +53,7 @@ export const WalletView = () => {
 			<Card className="bg-green-dark">
 				<section className="sm:flex sm:justify-center">
 					<Card className="bg-black-darkest text-white rounded-lg w-full max-w-screen-xl">
-						<div className="flex items-center my-auto">
+						<div className="flex items-center my-auto cursor-pointer" onClick={() => history.push('fee')}>
 							<LogoContainer>
 								<Logo width={44}/>
 							</LogoContainer>

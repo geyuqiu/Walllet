@@ -5,6 +5,19 @@ exports[`FeeInput should match snapshot 1`] = `
   <section
     class="p-12 w-1/2"
   >
+    <button
+      class="BackButton__StyledBackButton-tw1zv6-0 eIXjtA mb-4"
+    >
+      <div
+        class="sc-bdfBwQ iyevwF mx-auto"
+        height="20"
+        width="20"
+      >
+        <svg>
+          arrow-left.svg
+        </svg>
+      </div>
+    </button>
     <label
       class="text-black-dark pl-6 leading-relaxed font-semibold"
     >

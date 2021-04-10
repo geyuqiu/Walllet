@@ -7,22 +7,22 @@ exports[`Footer should match snapshot 1`] = `
     data-testid="TableRow"
   >
     <td
-      class="sm:pt-3 sm:pb-3"
+      class="md:pt-3 md:pb-3"
     >
       <div
-        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 dbZfon justify-end sm:justify-start"
+        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 dbZfon justify-end md:justify-start"
       >
         <a
           class="text-green-dark hover:text-green-darkest active:text-green-light font-semibold hover:underline"
           href="https://explorer.ark.io/transaction/77a740c7517ae164b35e4e28da7251543d9d98e34e90d3baf604fc582159c352"
         >
           <span
-            class="table-cell lg:table-cell sm:hidden"
+            class="table-cell lg:table-cell md:hidden"
           >
             77a74...9c352
           </span>
           <div
-            class="sc-bdfBwQ iyevwF hidden lg:hidden sm:table-cell"
+            class="sc-bdfBwQ iyevwF hidden lg:hidden md:table-cell"
             height="20"
             width="20"
           >
@@ -35,40 +35,51 @@ exports[`Footer should match snapshot 1`] = `
     </td>
     <td>
       <div
-        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 dbZfon justify-end sm:justify-start sm:border-l border-theme-secondary-300 pl-5 pr-5"
+        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 dbZfon justify-end md:justify-start md:border-l border-theme-secondary-300 pl-5 pr-5"
       >
-        AReY3...qEVPN4
+        <span
+          class="hidden sm:block md:hidden"
+        >
+          AReY3W6nTv3utiG2em5nefKEsGQeqEVPN4
+        </span>
+        <span
+          class="block sm:hidden md:block"
+        >
+          AReY3...qEVPN4
+        </span>
       </div>
     </td>
     <td>
       <div
-        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 dbZfon justify-end sm:justify-start sm:border-l border-theme-secondary-300"
+        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 dbZfon justify-end md:justify-start md:border-l border-theme-secondary-300"
       >
-        Adzbh...FgETuW
+        <span
+          class="hidden sm:block md:hidden"
+        >
+          AdzbhuDTyhnfAqepZzVcVsgd1Ym6FgETuW
+        </span>
+        <span
+          class="block sm:hidden md:block"
+        >
+          Adzbh...FgETuW
+        </span>
       </div>
     </td>
     <td
       class="hidden xl:table-cell"
     >
       <div
-        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 dbZfon justify-end sm:justify-center sm:border-l border-theme-secondary-300"
+        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 dbZfon justify-end md:justify-center md:border-l border-theme-secondary-300"
       >
         2021-04-01T11:41:20.000Z
       </div>
     </td>
     <td>
       <div
-        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 dbZfon justify-end sm:border-l border-theme-secondary-300"
+        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 dbZfon justify-end md:border-l border-theme-secondary-300"
       >
-        <span
-          class="sm:hidden lg:table-cell"
-        >
+        <span>
           1800000000.00000000 DARK
-        </span>
-        <span
-          class="hidden lg:hidden sm:table-cell"
-        >
-          1800000000.00 DARK
         </span>
       </div>
     </td>
@@ -76,7 +87,7 @@ exports[`Footer should match snapshot 1`] = `
       class="hidden lg:table-cell"
     >
       <div
-        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 dbZfon justify-end sm:border-l border-theme-secondary-300"
+        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 dbZfon justify-end md:border-l border-theme-secondary-300"
       >
         18.00000000 DARK
       </div>
