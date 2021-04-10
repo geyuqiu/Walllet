@@ -7,7 +7,7 @@ const getType = (type: string): any => {
 		case "horizontal":
 			return tw`flex clear-both w-full min-w-full my-6`;
 		case "vertical":
-			return tw`relative inline-block align-middle border-t-0 border-l border-solid mx-6 h-full`;
+			return tw`relative inline-block align-middle border-t-0 border-l border-solid mx-10 h-full`;
 	}
 };
 

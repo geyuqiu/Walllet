@@ -1,22 +1,25 @@
-import React from "react";
-
-import {Card} from '../../../components/Card/Card';
 import {Divider} from "app/components/Divider/Divider";
-import {useHistory} from "react-router-dom";
 import {Dropdown} from "app/components/Dropdown/Dropdown";
-import {Button} from '../../../components/Button/Button';
-import {hideTextMiddle} from '../TransactionRow/TransactionRow';
 import {Icon} from "app/components/Icon/Icon";
-import {Wallet} from '../model';
+import React from "react";
+import {useHistory} from "react-router-dom";
 import styled from 'styled-components';
-import tw from 'twin.macro';
+
 import {SvgCollection} from '../../../assets/svg';
+import {Button} from '../../../components/Button/Button';
+import {Card} from '../../../components/Card/Card';
+import {Wallet} from '../model';
+import {hideTextMiddle} from '../TransactionRow/TransactionRow';
 
+type LogoContainerProps = {
+	width: number;
+}
 
-const LogoContainer = styled.div`
-	${tw`flex items-center justify-center mr-2 rounded-sm text-theme-background bg-theme-secondary-500 dark:bg-theme-secondary-700`};
-	width: 18px;
-	height: 18px;
+const LogoContainer = styled.div<LogoContainerProps>`
+  ${({width}) => width && `
+    width: ${width}px;
+  `};
+  height: auto;
 `;
 
 const {Logo} = SvgCollection;
@@ -41,7 +44,7 @@ export const WalletCard = ({wallets, wallet}: WalletProps) => {
 			<Card className="bg-green-dark sm:flex sm:justify-center">
 				<Card className="bg-black-darkest text-white rounded-lg w-full max-w-screen-xl flex justify-center flex-col lg:flex-row">
 					<div className="flex items-center my-auto cursor-pointer" onClick={() => history.push('fee')}>
-						<LogoContainer>
+						<LogoContainer width={57}>
 							<Logo width={44}/>
 						</LogoContainer>
 
