@@ -6,7 +6,6 @@ import {useHistory} from "react-router-dom";
 import styled from 'styled-components';
 
 import {SvgCollection} from '../../../assets/svg';
-import {Button} from '../../../components/Button/Button';
 import {Card} from '../../../components/Card/Card';
 import {Wallet} from '../model';
 import {hideTextMiddle} from '../TransactionRow/TransactionRow';
@@ -58,12 +57,11 @@ export const WalletCard = ({wallets, wallet}: WalletProps) => {
 					</div>
 					<Dropdown
 						toggleContent={
-							<div className="relative">
-								<Button size="icon" className="text-left" icon="Address" fill='#000000' stroke='#FBC457'>
-									<span className="hidden sm:block">{wallet.address}</span>
-									<span className="block sm:hidden">{hideTextMiddle(wallet.address, 7, 8)}</span>
-									<Icon name="ChevronDown" width={20} height={20}/>
-								</Button>
+							<div className="flex">
+								<Icon name="Address" width={20} height={20} fill='#000000' stroke='#FBC457'/>
+								<span className="hidden sm:block">{wallet.address}</span>
+								<span className="block sm:hidden">{hideTextMiddle(wallet.address, 7, 8)}</span>
+								<Icon name="ChevronDown" width={20} height={20}/>
 							</div>
 						}
 						options={walletDisplayOptions}
