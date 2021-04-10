@@ -12,9 +12,9 @@ test('see logo text', async (t) => {
 
 });
 
-test('all 6 columns exists on xl screens', async (t) => {
+test('all 6 columns exists on screens', async (t) => {
 	for (let i = 0; i < 6; i++) {
-		await t.resizeWindow(1300, 800)
+		await t // cannot resize electron on macOS: https://github.com/DevExpress/testcafe-browser-provider-electron/issues/52
 			.expect(Selector(`[data-testid=table__th--${i}]`).exists).ok();
 	}
 });
