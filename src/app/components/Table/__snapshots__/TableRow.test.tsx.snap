@@ -5,9 +5,17 @@ exports[`TableRow should render with border 1`] = `
   <table>
     <tbody>
       <tr
-        class="sc-bdfBwQ fPMXDH"
+        class="TableRow__TableRowStyled-sc-1p89o19-0 iIKWLH"
         data-testid="TableRow"
-      />
+      >
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 dbZfon"
+          >
+            something
+          </div>
+        </td>
+      </tr>
     </tbody>
   </table>
 </div>
@@ -18,9 +26,17 @@ exports[`TableRow should render without border 1`] = `
   <table>
     <tbody>
       <tr
-        class="sc-bdfBwQ fZKKsM"
+        class="TableRow__TableRowStyled-sc-1p89o19-0 fYQqzA"
         data-testid="TableRow"
-      />
+      >
+        <td>
+          <div
+            class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 dbZfon"
+          >
+            something
+          </div>
+        </td>
+      </tr>
     </tbody>
   </table>
 </div>

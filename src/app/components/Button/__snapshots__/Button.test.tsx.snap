@@ -52,58 +52,6 @@ exports[`Button should render an icon 1`] = `
 </div>
 `;
 
-exports[`Button should render as danger button 1`] = `
-<div>
-  <button
-    class="OriginalButton__StyledButton-sc-1y2wptt-0 hLYMjm"
-    type="button"
-  >
-    <div
-      class="flex relative items-center space-x-2"
-    />
-  </button>
-</div>
-`;
-
-exports[`Button should render as primary button 1`] = `
-<div>
-  <button
-    class="OriginalButton__StyledButton-sc-1y2wptt-0 cEUmKc"
-    type="button"
-  >
-    <div
-      class="flex relative items-center space-x-2"
-    />
-  </button>
-</div>
-`;
-
-exports[`Button should render as secondary button 1`] = `
-<div>
-  <button
-    class="OriginalButton__StyledButton-sc-1y2wptt-0 hsoUax"
-    type="button"
-  >
-    <div
-      class="flex relative items-center space-x-2"
-    />
-  </button>
-</div>
-`;
-
-exports[`Button should render as transparent button 1`] = `
-<div>
-  <button
-    class="OriginalButton__StyledButton-sc-1y2wptt-0 icTvPi"
-    type="button"
-  >
-    <div
-      class="flex relative items-center space-x-2"
-    />
-  </button>
-</div>
-`;
-
 exports[`Button should render if disabled 1`] = `
 <DocumentFragment>
   <button

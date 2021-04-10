@@ -7,7 +7,7 @@ exports[`TableRow should render with border 1`] = `
       <tr>
         <td>
           <div
-            class="sc-bdfBwQ dUfliX"
+            class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 dbZfon"
           >
             1
           </div>

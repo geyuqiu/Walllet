@@ -3,23 +3,22 @@
 exports[`FeeInput should match snapshot 1`] = `
 <div>
   <section
-    class="p-12"
+    class="p-12 w-1/2"
   >
     <label
-      class="text-black-dark pl-6"
-      for="fee"
+      class="text-black-dark pl-6 leading-relaxed font-semibold"
     >
       Fee
     </label>
     <section>
       <input
-        class="p-4 text-gray-darkest hover:border-green-darkest border-gray-darkest border border-solid rounded-full w-full focus:outline-none"
+        class="p-4 text-gray-darkest hover:border-green-darkest border-gray-darkest border border-solid rounded-50vh w-full focus:outline-none"
         placeholder="currency: DARK"
         role="textbox"
         value="currency: DARK"
       />
       <section
-        class="pl-6"
+        class="px-6"
       >
         <div
           class="FeeInput__SliderWrapper-sc-1tci9nq-0 kMhBBq"
