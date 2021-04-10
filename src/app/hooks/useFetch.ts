@@ -9,7 +9,7 @@ const walletBaseUrl = 'https://api.ark.io/api/wallets/';
 const dateFormat = 'DD.MM.YYYY';
 
 export const useFetch = (wallet: Wallet | null, setIsLoadingTransactions: Function) => {
-	const [wallets, setWallets] = useState<string[]>([]);
+	const [wallets, setWallets] = useState<Wallet[]>([]);
 	useEffect(() => {
 		const fetchWallets = async () => {
 			setIsLoadingTransactions(true);

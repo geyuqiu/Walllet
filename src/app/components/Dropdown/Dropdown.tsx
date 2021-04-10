@@ -1,9 +1,9 @@
-import {Divider} from "app/components/Divider";
 import React, {useEffect, useRef, useState} from "react";
 import {styled} from "twin.macro";
 import {Position, Size} from "types";
 
 import {clickOutsideHandler} from '../../hooks/click-outside';
+import {Divider} from '../Divider/Divider';
 import {Icon} from '../Icon/Icon';
 import {defaultClasses, getStyles} from "./Dropdown.styles";
 
