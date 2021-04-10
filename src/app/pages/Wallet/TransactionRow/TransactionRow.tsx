@@ -58,7 +58,6 @@ export const TransactionRow = ({transaction, address}: TransactionRowProps) => {
 				<Amount
 					data-testid="transaction__fee__Amount"
 					value={BigNumber.make(transaction.amount)}
-					className="font-bold"
 				/>
 			</TableCell>
 
@@ -67,7 +66,6 @@ export const TransactionRow = ({transaction, address}: TransactionRowProps) => {
 				<Amount
 					data-testid="transaction__fee__Amount"
 					value={BigNumber.make(transaction.fee)}
-					className="font-bold"
 				/>
 			</TableCell>
 
