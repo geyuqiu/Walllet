@@ -59,7 +59,7 @@ export const WalletCard = ({wallets, wallet}: WalletProps) => {
 					<Dropdown
 						toggleContent={
 							<div className="flex">
-								<Circle className="" size="sm">
+								<Circle className="" size="lg">
 									<Icon name="Address" width={20} height={20} fill='#000000' stroke='#FBC457'/>
 								</Circle>
 								<span className="hidden sm:block">{wallet.address}</span>
@@ -73,7 +73,7 @@ export const WalletCard = ({wallets, wallet}: WalletProps) => {
 					<div className="hidden lg:block">
 						<Divider className="border-black-light dark:border-theme-secondary-600" type="vertical"/>
 					</div>
-					<div>
+					<div className="mt-6">
 						<Circle className="" size="lg">
 							<Icon name="Balance" width={20} height={20} fill='#000000' stroke='#FBC457'/>
 						</Circle>

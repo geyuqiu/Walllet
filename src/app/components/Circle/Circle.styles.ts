@@ -2,7 +2,7 @@ import tw, {css} from "twin.macro";
 import {Size} from "types";
 
 const defaultStyle = (noShadow: boolean) => [
-	tw`transition-all duration-100 inline-flex items-center justify-center align-middle border-2 rounded-full`,
+	tw`transition-all duration-100 inline-flex items-center justify-center align-middle border rounded-full border-gray-darkest border-opacity-10`,
 	noShadow ? tw`ring-0` : tw`ring-6`,
 ];
 
