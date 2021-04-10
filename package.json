@@ -85,12 +85,11 @@
 		"testRunner": "jest-circus/runner"
 	},
 	"dependencies": {
-		"@ledgerhq/hw-transport-node-hid-singleton": "^5.36.0",
-		"@sentry/react": "^6.2.0",
-		"@sentry/tracing": "^6.2.0",
+		"@arkecosystem/platform-sdk": "^4.1.10",
+		"@arkecosystem/platform-sdk-intl": "^4.1.10",
+		"@arkecosystem/platform-sdk-support": "^4.1.10",
 		"@tailwindcss/forms": "^0.2.1",
 		"@tailwindcss/postcss7-compat": "^2.0.2",
-		"@tippyjs/react": "^4.2.0",
 		"@types/react-linkify": "^1.0.0",
 		"about-window": "^1.13.4",
 		"async-retry": "^1.3.1",

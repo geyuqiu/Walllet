@@ -10,6 +10,8 @@ import {Card} from '../../../components/Card/Card';
 import {Circle} from '../../../components/Circle/Circle';
 import {Wallet} from '../model';
 import {hideTextMiddle} from '../TransactionRow/TransactionRow';
+import {Amount} from '../../../components/Amount/Amount';
+import {BigNumber} from '@arkecosystem/platform-sdk-support';
 
 type LogoContainerProps = {
 	width: number;
@@ -67,7 +69,7 @@ export const WalletCard = ({wallets, wallet}: WalletProps) => {
 								<Icon name="ChevronDown" width={20} height={20} className="ml-3 mt-3"/>
 							</div>
 						}
-						className="border-r border-gray-darkest border-opacity-10"
+						className="border border-gray-darkest border-opacity-10 rounded-l-3xl rounded-r-3xl"
 						options={walletDisplayOptions}
 						dropdownClass="top-3 text-left"
 					/>
@@ -80,7 +82,11 @@ export const WalletCard = ({wallets, wallet}: WalletProps) => {
 						</Circle>
 						<div className="flex flex-col">
 							<span className="text-gray-darkest">Balance</span>
-							<span className="font-bold">{wallet.balance}</span>
+							<Amount
+								data-testid="BalanceAmount"
+								value={BigNumber.make(wallet.balance)}
+								className="text-theme-secondary-text font-bold"
+							/>
 						</div>
 					</div>
 				</Card>

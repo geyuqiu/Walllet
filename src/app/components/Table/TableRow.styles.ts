@@ -13,17 +13,15 @@ const getHoverStyles = (isSelected?: boolean): any =>
 	css`
 		&:hover td > div {
 			${isSelected
-				? tw`bg-theme-success-100 dark:bg-theme-success-900`
-				: tw`bg-theme-secondary-100 dark:bg-black-dark`}
+				? tw`bg-green-lightest`
+				: tw`bg-gray-lightest`}
 		}
 	`;
 
 export const getStyles = ({ onClick, border, isSelected }: any) => {
 	const styles = [baseStyle, getBorderStyles(border), getCursorStyles(onClick)];
 
-	if (onClick) {
-		styles.push(getHoverStyles(isSelected));
-	}
+	styles.push(getHoverStyles(isSelected));
 
 	return styles;
 };
