@@ -238,6 +238,9 @@ module.exports = {
 			transitionProperty: {
 				background: "background-color",
 			},
+			ringWidth: {
+				6: "6px",
+			},
 		},
 	},
 	variants: {

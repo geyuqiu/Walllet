@@ -26,7 +26,7 @@ const getPosition = (position: string): any => {
 			return tw`top-0 right-0`;
 		case "right":
 		default:
-			return tw`right-0`;
+			return tw`left-0`;
 	}
 };
 

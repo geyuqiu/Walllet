@@ -9,6 +9,7 @@ import {SvgCollection} from '../../../assets/svg';
 import {Card} from '../../../components/Card/Card';
 import {Wallet} from '../model';
 import {hideTextMiddle} from '../TransactionRow/TransactionRow';
+import {Circle} from '../../../components/Circle/Circle';
 
 type LogoContainerProps = {
 	width: number;
@@ -58,7 +59,9 @@ export const WalletCard = ({wallets, wallet}: WalletProps) => {
 					<Dropdown
 						toggleContent={
 							<div className="flex">
-								<Icon name="Address" width={20} height={20} fill='#000000' stroke='#FBC457'/>
+								<Circle className="" size="sm">
+									<Icon name="Address" width={20} height={20} fill='#000000' stroke='#FBC457'/>
+								</Circle>
 								<span className="hidden sm:block">{wallet.address}</span>
 								<span className="block sm:hidden">{hideTextMiddle(wallet.address, 7, 8)}</span>
 								<Icon name="ChevronDown" width={20} height={20}/>
@@ -71,7 +74,9 @@ export const WalletCard = ({wallets, wallet}: WalletProps) => {
 						<Divider className="border-black-light dark:border-theme-secondary-600" type="vertical"/>
 					</div>
 					<div>
-						<Icon name="Balance" width={20} height={20} fill='#000000' stroke='#FBC457'/>
+						<Circle className="" size="lg">
+							<Icon name="Balance" width={20} height={20} fill='#000000' stroke='#FBC457'/>
+						</Circle>
 						{wallet.balance}
 					</div>
 				</Card>
