@@ -7,9 +7,9 @@ import styled from 'styled-components';
 
 import {SvgCollection} from '../../../assets/svg';
 import {Card} from '../../../components/Card/Card';
+import {Circle} from '../../../components/Circle/Circle';
 import {Wallet} from '../model';
 import {hideTextMiddle} from '../TransactionRow/TransactionRow';
-import {Circle} from '../../../components/Circle/Circle';
 
 type LogoContainerProps = {
 	width: number;
@@ -59,25 +59,29 @@ export const WalletCard = ({wallets, wallet}: WalletProps) => {
 					<Dropdown
 						toggleContent={
 							<div className="flex">
-								<Circle className="" size="lg">
-									<Icon name="Address" width={20} height={20} fill='#000000' stroke='#FBC457'/>
+								<Circle className="rounded-l-3xl mr-3" size="lg">
+									<Icon name="Address" width={15} height={15} fill='#000000' stroke='#FBC457'/>
 								</Circle>
-								<span className="hidden sm:block">{wallet.address}</span>
-								<span className="block sm:hidden">{hideTextMiddle(wallet.address, 7, 8)}</span>
-								<Icon name="ChevronDown" width={20} height={20}/>
+								<span className="hidden sm:block mt-3">{wallet.address}</span>
+								<span className="block sm:hidden mt-3">{hideTextMiddle(wallet.address, 7, 8)}</span>
+								<Icon name="ChevronDown" width={20} height={20} className="ml-3 mt-3"/>
 							</div>
 						}
+						className="border-r border-gray-darkest border-opacity-10"
 						options={walletDisplayOptions}
 						dropdownClass="top-3 text-left"
 					/>
 					<div className="hidden lg:block">
 						<Divider className="border-black-light dark:border-theme-secondary-600" type="vertical"/>
 					</div>
-					<div className="mt-6">
-						<Circle className="" size="lg">
-							<Icon name="Balance" width={20} height={20} fill='#000000' stroke='#FBC457'/>
+					<div className="mt-6 flex flex-row">
+						<Circle className="rounded-full mr-3" size="lg">
+								<Icon name="Balance" width={15} height={15} fill='#000000' stroke='#FBC457'/>
 						</Circle>
-						{wallet.balance}
+						<div className="flex flex-col">
+							<span className="text-gray-darkest">Balance</span>
+							<span className="font-bold">{wallet.balance}</span>
+						</div>
 					</div>
 				</Card>
 			</Card>

@@ -1,3 +1,4 @@
+import cn from "classnames";
 import React, {useEffect, useRef, useState} from "react";
 import {styled} from "twin.macro";
 import {Position, Size} from "types";
@@ -37,6 +38,7 @@ type DropdownProps = {
 	toggleSize?: Size;
 	toggleContent?: any;
 	disableToggle?: boolean;
+	className?: string;
 };
 
 export const Wrapper = styled.div<{ position?: string; variant: string }>(getStyles);
@@ -162,6 +164,7 @@ export const Dropdown = ({
 	toggleSize,
 	toggleContent,
 	disableToggle,
+  className
 }: DropdownProps) => {
 	const [isOpen, setIsOpen] = useState(false);
 
@@ -255,7 +258,7 @@ export const Dropdown = ({
 	}, [ref]);
 
 	return (
-		<div ref={ref} className="relative">
+		<div ref={ref} className={cn("relative", className)}>
 			<span data-testid="dropdown__toggle" onClick={(event: any) => !disableToggle && toggle(event)}>
 				{renderToggle(isOpen, toggleContent, toggleIcon, toggleSize)}
 			</span>

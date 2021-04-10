@@ -51,7 +51,7 @@ exports[`App should match snapshot 1`] = `
           />
         </div>
         <div
-          class="relative"
+          class="relative border-r border-gray-darkest border-opacity-10"
         >
           <span
             data-testid="dropdown__toggle"
@@ -60,12 +60,12 @@ exports[`App should match snapshot 1`] = `
               class="flex"
             >
               <div
-                class="Circle__CircleWrapper-sc-1hq8kv9-0 hwDwdd ring-theme-background"
+                class="Circle__CircleWrapper-sc-1hq8kv9-0 cuWdXR rounded-l-3xl mr-3 ring-theme-background"
               >
                 <div
-                  class="sc-bdfBwQ iyevwF"
-                  height="20"
-                  width="20"
+                  class="sc-bdfBwQ dfWOLJ"
+                  height="15"
+                  width="15"
                 >
                   <svg
                     fill="#000000"
@@ -76,17 +76,17 @@ exports[`App should match snapshot 1`] = `
                 </div>
               </div>
               <span
-                class="hidden sm:block"
+                class="hidden sm:block mt-3"
               >
                 AdzbhuDTyhnfAqepZzVcVsgd1Ym6FgETuW
               </span>
               <span
-                class="block sm:hidden"
+                class="block sm:hidden mt-3"
               >
                 AdzbhuD...m6FgETuW
               </span>
               <div
-                class="sc-bdfBwQ iyevwF"
+                class="sc-bdfBwQ iyevwF ml-3 mt-3"
                 height="20"
                 width="20"
               >
@@ -106,15 +106,15 @@ exports[`App should match snapshot 1`] = `
           />
         </div>
         <div
-          class="mt-6"
+          class="mt-6 flex flex-row"
         >
           <div
-            class="Circle__CircleWrapper-sc-1hq8kv9-0 hwDwdd ring-theme-background"
+            class="Circle__CircleWrapper-sc-1hq8kv9-0 cuWdXR rounded-full mr-3 ring-theme-background"
           >
             <div
-              class="sc-bdfBwQ iyevwF"
-              height="20"
-              width="20"
+              class="sc-bdfBwQ dfWOLJ"
+              height="15"
+              width="15"
             >
               <svg
                 fill="#000000"
@@ -124,7 +124,20 @@ exports[`App should match snapshot 1`] = `
               </svg>
             </div>
           </div>
-          0
+          <div
+            class="flex flex-col"
+          >
+            <span
+              class="text-gray-darkest"
+            >
+              Balance
+            </span>
+            <span
+              class="font-bold"
+            >
+              0
+            </span>
+          </div>
         </div>
       </div>
     </div>
