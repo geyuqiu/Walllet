@@ -47,7 +47,7 @@ export const Table = ({children, data, columns, hideHeader, className, initialSt
 	};
 
 	return (
-		<TableWrapper {...getTableProps({className})} className={cn({"-mt-3": !hideHeader})}>
+		<TableWrapper {...getTableProps({className})} className={cn("w-full max-w-screen-xl", {"-mt-3": !hideHeader})}>
 			<table cellPadding={0} className="table-auto">
 				{!hideHeader && (
 					<thead>

@@ -81,7 +81,7 @@ export const WalletView = () => {
 					</div>
 				</Card>
 			</Card>
-			<section className="sm:mx-8 ml-6 mr-3 pt-12">
+			<section className="ml-6 mr-3 sm:mx-8 sm:flex sm:justify-center pt-12">
 				{isLoadingTransactions && <p>Loading!</p>}
 				{!isLoadingTransactions && !transactions.length && <p>No transactions were found for this wallet!</p>}
 				{!isLoadingTransactions && transactions.length &&
