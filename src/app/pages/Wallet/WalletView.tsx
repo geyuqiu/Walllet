@@ -61,10 +61,10 @@ export const WalletView = () => {
 							<span className="text-2xl font-bold" data-testid="logo__text">ARK Wallet</span>
 						</div>
 						<div className="lg:hidden">
-							<Divider className="border-theme-secondary-300 dark:border-theme-secondary-600" type="horizontal"/>
+							<Divider className="border-black-light dark:border-theme-secondary-600" type="horizontal"/>
 						</div>
 						<div className="lg:contents hidden">
-							<Divider className="border-theme-secondary-300 dark:border-theme-secondary-600" type="vertical"/>
+							<Divider className="border-black-light dark:border-theme-secondary-600" type="vertical"/>
 						</div>
 						<Dropdown
 							toggleContent={

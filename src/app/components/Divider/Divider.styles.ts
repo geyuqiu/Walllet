@@ -11,19 +11,6 @@ const getType = (type: string): any => {
 	}
 };
 
-const getSize = (type: string, size: string): any => {
-	if (type === "vertical") {
-		switch (size) {
-			case "sm":
-				return tw`h-2`;
-			case "lg":
-				return tw`h-8`;
-			default:
-				return tw`h-4`;
-		}
-	}
-};
-
 const isDashed = (dashed: boolean): any => {
 	if (dashed) {
 		return [
@@ -38,8 +25,7 @@ const isDashed = (dashed: boolean): any => {
 	return null;
 };
 
-export const getStyles = ({ size, type, dashed }: { size?: string; type?: string; dashed?: boolean }) => [
-	getSize(type!, size!),
+export const getStyles = ({ type, dashed }: { size?: string; type?: string; dashed?: boolean }) => [
 	...baseStyle,
 	getType(type!),
 	isDashed(dashed!),
