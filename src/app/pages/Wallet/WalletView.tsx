@@ -60,10 +60,10 @@ export const WalletView = () => {
 
 							<span className="text-2xl font-bold" data-testid="logo__text">ARK Wallet</span>
 						</div>
-						<div className="mx-8 -my-2 lg:hidden">
+						<div className="lg:hidden">
 							<Divider className="border-theme-secondary-300 dark:border-theme-secondary-600" type="horizontal"/>
 						</div>
-						<div className="mx-8 -my-2 lg:block hidden">
+						<div className="lg:contents hidden">
 							<Divider className="border-theme-secondary-300 dark:border-theme-secondary-600" type="vertical"/>
 						</div>
 						<Dropdown
