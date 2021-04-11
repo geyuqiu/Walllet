@@ -99,7 +99,7 @@ exports[`WalletCard should match snapshot 1`] = `
               </div>
             </div>
             <div
-              class="sc-bdfBwQ dfWOLJ mr-5"
+              class="sc-bdfBwQ dfWOLJ mx-5"
               height="15"
               width="15"
             >

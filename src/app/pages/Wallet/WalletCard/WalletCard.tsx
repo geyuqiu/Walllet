@@ -73,7 +73,7 @@ export const WalletCard = ({wallets, wallet}: WalletProps) => {
 										<span className="hidden lg:block xl:hidden">{hideTextMiddle(wallet.address, 11, 10)}</span>
 									</div>
 								</div>
-								<Icon name="ChevronDown" width={15} height={15} className="mr-5"/>
+								<Icon name="ChevronDown" width={15} height={15} className="mx-5"/>
 							</div>
 						}
 						className="border border-gray-darkest border-opacity-10 rounded-l-3xl rounded-r-3xl"
