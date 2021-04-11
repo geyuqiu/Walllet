@@ -7,7 +7,7 @@ exports[`Routing should match snapshot 1`] = `
     data-testid="Card"
   >
     <div
-      class="Cardstyles__Wrapper-xnuhyv-0 iAsJMU bg-black-darkest text-white rounded-lg w-full max-w-screen-xl flex justify-center items-start lg:items-center flex-col lg:flex-row"
+      class="Cardstyles__Wrapper-xnuhyv-0 iAsJMU bg-black-darkest text-white rounded-lg w-full max-w-screen-xl flex justify-center lg:items-center flex-col lg:flex-row"
       data-testid="Card"
     >
       <div
@@ -59,7 +59,7 @@ exports[`Routing should match snapshot 1`] = `
               class="flex items-center"
             >
               <div
-                class="Circle__CircleWrapper-sc-1hq8kv9-0 cqSuMy rounded-l-3xl mr-5 border-r bg-black-light ring-theme-background"
+                class="Circle__CircleWrapper-sc-1hq8kv9-0 cqSuMy rounded-l-3xl mr-5 border-r bg-black-light hidden sm:block ring-theme-background"
               >
                 <div
                   class="sc-bdfBwQ dfWOLJ"
@@ -111,10 +111,10 @@ exports[`Routing should match snapshot 1`] = `
         />
       </div>
       <div
-        class="flex flex-row"
+        class="flex flex-row mt-6 lg:mt-0"
       >
         <div
-          class="Circle__CircleWrapper-sc-1hq8kv9-0 cqSuMy border rounded-full mr-3 ring-theme-background"
+          class="Circle__CircleWrapper-sc-1hq8kv9-0 cqSuMy border rounded-full mr-3 hidden sm:block ring-theme-background"
         >
           <div
             class="sc-bdfBwQ dfWOLJ"
