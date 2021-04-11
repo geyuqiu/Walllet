@@ -23,7 +23,7 @@ export const TransactionRow = ({transaction, address}: TransactionRowProps) => {
 		<TableRow className="text-base">
 
 			<TableCell innerClassName="justify-end md:justify-start"
-			           className="md:py-2">
+			           className="md:py-2 md:w-4">
 				<Link href={'https://explorer.ark.io/transaction/' + transaction.id}
 				      className={linkClassName}>
 					<span className="table-cell lg:table-cell md:hidden">{hideTextBetween({
@@ -35,7 +35,7 @@ export const TransactionRow = ({transaction, address}: TransactionRowProps) => {
 				</Link>
 			</TableCell>
 
-			<TableCell innerClassName="justify-end md:justify-start md:border-l border-theme-secondary-300 pl-5 pr-5">
+			<TableCell innerClassName="justify-end md:justify-start md:border-l border-theme-secondary-300">
 				{address !== transaction.sender
 					? <Link href={'https://explorer.ark.io/wallets/' + transaction.sender} className={linkClassName}>
 						<ResponsiveText text={transaction.sender} prefixLength={5} suffixLength={5}/>

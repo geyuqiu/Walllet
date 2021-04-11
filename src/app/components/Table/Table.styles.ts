@@ -61,6 +61,7 @@ export const tableStyle = `
 			width: 45%;
 			padding-right: 10px;
 			white-space: nowrap;
+			color: #5A5D60;
 		}
 
 		/*

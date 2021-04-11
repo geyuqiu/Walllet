@@ -4,7 +4,7 @@ export const feeAccessor = 'fee';
 export const tableColumns = [
 	{
 		Header: 'Txid',
-		accessor: 'id',
+		accessor: 'id'
 	},
 	{
 		Header: 'Sender',
