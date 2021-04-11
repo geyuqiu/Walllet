@@ -19,9 +19,14 @@ export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 		setTextBoxValue(value);
 		setTextBoxStyles();
 		setInputRangeColor('#FBC457', Number(value));
+
+		const elem = document.querySelector('input[type=range]');
+		if (value && elem) {
+			elem.classList.add('yellow');
+		}
 	}
 
-	const handleTextBoxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+	const onTextBoxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		const value = parse(event.target.value);
 		setTextBoxValue(value);
 		setTextBoxStyles();
@@ -29,6 +34,12 @@ export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 			const nullSafe = !value ? initialValue : value;
 			setSliderValue(nullSafe);
 			setInputRangeColor('#046E62', Number(value));
+
+			const elem = document.querySelector('input[type=range]');
+			if (value && elem) {
+				updateLabelColor();
+				elem.classList.remove('yellow');
+			}
 			emitValueToSatoshi(nullSafe);
 		}
 	};
@@ -38,6 +49,7 @@ export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 			onChange(String(Number(value) * hundredMillion));
 		}
 	};
+
 	const inputRangeRef = useRef<any>(null);
 	const textBoxRef = useRef<any>(null);
 	const labelRef = useRef<any>(null);
@@ -53,26 +65,27 @@ export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 		textBoxRef.current.style.fontWeight = '600';
 	}
 
-	const onTextBoxHover = () => labelRef.current.style.color = '#046E62';
+	const updateLabelColor = () => labelRef.current.style.color = '#046E62';
 
-	const exitTextBoxHover = () => labelRef.current.style.color = '#1F2121';
+	const resetLabelColor = () => labelRef.current.style.color = '#1F2121';
 
 	return (
 		<section className="p-12 w-1/2">
 			<BackButton className="mb-4" backToUrl="/"/>
 			<label className="text-black-dark pl-6 leading-relaxed font-semibold"
+			       data-testid="fee_input__label"
 			       ref={labelRef}>Fee</label>
-			<section onMouseEnter={onTextBoxHover} onMouseLeave={exitTextBoxHover}>
+			<section onMouseEnter={updateLabelColor} onMouseLeave={resetLabelColor}>
 				<input role="textbox" placeholder="currency: DARK"
 	        className="p-4 my-3 text-gray-darkest hover:border-green-darkest border-gray-darkest border border-solid rounded-50vh w-full focus:outline-none"
-					onChange={handleTextBoxChange} value={textBoxValue}
-	        ref={textBoxRef}
+					onChange={onTextBoxChange} value={textBoxValue}
+	        ref={textBoxRef} data-testid="fee_input__textbox"
 				/>
 				<section className="px-6">
 					<SliderWrapper>
 						<input type="range" id="fee" name="fee" min="0" max="5" step="0.00000001" role="slider"
 							onChange={onInputRangeChange} value={sliderValue}
-						  ref={inputRangeRef}
+						  ref={inputRangeRef} data-testid="fee_input__slider"
 						/>
 					</SliderWrapper>
 				</section>

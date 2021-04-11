@@ -20,12 +20,14 @@ exports[`FeeInput should match snapshot 1`] = `
     </button>
     <label
       class="text-black-dark pl-6 leading-relaxed font-semibold"
+      data-testid="fee_input__label"
     >
       Fee
     </label>
     <section>
       <input
-        class="p-4 text-gray-darkest hover:border-green-darkest border-gray-darkest border border-solid rounded-50vh w-full focus:outline-none"
+        class="p-4 my-3 text-gray-darkest hover:border-green-darkest border-gray-darkest border border-solid rounded-50vh w-full focus:outline-none"
+        data-testid="fee_input__textbox"
         placeholder="currency: DARK"
         role="textbox"
         value="currency: DARK"
@@ -34,9 +36,10 @@ exports[`FeeInput should match snapshot 1`] = `
         class="px-6"
       >
         <div
-          class="FeeInput__SliderWrapper-sc-1tci9nq-0 kMhBBq"
+          class="FeeInput__SliderWrapper-sc-1tci9nq-0 jjiGwR"
         >
           <input
+            data-testid="fee_input__slider"
             id="fee"
             max="5"
             min="0"
