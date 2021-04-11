@@ -73,10 +73,10 @@ export const WalletCard = ({wallets, wallet, addressOnSelect}: WalletProps) => {
 						<span className="text-2xl font-bold lg:hidden xl:block" data-testid="logo__text">ARK Wallet</span>
 					</div>
 					<div className="lg:hidden">
-						<Divider className="border-black-light dark:border-theme-secondary-600" type="horizontal"/>
+						<Divider className="border-black-dark dark:border-theme-secondary-600" type="horizontal"/>
 					</div>
 					<div className="lg:contents hidden">
-						<Divider className="border-black-light dark:border-theme-secondary-600" type="vertical"/>
+						<Divider className="border-black-dark dark:border-theme-secondary-600" type="vertical"/>
 					</div>
 					<Dropdown
 						onSelect={(dropdownOption: DropdownOption) => addressOnSelect(dropdownOption.label)}
@@ -105,7 +105,7 @@ export const WalletCard = ({wallets, wallet, addressOnSelect}: WalletProps) => {
 						dropdownClass="top-3 text-left w-full"
 					/>
 					<div className="hidden lg:contents">
-						<Divider className="border-black-light dark:border-theme-secondary-600" type="vertical"/>
+						<Divider className="border-black-dark dark:border-theme-secondary-600" type="vertical"/>
 					</div>
 					<div className="flex flex-row mt-6 lg:mt-0">
 						<div className="hidden sm:block">
