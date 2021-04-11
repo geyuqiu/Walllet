@@ -78,7 +78,7 @@ export const WalletCard = ({wallets, wallet}: WalletProps) => {
 						}
 						className="border border-gray-darkest border-opacity-10 rounded-l-3xl rounded-r-3xl"
 						options={walletDisplayOptions}
-						dropdownClass="top-3 text-left"
+						dropdownClass="top-3 text-left w-full"
 					/>
 					<div className="hidden lg:contents">
 						<Divider className="border-black-light dark:border-theme-secondary-600" type="vertical"/>

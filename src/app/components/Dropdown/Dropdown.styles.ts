@@ -1,6 +1,6 @@
 import tw from "twin.macro";
 
-export const defaultClasses = "mt-3 py-3 absolute z-10 rounded-lg shadow-xl";
+export const defaultClasses = "mt-3 py-4 absolute z-10 rounded-lg shadow-xl";
 
 const getVariant = (variant: string): any => {
 	if (variant === "options") {
