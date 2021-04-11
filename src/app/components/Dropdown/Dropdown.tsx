@@ -90,7 +90,7 @@ const renderOptions = (options: DropdownOption[] | DropdownOptionGroup[], onSele
 			{(options as DropdownOption[]).map((option: DropdownOption, index: number) => (
 				<li
 					aria-disabled={option.disabled}
-					className={`group flex items-center space-x-2 py-4 px-5 text-base font-semibold text-left whitespace-nowrap ${
+					className={`group flex items-center space-x-2 py-4 px-5 text-sm text-left whitespace-nowrap ${
 						option.disabled
 							? "cursor-not-allowed select-none bg-theme-secondary-100 text-theme-secondary-400 dark:bg-theme-secondary-700 dark:text-theme-secondary-500"
 							: "cursor-pointer text-white dark:text-theme-secondary-200 active:bg-green-darkest hover:bg-black-lightest dark:hover:bg-theme-primary-600 dark:hover:text-theme-secondary-200"
