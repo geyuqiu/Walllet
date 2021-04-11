@@ -11,7 +11,7 @@ type DropdownButtonProps = {
 
 export const DropdownButton = ({isOpen, label}: DropdownButtonProps) => {
 	return (
-		<button className="flex justify-between items-center h-11 w-full">
+		<button className="flex justify-between items-center h-11 w-full focus:outline-none">
 			<div className="flex items-center">
 				<div className="hidden sm:block">
 					<Circle className="rounded-l-3xl border-r bg-black-light" size="lg">
