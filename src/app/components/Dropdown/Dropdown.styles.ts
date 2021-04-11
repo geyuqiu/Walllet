@@ -4,7 +4,7 @@ export const defaultClasses = "mt-3 py-3 absolute z-10 rounded-lg shadow-xl";
 
 const getVariant = (variant: string): any => {
 	if (variant === "options") {
-		return tw`bg-white dark:bg-theme-secondary-800`;
+		return tw`bg-black-dark dark:bg-theme-secondary-800`;
 	}
 
 	return tw`bg-theme-background border-2 border-theme-primary-100 dark:border-theme-secondary-800`;
@@ -26,7 +26,7 @@ const getPosition = (position: string): any => {
 			return tw`top-0 right-0`;
 		case "right":
 		default:
-			return tw`left-0`;
+			return tw`left-0 top-8`;
 	}
 };
 

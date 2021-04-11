@@ -14,5 +14,5 @@ v12.22.0
 switch line 10 with line 13 under `Routing.tsx` to enable feeInput
 
 design decision: 
-* module structure: similar to desktop wallet without barrels
+* module structure: similar to desktop wallet without barrels and theme
 * use backbutton and logo ark to navigate between `feeInput` and `WalletView`
