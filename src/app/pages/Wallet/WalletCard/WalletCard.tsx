@@ -6,13 +6,14 @@ import React from "react";
 import {useHistory} from "react-router-dom";
 import styled from 'styled-components';
 
+import {Size} from '../../../../types';
 import {SvgCollection} from '../../../assets/svg';
 import {Amount} from '../../../components/Amount/Amount';
 import {Card} from '../../../components/Card/Card';
 import {Circle} from '../../../components/Circle/Circle';
+import useViewport from '../../../hooks/useViewport';
 import {Wallet} from '../model';
 import {hideTextMiddle} from '../TransactionRow/TransactionRow';
-import useViewport from '../../../hooks/useViewport';
 
 type LogoContainerProps = {
 	width: number;
@@ -27,13 +28,13 @@ const LogoContainer = styled.div<LogoContainerProps>`
 
 const {Logo} = SvgCollection;
 
-export const buildLabelAndValue = (wallets: Wallet[], viewport?: string) => {
+export const buildLabelAndValue = (wallets: Wallet[], viewport?: Size | null) => {
 	const options: any[] = [];
 	wallets.forEach(w => {
 		let address = w.address;
-		if (viewport === 'extra-small') {
+		if (viewport === 'xs') {
 			address = hideTextMiddle(address, 7, 8);
-		} else if(viewport === 'extra-laarge') {
+		} else if(viewport === 'xl') {
 			address = hideTextMiddle(address, 11, 10);
 		}
 		options.push({

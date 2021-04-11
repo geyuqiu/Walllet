@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react'
 
+import {Size} from '../../types';
 import {HideColumnsResponsive} from '../pages/Wallet/WalletView';
 
 export const toggleColumn = (toggleHideColumn: Function, innerWidth: number, columnAccessor: string, breakPoint: number) => {
@@ -7,7 +8,7 @@ export const toggleColumn = (toggleHideColumn: Function, innerWidth: number, col
 };
 
 export default function useViewport(toggleHideColumn?: Function, hideColumnsAtBreakpoint?: HideColumnsResponsive[]) {
-	const [viewport, setViewport] = useState('');
+	const [viewport, setViewport] = useState<Size | null>(null);
 
 	const handleResize = () => {
 		const innerWidth = window.innerWidth;
@@ -16,17 +17,17 @@ export default function useViewport(toggleHideColumn?: Function, hideColumnsAtBr
 		);
 
 		if (innerWidth > 1280) {
-			setViewport('huge');
+			setViewport('2xl');
 		} else if (innerWidth > 1024) {
-			setViewport('extra-large');
+			setViewport('xl');
 		} else if (innerWidth > 992) {
-			setViewport('large');
+			setViewport('lg');
 		} else if (innerWidth > 768) {
-			setViewport('medium');
+			setViewport('md');
 		} else if (innerWidth > 640) {
-			setViewport('small');
+			setViewport('sm');
 		} else {
-			setViewport('extra-small');
+			setViewport('xs');
 		}
 	};
 
