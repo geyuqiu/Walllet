@@ -29,9 +29,10 @@ const {Logo} = SvgCollection;
 type WalletProps = {
 	wallets: Wallet[];
 	wallet: Wallet | null;
+	addressOnSelect: (value: string) => void
 }
 
-export const WalletCard = ({wallets, wallet}: WalletProps) => {
+export const WalletCard = ({wallets, wallet, addressOnSelect}: WalletProps) => {
 	const history = useHistory();
 	const walletDisplayOptions = [
 		{label: 'all', value: "all"},
@@ -59,12 +60,13 @@ export const WalletCard = ({wallets, wallet}: WalletProps) => {
 						<Divider className="border-black-light dark:border-theme-secondary-600" type="vertical"/>
 					</div>
 					<Dropdown
+						onSelect={(value: string) => addressOnSelect(value)}
 						toggleContent={
 							<div className="flex justify-between items-center h-11">
 								<div className="flex items-center">
 									<div className="hidden sm:block">
 										<Circle className="rounded-l-3xl border-r bg-black-light" size="lg">
-											<Icon name="Address" width={15} height={15} fill='#000000' stroke='#FBC457' className="ml-2"/>
+											<Icon name="Address" width={15} height={15} fill='#000000' stroke='#FBC457' className="ml-2" data-testid="dropdown__left__icon"/>
 										</Circle>
 									</div>
 									<div className="ml-5">
@@ -73,7 +75,7 @@ export const WalletCard = ({wallets, wallet}: WalletProps) => {
 										<span className="hidden lg:block xl:hidden">{hideTextMiddle(wallet.address, 11, 10)}</span>
 									</div>
 								</div>
-								<Icon name="ChevronDown" width={15} height={15} className="mx-5"/>
+								<Icon name="ChevronDown" width={15} height={15} className="mx-5" data-testid="dropdown__right_icon"/>
 							</div>
 						}
 						className="border border-gray-darkest border-opacity-10 rounded-l-3xl rounded-r-3xl"

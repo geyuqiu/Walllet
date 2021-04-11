@@ -26,9 +26,13 @@ export const WalletView = () => {
 	});
 	const {wallets, transactions} = useFetch(wallet, setIsLoadingTransactions);
 
+	const addressOnSelect = (address: string) => {
+		setWallet(wallets.find(w => w.address ===  address)!);
+	}
+
 	return (
 		<>
-			<WalletCard wallets={wallets} wallet={wallet}/>
+			<WalletCard wallets={wallets} wallet={wallet} addressOnSelect={addressOnSelect}/>
 			<section className="ml-6 mr-3 sm:mx-8 sm:flex sm:justify-center pt-12">
 				{isLoadingTransactions && <p>Loading!</p>}
 				{!isLoadingTransactions && !transactions.length && <p>No transactions were found for this wallet!</p>}

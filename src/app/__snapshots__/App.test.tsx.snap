@@ -70,6 +70,7 @@ exports[`App should match snapshot 1`] = `
                   >
                     <div
                       class="sc-bdfBwQ dfWOLJ ml-2"
+                      data-testid="dropdown__left__icon"
                       height="15"
                       width="15"
                     >
@@ -104,6 +105,7 @@ exports[`App should match snapshot 1`] = `
               </div>
               <div
                 class="sc-bdfBwQ dfWOLJ mx-5"
+                data-testid="dropdown__right_icon"
                 height="15"
                 width="15"
               >
