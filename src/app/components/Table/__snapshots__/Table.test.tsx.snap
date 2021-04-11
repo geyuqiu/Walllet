@@ -40,7 +40,7 @@ exports[`Table should render 1`] = `
                   width="8"
                 >
                   <svg>
-                    chevron-down.svg
+                    arrow-down.svg
                   </svg>
                 </div>
               </div>
@@ -71,7 +71,7 @@ exports[`Table should render 1`] = `
                   width="8"
                 >
                   <svg>
-                    chevron-down.svg
+                    arrow-down.svg
                   </svg>
                 </div>
               </div>
@@ -102,7 +102,7 @@ exports[`Table should render 1`] = `
                   width="8"
                 >
                   <svg>
-                    chevron-down.svg
+                    arrow-down.svg
                   </svg>
                 </div>
               </div>
@@ -167,7 +167,7 @@ exports[`Table should render empty rows if template not provided 1`] = `
                   width="8"
                 >
                   <svg>
-                    chevron-down.svg
+                    arrow-down.svg
                   </svg>
                 </div>
               </div>
@@ -198,7 +198,7 @@ exports[`Table should render empty rows if template not provided 1`] = `
                   width="8"
                 >
                   <svg>
-                    chevron-down.svg
+                    arrow-down.svg
                   </svg>
                 </div>
               </div>
@@ -229,7 +229,7 @@ exports[`Table should render empty rows if template not provided 1`] = `
                   width="8"
                 >
                   <svg>
-                    chevron-down.svg
+                    arrow-down.svg
                   </svg>
                 </div>
               </div>

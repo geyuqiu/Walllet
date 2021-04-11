@@ -108,7 +108,7 @@ export const WalletCard = ({wallets, wallet, addressOnSelect}: WalletProps) => {
 						<div className="flex flex-col">
 							<span className="text-gray-darkest">Balance</span>
 							<Amount
-								data-testid="balance__Amount"
+								data-testid="balance__amount"
 								value={BigNumber.make(wallet.balance)}
 								className="font-bold"
 							/>

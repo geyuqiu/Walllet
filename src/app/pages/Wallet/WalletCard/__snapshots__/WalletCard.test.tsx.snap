@@ -100,13 +100,13 @@ exports[`WalletCard should match snapshot 1`] = `
               </div>
             </div>
             <div
-              class="sc-bdfBwQ dfWOLJ mx-5"
+              class="sc-bdfBwQ dfWOLJ transition-transform mx-5"
               data-testid="dropdown__right_icon"
               height="15"
               width="15"
             >
               <svg>
-                chevron-down.svg
+                arrow-down.svg
               </svg>
             </div>
           </button>
@@ -153,9 +153,223 @@ exports[`WalletCard should match snapshot 1`] = `
           </span>
           <span
             class="font-bold"
-            data-testid="balance__Amount"
+            data-testid="balance__amount"
           >
             0 DARK
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`WalletCard should open dropdown list with all addresses 1`] = `
+<div>
+  <div
+    class="Cardstyles__Wrapper-xnuhyv-0 iAsJMU bg-green-dark sm:flex sm:justify-center"
+    data-testid="Card"
+  >
+    <div
+      class="Cardstyles__Wrapper-xnuhyv-0 iAsJMU bg-black-darkest text-white rounded-lg w-full max-w-screen-xl flex justify-center lg:items-center flex-col lg:flex-row"
+      data-testid="Card"
+    >
+      <div
+        class="flex items-center my-auto cursor-pointer"
+      >
+        <div
+          class="sc-gsTCUz dXshFa"
+          width="57"
+        >
+          <svg
+            width="44"
+          >
+            logo.svg
+          </svg>
+        </div>
+        <span
+          class="text-2xl font-bold lg:hidden xl:block"
+          data-testid="logo__text"
+        >
+          ARK Wallet
+        </span>
+      </div>
+      <div
+        class="lg:hidden"
+      >
+        <div
+          class="Divider-sc-10xryrv-0 ijsPwK border-black-light dark:border-theme-secondary-600"
+          type="horizontal"
+        />
+      </div>
+      <div
+        class="lg:contents hidden"
+      >
+        <div
+          class="Divider-sc-10xryrv-0 dCquGe border-black-light dark:border-theme-secondary-600"
+          type="vertical"
+        />
+      </div>
+      <div
+        class="relative border border-gray-darkest border-opacity-10 rounded-l-3xl rounded-r-3xl"
+      >
+        <span
+          data-testid="dropdown__toggle"
+        >
+          <button
+            class="flex justify-between items-center h-11 w-full"
+          >
+            <div
+              class="flex items-center"
+            >
+              <div
+                class="hidden sm:block"
+              >
+                <div
+                  class="Circle__CircleWrapper-sc-1hq8kv9-0 cqSuMy rounded-l-3xl border-r bg-black-light ring-theme-background"
+                >
+                  <div
+                    class="sc-bdfBwQ dfWOLJ ml-2"
+                    data-testid="dropdown__left__icon"
+                    height="15"
+                    width="15"
+                  >
+                    <svg
+                      fill="#000000"
+                      stroke="#FBC457"
+                    >
+                      address.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="ml-5"
+              >
+                <span
+                  class="hidden sm:block lg:hidden xl:block"
+                >
+                  address1
+                </span>
+                <span
+                  class="block sm:hidden"
+                >
+                  address...address1
+                </span>
+                <span
+                  class="hidden lg:block xl:hidden"
+                >
+                  address1...address1
+                </span>
+              </div>
+            </div>
+            <div
+              class="sc-bdfBwQ dfWOLJ transition-transform mx-5 transform rotate-180"
+              data-testid="dropdown__right_icon"
+              height="15"
+              width="15"
+            >
+              <svg>
+                arrow-down.svg
+              </svg>
+            </div>
+          </button>
+        </span>
+        <div
+          class="Dropdown__Wrapper-uh3cy4-0 gmKQkX opacity-0 mt-3 py-8 absolute z-10 rounded-lg shadow-xl top-3 text-left w-full"
+          data-testid="dropdown__content"
+          style="z-index: 1; opacity: 100; height: -30px; overflow-y: scroll;"
+        >
+          <ul
+            data-testid="dropdown__options"
+          >
+            <li
+              class="group flex items-center space-x-2 py-4 px-5 text-base font-semibold text-left whitespace-nowrap cursor-pointer text-white dark:text-theme-secondary-200 active:bg-green-darkest hover:bg-black-lightest dark:hover:bg-theme-primary-600 dark:hover:text-theme-secondary-200"
+              data-testid="dropdown__option--0"
+            >
+              <span>
+                address1
+              </span>
+            </li>
+            <li
+              class="group flex items-center space-x-2 py-4 px-5 text-base font-semibold text-left whitespace-nowrap cursor-pointer text-white dark:text-theme-secondary-200 active:bg-green-darkest hover:bg-black-lightest dark:hover:bg-theme-primary-600 dark:hover:text-theme-secondary-200"
+              data-testid="dropdown__option--1"
+            >
+              <span>
+                address2
+              </span>
+            </li>
+            <li
+              class="group flex items-center space-x-2 py-4 px-5 text-base font-semibold text-left whitespace-nowrap cursor-pointer text-white dark:text-theme-secondary-200 active:bg-green-darkest hover:bg-black-lightest dark:hover:bg-theme-primary-600 dark:hover:text-theme-secondary-200"
+              data-testid="dropdown__option--2"
+            >
+              <span>
+                address3
+              </span>
+            </li>
+            <li
+              class="group flex items-center space-x-2 py-4 px-5 text-base font-semibold text-left whitespace-nowrap cursor-pointer text-white dark:text-theme-secondary-200 active:bg-green-darkest hover:bg-black-lightest dark:hover:bg-theme-primary-600 dark:hover:text-theme-secondary-200"
+              data-testid="dropdown__option--3"
+            >
+              <span>
+                address4
+              </span>
+            </li>
+            <li
+              class="group flex items-center space-x-2 py-4 px-5 text-base font-semibold text-left whitespace-nowrap cursor-pointer text-white dark:text-theme-secondary-200 active:bg-green-darkest hover:bg-black-lightest dark:hover:bg-theme-primary-600 dark:hover:text-theme-secondary-200"
+              data-testid="dropdown__option--4"
+            >
+              <span>
+                address5
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="hidden lg:contents"
+      >
+        <div
+          class="Divider-sc-10xryrv-0 dCquGe border-black-light dark:border-theme-secondary-600"
+          type="vertical"
+        />
+      </div>
+      <div
+        class="flex flex-row mt-6 lg:mt-0"
+      >
+        <div
+          class="hidden sm:block"
+        >
+          <div
+            class="Circle__CircleWrapper-sc-1hq8kv9-0 cqSuMy border rounded-full mr-3 ring-theme-background"
+          >
+            <div
+              class="sc-bdfBwQ dfWOLJ"
+              height="15"
+              width="15"
+            >
+              <svg
+                fill="#000000"
+                stroke="#FBC457"
+              >
+                balance.svg
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col"
+        >
+          <span
+            class="text-gray-darkest"
+          >
+            Balance
+          </span>
+          <span
+            class="font-bold"
+            data-testid="balance__amount"
+          >
+            NaN DARK
           </span>
         </div>
       </div>

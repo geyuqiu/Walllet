@@ -100,13 +100,13 @@ exports[`WalletView should match snapshot 1`] = `
               </div>
             </div>
             <div
-              class="sc-bdfBwQ dfWOLJ mx-5"
+              class="sc-bdfBwQ dfWOLJ transition-transform mx-5"
               data-testid="dropdown__right_icon"
               height="15"
               width="15"
             >
               <svg>
-                chevron-down.svg
+                arrow-down.svg
               </svg>
             </div>
           </button>
@@ -153,7 +153,7 @@ exports[`WalletView should match snapshot 1`] = `
           </span>
           <span
             class="font-bold"
-            data-testid="balance__Amount"
+            data-testid="balance__amount"
           >
             10,043.109 DARK
           </span>
