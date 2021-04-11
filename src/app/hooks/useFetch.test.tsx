@@ -1,6 +1,6 @@
 import {Wallet} from '../pages/Wallet/model';
 import {Transaction} from '../pages/Wallet/TransactionRow/model';
-import {parseTransaction, parseWallets} from './useFetch';
+import {parseTransaction, parseWallets} from './useFetchWallets';
 
 describe("parseWallets should ", () => {
 	it("parse wallet address and balance", () => {

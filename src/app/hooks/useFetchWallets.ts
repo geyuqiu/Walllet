@@ -8,18 +8,26 @@ import {httpClient} from "../services/HttpClient";
 const walletBaseUrl = 'https://api.ark.io/api/wallets/';
 const dateFormat = 'DD.MM.YYYY';
 
-export const useFetch = (wallet: Wallet | null, setIsLoadingTransactions: Function) => {
+export const useFetchWallets = (setIsLoadingTransactions: Function, setWallet: Function) => {
 	const [wallets, setWallets] = useState<Wallet[]>([]);
 	useEffect(() => {
 		const fetchWallets = async () => {
+			setIsLoadingTransactions(false);
 			const response = await httpClient.get(walletBaseUrl + "top?page=1&limit=5");
 			const wallets = parseWallets(response);
 			if (wallets.length) {
 				setWallets(wallets);
+				setWallet(wallets[0]);
 			}
+			setIsLoadingTransactions(true);
 		};
 		fetchWallets();
 	}, []);
+
+	return {wallets};
+};
+
+export const useFetchTransactions = (wallet: Wallet | null, setIsLoadingTransactions: Function) => {
 
 	const [transactions, setTransactions] = useState<Transaction[]>([]);
 	useEffect(() => {
@@ -35,7 +43,7 @@ export const useFetch = (wallet: Wallet | null, setIsLoadingTransactions: Functi
 		if (wallet) fetchTransaction();
 	}, [wallet]);
 
-	return { wallets, transactions };
+	return {transactions};
 };
 
 export const parseWallets = (response: any): Wallet[] => {

@@ -63,7 +63,7 @@ export const WalletCard = ({wallets, wallet, addressOnSelect}: WalletProps) => {
 
 	return (
 		<>
-			{!wallet && <p>Loading ...</p>}
+			{!wallets.length && <p>Loading Wallets ...</p>}
 			{wallet &&
 			<Card className="bg-green-dark sm:flex sm:justify-center">
 				<Card className="bg-black-darkest text-white rounded-lg w-full max-w-screen-xl flex justify-center lg:items-center flex-col lg:flex-row">
