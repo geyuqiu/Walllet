@@ -60,14 +60,18 @@ export const WalletCard = ({wallets, wallet}: WalletProps) => {
 					</div>
 					<Dropdown
 						toggleContent={
-							<div className="flex justify-between items-center">
+							<div className="flex justify-between items-center h-11">
 								<div className="flex items-center">
-									<Circle className="rounded-l-3xl mr-5 border-r bg-black-light hidden sm:block" size="lg">
-										<Icon name="Address" width={15} height={15} fill='#000000' stroke='#FBC457'/>
-									</Circle>
-									<span className="hidden sm:block lg:hidden xl:block">{wallet.address}</span>
-									<span className="block sm:hidden">{hideTextMiddle(wallet.address, 7, 8)}</span>
-									<span className="hidden lg:block xl:hidden">{hideTextMiddle(wallet.address, 11, 10)}</span>
+									<div className="hidden sm:block">
+										<Circle className="rounded-l-3xl border-r bg-black-light" size="lg">
+											<Icon name="Address" width={15} height={15} fill='#000000' stroke='#FBC457'/>
+										</Circle>
+									</div>
+									<div className="ml-5">
+										<span className="hidden sm:block lg:hidden xl:block">{wallet.address}</span>
+										<span className="block sm:hidden">{hideTextMiddle(wallet.address, 7, 8)}</span>
+										<span className="hidden lg:block xl:hidden">{hideTextMiddle(wallet.address, 11, 10)}</span>
+									</div>
 								</div>
 								<Icon name="ChevronDown" width={15} height={15} className="mr-5"/>
 							</div>
@@ -80,9 +84,11 @@ export const WalletCard = ({wallets, wallet}: WalletProps) => {
 						<Divider className="border-black-light dark:border-theme-secondary-600" type="vertical"/>
 					</div>
 					<div className="flex flex-row mt-6 lg:mt-0">
-						<Circle className="border rounded-full mr-3 hidden sm:block" size="lg">
-								<Icon name="Balance" width={15} height={15} fill='#000000' stroke='#FBC457'/>
-						</Circle>
+						<div className="hidden sm:block">
+							<Circle className="border rounded-full mr-3" size="lg">
+									<Icon name="Balance" width={15} height={15} fill='#000000' stroke='#FBC457'/>
+							</Circle>
+						</div>
 						<div className="flex flex-col">
 							<span className="text-gray-darkest">Balance</span>
 							<Amount

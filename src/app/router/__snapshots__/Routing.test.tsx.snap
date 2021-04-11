@@ -53,42 +53,50 @@ exports[`Routing should match snapshot 1`] = `
           data-testid="dropdown__toggle"
         >
           <div
-            class="flex justify-between items-center"
+            class="flex justify-between items-center h-11"
           >
             <div
               class="flex items-center"
             >
               <div
-                class="Circle__CircleWrapper-sc-1hq8kv9-0 cqSuMy rounded-l-3xl mr-5 border-r bg-black-light hidden sm:block ring-theme-background"
+                class="hidden sm:block"
               >
                 <div
-                  class="sc-bdfBwQ dfWOLJ"
-                  height="15"
-                  width="15"
+                  class="Circle__CircleWrapper-sc-1hq8kv9-0 cqSuMy rounded-l-3xl border-r bg-black-light ring-theme-background"
                 >
-                  <svg
-                    fill="#000000"
-                    stroke="#FBC457"
+                  <div
+                    class="sc-bdfBwQ dfWOLJ"
+                    height="15"
+                    width="15"
                   >
-                    address.svg
-                  </svg>
+                    <svg
+                      fill="#000000"
+                      stroke="#FBC457"
+                    >
+                      address.svg
+                    </svg>
+                  </div>
                 </div>
               </div>
-              <span
-                class="hidden sm:block lg:hidden xl:block"
+              <div
+                class="ml-5"
               >
-                AdzbhuDTyhnfAqepZzVcVsgd1Ym6FgETuW
-              </span>
-              <span
-                class="block sm:hidden"
-              >
-                AdzbhuD...m6FgETuW
-              </span>
-              <span
-                class="hidden lg:block xl:hidden"
-              >
-                AdzbhuDTyhn...1Ym6FgETuW
-              </span>
+                <span
+                  class="hidden sm:block lg:hidden xl:block"
+                >
+                  AdzbhuDTyhnfAqepZzVcVsgd1Ym6FgETuW
+                </span>
+                <span
+                  class="block sm:hidden"
+                >
+                  AdzbhuD...m6FgETuW
+                </span>
+                <span
+                  class="hidden lg:block xl:hidden"
+                >
+                  AdzbhuDTyhn...1Ym6FgETuW
+                </span>
+              </div>
             </div>
             <div
               class="sc-bdfBwQ dfWOLJ mr-5"
@@ -114,19 +122,23 @@ exports[`Routing should match snapshot 1`] = `
         class="flex flex-row mt-6 lg:mt-0"
       >
         <div
-          class="Circle__CircleWrapper-sc-1hq8kv9-0 cqSuMy border rounded-full mr-3 hidden sm:block ring-theme-background"
+          class="hidden sm:block"
         >
           <div
-            class="sc-bdfBwQ dfWOLJ"
-            height="15"
-            width="15"
+            class="Circle__CircleWrapper-sc-1hq8kv9-0 cqSuMy border rounded-full mr-3 ring-theme-background"
           >
-            <svg
-              fill="#000000"
-              stroke="#FBC457"
+            <div
+              class="sc-bdfBwQ dfWOLJ"
+              height="15"
+              width="15"
             >
-              balance.svg
-            </svg>
+              <svg
+                fill="#000000"
+                stroke="#FBC457"
+              >
+                balance.svg
+              </svg>
+            </div>
           </div>
         </div>
         <div
