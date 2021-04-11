@@ -53,10 +53,10 @@ exports[`WalletCard should match snapshot 1`] = `
           data-testid="dropdown__toggle"
         >
           <div
-            class="flex justify-between"
+            class="flex justify-between items-center"
           >
             <div
-              class="flex"
+              class="flex items-center"
             >
               <div
                 class="Circle__CircleWrapper-sc-1hq8kv9-0 cqSuMy rounded-l-3xl mr-5 border-r bg-black-dark ring-theme-background"
@@ -75,20 +75,20 @@ exports[`WalletCard should match snapshot 1`] = `
                 </div>
               </div>
               <span
-                class="hidden sm:block mt-3"
+                class="hidden sm:block"
               >
                 AdzbhuDTyhnfAqepZzVcVsgd1Ym6FgETuW
               </span>
               <span
-                class="block sm:hidden mt-3"
+                class="block sm:hidden"
               >
                 AdzbhuD...m6FgETuW
               </span>
             </div>
             <div
-              class="sc-bdfBwQ iyevwF mr-5 mt-3"
-              height="20"
-              width="20"
+              class="sc-bdfBwQ dfWOLJ mr-5"
+              height="15"
+              width="15"
             >
               <svg>
                 chevron-down.svg
