@@ -13,10 +13,10 @@ export const useFetchWallets = (setWallet: Function) => {
 	useEffect(() => {
 		const fetchWallets = async () => {
 			const response = await httpClient.get(walletBaseUrl + "top?page=1&limit=5");
-			const wallets = parseWallets(response);
-			if (wallets.length) {
-				setWallets(wallets);
-				setWallet(wallets[0]);
+			const results = parseWallets(response);
+			if (results.length) {
+				setWallets(results);
+				setWallet(results[0]);
 			}
 		};
 		fetchWallets();
@@ -32,9 +32,9 @@ export const useFetchTransactions = (wallet: Wallet | null, setIsLoadingTransact
 		const fetchTransaction = async () => {
 			setIsLoadingTransactions(true);
 			const response = await httpClient.get(`${walletBaseUrl}${wallet!.address}/transactions?page=1&limit=15`);
-			const transactions = parseTransaction(response);
-			if (transactions) {
-				setTransactions(transactions);
+			const results = parseTransaction(response);
+			if (results) {
+				setTransactions(results);
 			}
 			setIsLoadingTransactions(false);
 		};

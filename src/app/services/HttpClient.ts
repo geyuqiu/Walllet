@@ -4,7 +4,7 @@ const fetch = crossFetch;
 
 export class HttpClient {
 	async get(url: string): Promise<any> {
-		const response = await fetch(url)
+		return await fetch(url)
 			.then((resp) => resp.json())
 			.then((data) => data)
 			.catch((error) => {
@@ -12,8 +12,6 @@ export class HttpClient {
 					`Received no response. This looks like a bug: ${error}`
 				);
 			});
-
-		return response;
 	}
 }
 

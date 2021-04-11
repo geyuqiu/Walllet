@@ -4,10 +4,10 @@ import {styled} from "twin.macro";
 import {Position, Size} from "types";
 
 import {clickOutsideHandler} from '../../hooks/click-outside';
+import {useViewportDropdown} from '../../hooks/useViewport';
 import {Divider} from '../Divider/Divider';
 import {Icon} from '../Icon/Icon';
 import {defaultClasses, getStyles} from "./Dropdown.styles";
-import {useViewportDropdown} from '../../hooks/useViewport';
 
 export type DropdownOption = {
 	icon?: string;
