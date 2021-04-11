@@ -64,7 +64,7 @@ export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 			       ref={labelRef}>Fee</label>
 			<section onMouseEnter={onTextBoxHover} onMouseLeave={exitTextBoxHover}>
 				<input role="textbox" placeholder="currency: DARK"
-	        className="p-4 text-gray-darkest hover:border-green-darkest border-gray-darkest border border-solid rounded-50vh w-full focus:outline-none"
+	        className="p-4 my-3 text-gray-darkest hover:border-green-darkest border-gray-darkest border border-solid rounded-50vh w-full focus:outline-none"
 					onChange={handleTextBoxChange} value={textBoxValue}
 	        ref={textBoxRef}
 				/>

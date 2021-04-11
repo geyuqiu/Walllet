@@ -10,19 +10,21 @@ export const inputRangeStyle = `
   
   input[type=range]::-webkit-slider-thumb {
 	  box-shadow: 1px 1px 1px #000000;
-	  border: 1px solid #000000;
-	  height: 16px;
-	  width: 6px;
+	  border: 2px solid;
+	  height: 26px;
+	  width: 12px;
 	  border-radius: 22px;
-	  background: #029383;
+	  background: white;
+	  border-color: #029383;
 	  cursor: pointer;
 	  -webkit-appearance: none;
-	  margin-top: -6.5px;
+	  margin-top: -12px;
 	}
 	input[type=range]:hover::-webkit-slider-thumb{
-	  background: #FBC457;
+	  border-color: #FBC457;
 	}
 	input[type=range]::-webkit-slider-runnable-track {
+		height: 1px;
 	  height: 4px;
 	}
 `;
