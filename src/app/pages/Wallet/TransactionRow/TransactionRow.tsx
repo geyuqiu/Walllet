@@ -36,7 +36,7 @@ export const TransactionRow = ({transaction, address}: TransactionRowProps) => {
 			</TableCell>
 
 			<TableCell innerClassName="justify-end md:justify-start md:border-l border-theme-secondary-300 pl-5 pr-5">
-				{address === transaction.sender
+				{address !== transaction.sender
 					? <Link href={'https://explorer.ark.io/wallets/' + transaction.sender} className={linkClassName}>
 						<ResponsiveText text={transaction.sender} prefixLength={5} suffixLength={5}/>
 					</Link>
@@ -45,7 +45,7 @@ export const TransactionRow = ({transaction, address}: TransactionRowProps) => {
 			</TableCell>
 
 			<TableCell innerClassName="justify-end md:justify-start md:border-l border-theme-secondary-300">
-				{address === transaction.recipient
+				{address !== transaction.recipient
 					? <Link href={'https://explorer.ark.io/wallets/' + transaction.recipient} className={linkClassName}>
 						<ResponsiveText text={transaction.recipient} prefixLength={5} suffixLength={5}/>
 					</Link>
