@@ -26,6 +26,17 @@ const LogoContainer = styled.div<LogoContainerProps>`
 
 const {Logo} = SvgCollection;
 
+export const buildLabelAndValue = (wallets: Wallet[]) => {
+	const options: any[] = [];
+	wallets.forEach(w => {
+		options.push({
+			label: w.address,
+			value: w.address
+		});
+	});
+	return options;
+}
+
 type WalletProps = {
 	wallets: Wallet[];
 	wallet: Wallet | null;
@@ -34,11 +45,9 @@ type WalletProps = {
 
 export const WalletCard = ({wallets, wallet, addressOnSelect}: WalletProps) => {
 	const history = useHistory();
-	const walletDisplayOptions = [
-		{label: 'all', value: "all"},
-		{label: 'favorites', value: "favorites"},
-		{label: 'ledger', value: "ledger"},
-	];
+	const walletDisplayOptions = wallets?.length
+		? buildLabelAndValue(wallets)
+		: [];
 
 	return (
 		<>

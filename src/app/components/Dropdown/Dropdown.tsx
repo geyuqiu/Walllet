@@ -221,12 +221,12 @@ export const Dropdown = ({
 							dropdownElement.offsetHeight + toggleHeight + numberFromPixels(styles.marginTop)
 						}px`,
 					});
-				} else {
+				} else if(dropdownElement.firstElementChild) {
 					const newHeight = spaceAfter - numberFromPixels(styles.marginTop) - OFFSET;
 
 					const newStyles =
 						newHeight >=
-						dropdownElement.firstElementChild!.clientHeight +
+						dropdownElement.firstElementChild.clientHeight +
 							numberFromPixels(styles.paddingTop) +
 							numberFromPixels(styles.paddingBottom)
 							? {
