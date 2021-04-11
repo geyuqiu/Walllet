@@ -1,3 +1,4 @@
+import {BigNumber} from '@arkecosystem/platform-sdk-support';
 import {Divider} from "app/components/Divider/Divider";
 import {Dropdown} from "app/components/Dropdown/Dropdown";
 import {Icon} from "app/components/Icon/Icon";
@@ -6,12 +7,11 @@ import {useHistory} from "react-router-dom";
 import styled from 'styled-components';
 
 import {SvgCollection} from '../../../assets/svg';
+import {Amount} from '../../../components/Amount/Amount';
 import {Card} from '../../../components/Card/Card';
 import {Circle} from '../../../components/Circle/Circle';
 import {Wallet} from '../model';
 import {hideTextMiddle} from '../TransactionRow/TransactionRow';
-import {Amount} from '../../../components/Amount/Amount';
-import {BigNumber} from '@arkecosystem/platform-sdk-support';
 
 type LogoContainerProps = {
 	width: number;
@@ -60,13 +60,15 @@ export const WalletCard = ({wallets, wallet}: WalletProps) => {
 					</div>
 					<Dropdown
 						toggleContent={
-							<div className="flex">
-								<Circle className="rounded-l-3xl mr-3 border-r" size="lg">
-									<Icon name="Address" width={15} height={15} fill='#000000' stroke='#FBC457'/>
-								</Circle>
-								<span className="hidden sm:block mt-3">{wallet.address}</span>
-								<span className="block sm:hidden mt-3">{hideTextMiddle(wallet.address, 7, 8)}</span>
-								<Icon name="ChevronDown" width={20} height={20} className="ml-3 mt-3"/>
+							<div className="flex justify-between">
+								<div className="flex">
+									<Circle className="rounded-l-3xl mr-5 border-r bg-black-dark" size="lg">
+										<Icon name="Address" width={15} height={15} fill='#000000' stroke='#FBC457'/>
+									</Circle>
+									<span className="hidden sm:block mt-3">{wallet.address}</span>
+									<span className="block sm:hidden mt-3">{hideTextMiddle(wallet.address, 7, 8)}</span>
+								</div>
+								<Icon name="ChevronDown" width={20} height={20} className="mr-5 mt-3"/>
 							</div>
 						}
 						className="border border-gray-darkest border-opacity-10 rounded-l-3xl rounded-r-3xl"

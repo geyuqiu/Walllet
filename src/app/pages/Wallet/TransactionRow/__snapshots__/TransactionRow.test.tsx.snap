@@ -3,7 +3,7 @@
 exports[`Footer should match snapshot 1`] = `
 <div>
   <tr
-    class="TableRow__TableRowStyled-sc-1p89o19-0 iIKWLH"
+    class="TableRow__TableRowStyled-sc-1p89o19-0 iRdKeT"
     data-testid="TableRow"
   >
     <td
@@ -78,8 +78,10 @@ exports[`Footer should match snapshot 1`] = `
       <div
         class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 dbZfon justify-end md:border-l border-theme-secondary-300"
       >
-        <span>
-          1800000000.00000000 DARK
+        <span
+          data-testid="transaction__fee__Amount"
+        >
+          1,000,000 DARK
         </span>
       </div>
     </td>
@@ -89,7 +91,11 @@ exports[`Footer should match snapshot 1`] = `
       <div
         class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 dbZfon justify-end md:border-l border-theme-secondary-300"
       >
-        18.00000000 DARK
+        <span
+          data-testid="transaction__fee__Amount"
+        >
+          0.01 DARK
+        </span>
       </div>
     </td>
   </tr>

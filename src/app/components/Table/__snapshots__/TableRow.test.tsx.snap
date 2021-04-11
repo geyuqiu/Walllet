@@ -5,7 +5,7 @@ exports[`TableRow should render with border 1`] = `
   <table>
     <tbody>
       <tr
-        class="TableRow__TableRowStyled-sc-1p89o19-0 iIKWLH"
+        class="TableRow__TableRowStyled-sc-1p89o19-0 iRdKeT"
         data-testid="TableRow"
       >
         <td>
@@ -26,7 +26,7 @@ exports[`TableRow should render without border 1`] = `
   <table>
     <tbody>
       <tr
-        class="TableRow__TableRowStyled-sc-1p89o19-0 fYQqzA"
+        class="TableRow__TableRowStyled-sc-1p89o19-0 dXhSPI"
         data-testid="TableRow"
       >
         <td>
