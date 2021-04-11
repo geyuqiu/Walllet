@@ -1,17 +1,13 @@
 import {Divider} from "app/components/Divider/Divider";
-import {Dropdown, DropdownOption} from "app/components/Dropdown/Dropdown";
 import React from "react";
 import {useHistory} from "react-router-dom";
 import styled from 'styled-components';
 
-import {Size} from '../../../../types';
 import {SvgCollection} from '../../../assets/svg';
 import {Card} from '../../../components/Card/Card';
-import {DropdownButton} from '../../../components/DropdownButton/DropdownButton';
-import {useViewport} from '../../../hooks/useViewport';
+import {AddressDropdown} from '../AddressDropdown/AddressDropdown';
 import {BalanceDisplay} from '../BalanceDisplay/BalanceDisplay';
 import {Wallet} from '../model';
-import {hideTextBetween} from '../TransactionRow/TransactionRow';
 
 type LogoContainerProps = {
 	width: number;
@@ -26,26 +22,6 @@ const LogoContainer = styled.div<LogoContainerProps>`
 
 const {Logo} = SvgCollection;
 
-export const buildLabelAndValue = (wallets: Wallet[], wallet: Wallet | null, viewport?: Size | null): DropdownOption[] => {
-	const options: DropdownOption[] = [];
-	wallets.forEach(w => {
-		const address = w.address;
-		let label = w.address;
-		if (viewport === 'xs') {
-			label = hideTextBetween({id: address, prefixLength: 7, suffixLength: 8});
-		} else if(viewport === 'lg') {
-			label = hideTextBetween({id: address, prefixLength: 11, suffixLength: 10});
-		}
-		if (wallet && wallet.address != address) {
-			options.push({
-				label: label,
-				value: address
-			});
-		}
-	});
-	return options;
-}
-
 type WalletProps = {
 	wallets: Wallet[];
 	wallet: Wallet | null;
@@ -54,10 +30,6 @@ type WalletProps = {
 
 export const WalletCard = ({wallets, wallet, addressOnSelect}: WalletProps) => {
 	const history = useHistory();
-	const viewport = useViewport();
-	const walletDisplayOptions = wallets?.length
-		? buildLabelAndValue(wallets, wallet, viewport)
-		: [];
 
 	return (
 		<>
@@ -76,31 +48,8 @@ export const WalletCard = ({wallets, wallet, addressOnSelect}: WalletProps) => {
 					<div className="lg:contents hidden">
 						<Divider className="border-black-dark dark:border-theme-secondary-600" type="vertical"/>
 					</div>
-					<Dropdown
-						onSelect={(dropdownOption: DropdownOption) => addressOnSelect(String(dropdownOption.value))}
-						toggleContent={(isOpen: boolean) => (
-							<DropdownButton
-								isOpen={isOpen}
-								label={
-									<div className="ml-5">
-										<span className="hidden sm:block lg:hidden xl:block">{wallet?.address}</span>
-										<span className="block sm:hidden">{hideTextBetween({
-											id: wallet?.address,
-											prefixLength: 7,
-											suffixLength: 8
-										})}</span>
-										<span className="hidden lg:block xl:hidden">{hideTextBetween({
-											id: wallet?.address,
-											prefixLength: 11,
-											suffixLength: 10
-										})}</span>
-									</div>
-								}
-							/>
-						)}
-						className="border border-gray-darkest border-opacity-10 rounded-l-3xl rounded-r-3xl"
-						options={walletDisplayOptions}
-						dropdownClass="top-3 text-left w-full"
+					<AddressDropdown
+						wallets={wallets} wallet={wallet} addressOnSelect={addressOnSelect}
 					/>
 					<div className="hidden lg:contents">
 						<Divider className="border-black-dark dark:border-theme-secondary-600" type="vertical"/>

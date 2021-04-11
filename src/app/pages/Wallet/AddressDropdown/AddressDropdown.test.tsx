@@ -2,7 +2,7 @@ import {act, fireEvent, render, waitFor} from "@testing-library/react";
 import React from "react";
 
 import {Wallet} from '../model';
-import {WalletCard} from "./WalletCard";
+import {AddressDropdown, buildLabelAndValue} from "./AddressDropdown";
 
 const wallets: Wallet[] = [
 	{address: 'address1', balance: 'balance1'},
@@ -24,10 +24,10 @@ const crytoWallets = [
 	},
 ];
 
-describe("WalletCard", () => {
+describe("AddressDropdown", () => {
 
 	it("should match snapshot", () => {
-		const { container } = render(<WalletCard  wallet={{
+		const { container } = render(<AddressDropdown wallet={{
 			address: 'AdzbhuDTyhnfAqepZzVcVsgd1Ym6FgETuW',
 			balance: '0'
 		}} wallets={crytoWallets}/>);
@@ -36,14 +36,14 @@ describe("WalletCard", () => {
 	});
 
 	it("wallet is null", () => {
-		const {container} = render(<WalletCard wallet={null} wallets={[]}/>);
+		const {container} = render(<AddressDropdown wallet={null} wallets={[]}/>);
 
 		expect(container).toMatchSnapshot();
 	});
 
 	it("should open dropdown list with all addresses", async () => {
 		const {container, getByRole, getByTestId} = render(
-			<WalletCard wallets={wallets} wallet={wallet}/>,
+			<AddressDropdown wallets={wallets} wallet={wallet}/>,
 		);
 		expect(getByRole("button")).toBeInTheDocument();
 		act(() => {
@@ -58,7 +58,7 @@ describe("WalletCard", () => {
 		const addressOnSelect = jest.fn();
 
 		const {getByRole, getByTestId} = render(
-			<WalletCard wallets={wallets} wallet={wallet} addressOnSelect={addressOnSelect}/>,
+			<AddressDropdown wallets={wallets} wallet={wallet} addressOnSelect={addressOnSelect}/>,
 		);
 		expect(getByRole("button")).toBeInTheDocument();
 
@@ -73,5 +73,32 @@ describe("WalletCard", () => {
 		});
 
 		expect(addressOnSelect).toHaveBeenCalled();
+	});
+});
+
+describe("buildLabelAndValue", () => {
+	it("donot show selected wallet", () => {
+		expect(buildLabelAndValue(wallets, wallet, undefined)).toEqual([
+			{label: 'address2', value: 'address2'},
+			{label: 'address3', value: 'address3'},
+			{label: 'address4', value: 'address4'},
+			{label: 'address5', value: 'address5'}
+		]);
+	});
+
+	it("hide middle part in address for xs viewport", () => {
+		wallet = crytoWallets[0];
+
+		expect(buildLabelAndValue(crytoWallets, wallet, 'xs')).toEqual([
+			{label: 'DEyaFhD...6umyrEUj', value: 'DEyaFhDuaoQyKbFH4gJtYZvKkB6umyrEUj'}
+		]);
+	});
+
+	it("hide middle part in address for lg viewport: >=1024", () => {
+		wallet = crytoWallets[0];
+
+		expect(buildLabelAndValue(crytoWallets, wallet, 'lg')).toEqual([
+			{label: 'DEyaFhDuaoQ...kB6umyrEUj', value: 'DEyaFhDuaoQyKbFH4gJtYZvKkB6umyrEUj'}
+		]);
 	});
 });
