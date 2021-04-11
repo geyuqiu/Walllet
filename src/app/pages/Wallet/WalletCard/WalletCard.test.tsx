@@ -90,7 +90,7 @@ describe("buildLabelAndValue", () => {
 		wallet = crytoWallets[0];
 
 		expect(buildLabelAndValue(crytoWallets, wallet, 'xs')).toEqual([
-			{label: 'DEyaFhD...6umyrEUj', value: 'DEyaFhD...6umyrEUj'}
+			{label: 'DEyaFhD...6umyrEUj', value: 'DEyaFhDuaoQyKbFH4gJtYZvKkB6umyrEUj'}
 		]);
 	});
 
@@ -98,7 +98,7 @@ describe("buildLabelAndValue", () => {
 		wallet = crytoWallets[0];
 
 		expect(buildLabelAndValue(crytoWallets, wallet, 'xl')).toEqual([
-			{label: 'DEyaFhDuaoQ...kB6umyrEUj', value: 'DEyaFhDuaoQ...kB6umyrEUj'}
+			{label: 'DEyaFhDuaoQ...kB6umyrEUj', value: 'DEyaFhDuaoQyKbFH4gJtYZvKkB6umyrEUj'}
 		]);
 	});
 });

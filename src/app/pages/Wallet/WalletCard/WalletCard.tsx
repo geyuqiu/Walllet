@@ -33,7 +33,7 @@ export const buildLabelAndValue = (wallets: Wallet[], wallet: Wallet | null, vie
 	const options: DropdownOption[] = [];
 	wallets.forEach(w => {
 		const address = w.address;
-		let label: string;
+		let label = w.address;
 		if (viewport === 'xs') {
 			label = hideTextBetween({id: address, prefixLength: 7, suffixLength: 8});
 		} else if(viewport === 'xl') {
@@ -41,7 +41,7 @@ export const buildLabelAndValue = (wallets: Wallet[], wallet: Wallet | null, vie
 		}
 		if (wallet && wallet.address != address) {
 			options.push({
-				label: label!,
+				label: label,
 				value: address
 			});
 		}
