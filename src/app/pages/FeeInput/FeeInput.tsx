@@ -71,7 +71,7 @@ export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 
 	return (
 		<section className="p-12 w-1/2">
-			<BackButton className="mb-4" backToUrl="/"/>
+			<BackButton className="mb-4" backToUrl="/" data-testid="feeinput__backbutton"/>
 			<label className="text-black-dark pl-6 leading-relaxed font-semibold"
 			       data-testid="fee_input__label"
 			       ref={labelRef}>Fee</label>
