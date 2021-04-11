@@ -64,7 +64,7 @@ export const WalletCard = ({wallets, wallet}: WalletProps) => {
 								<div className="flex items-center">
 									<div className="hidden sm:block">
 										<Circle className="rounded-l-3xl border-r bg-black-light" size="lg">
-											<Icon name="Address" width={15} height={15} fill='#000000' stroke='#FBC457'/>
+											<Icon name="Address" width={15} height={15} fill='#000000' stroke='#FBC457' className="ml-2"/>
 										</Circle>
 									</div>
 									<div className="ml-5">

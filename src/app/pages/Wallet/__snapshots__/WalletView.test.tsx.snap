@@ -65,7 +65,7 @@ exports[`WalletView should match snapshot 1`] = `
                   class="Circle__CircleWrapper-sc-1hq8kv9-0 cqSuMy rounded-l-3xl border-r bg-black-light ring-theme-background"
                 >
                   <div
-                    class="sc-bdfBwQ dfWOLJ"
+                    class="sc-bdfBwQ dfWOLJ ml-2"
                     height="15"
                     width="15"
                   >
