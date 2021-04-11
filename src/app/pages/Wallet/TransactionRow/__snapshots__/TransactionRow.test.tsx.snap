@@ -7,10 +7,10 @@ exports[`Footer should match snapshot 1`] = `
     data-testid="TableRow"
   >
     <td
-      class="md:pt-3 md:pb-3"
+      class="md:py-2 md:w-4"
     >
       <div
-        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 dbZfon justify-end md:justify-start"
+        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hQDHYv justify-end md:justify-start"
       >
         <a
           class="text-green-dark hover:text-green-darkest active:text-green-light font-semibold hover:underline"
@@ -35,48 +35,58 @@ exports[`Footer should match snapshot 1`] = `
     </td>
     <td>
       <div
-        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 dbZfon justify-end md:justify-start md:border-l border-theme-secondary-300 pl-5 pr-5"
+        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hQDHYv justify-end md:justify-start md:border-l border-theme-secondary-300"
       >
-        <span
-          class="hidden sm:block md:hidden"
+        <a
+          class="text-green-dark hover:text-green-darkest active:text-green-light font-semibold hover:underline"
+          href="https://explorer.ark.io/wallets/AReY3W6nTv3utiG2em5nefKEsGQeqEVPN4"
         >
-          AReY3W6nTv3utiG2em5nefKEsGQeqEVPN4
-        </span>
-        <span
-          class="block sm:hidden md:block"
-        >
-          AReY3...qEVPN4
-        </span>
+          <span
+            class="hidden sm:block md:hidden"
+          >
+            AReY3W6nTv3utiG2em5nefKEsGQeqEVPN4
+          </span>
+          <span
+            class="block sm:hidden md:block"
+          >
+            AReY3...EVPN4
+          </span>
+        </a>
       </div>
     </td>
     <td>
       <div
-        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 dbZfon justify-end md:justify-start md:border-l border-theme-secondary-300"
+        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hQDHYv justify-end md:justify-start md:border-l border-theme-secondary-300"
       >
-        <span
-          class="hidden sm:block md:hidden"
+        <a
+          class="text-green-dark hover:text-green-darkest active:text-green-light font-semibold hover:underline"
+          href="https://explorer.ark.io/wallets/AdzbhuDTyhnfAqepZzVcVsgd1Ym6FgETuW"
         >
-          AdzbhuDTyhnfAqepZzVcVsgd1Ym6FgETuW
-        </span>
-        <span
-          class="block sm:hidden md:block"
-        >
-          Adzbh...FgETuW
-        </span>
+          <span
+            class="hidden sm:block md:hidden"
+          >
+            AdzbhuDTyhnfAqepZzVcVsgd1Ym6FgETuW
+          </span>
+          <span
+            class="block sm:hidden md:block"
+          >
+            Adzbh...gETuW
+          </span>
+        </a>
       </div>
     </td>
     <td
       class="hidden xl:table-cell"
     >
       <div
-        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 dbZfon justify-end md:justify-center md:border-l border-theme-secondary-300"
+        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hQDHYv justify-end md:justify-center md:border-l border-theme-secondary-300"
       >
         2021-04-01T11:41:20.000Z
       </div>
     </td>
     <td>
       <div
-        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 dbZfon justify-end md:border-l border-theme-secondary-300"
+        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hQDHYv justify-end md:border-l border-theme-secondary-300"
       >
         <span
           data-testid="transaction__fee__Amount"
@@ -89,7 +99,7 @@ exports[`Footer should match snapshot 1`] = `
       class="hidden lg:table-cell"
     >
       <div
-        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 dbZfon justify-end md:border-l border-theme-secondary-300"
+        class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hQDHYv justify-end md:border-l border-theme-secondary-300"
       >
         <span
           data-testid="transaction__fee__Amount"

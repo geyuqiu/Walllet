@@ -8,7 +8,7 @@ import {httpClient} from "../services/HttpClient";
 const walletBaseUrl = 'https://api.ark.io/api/wallets/';
 const dateFormat = 'DD.MM.YYYY';
 
-export const useFetchWallets = (setWallet: Function) => {
+export const useFetch = (setWallet: Function) => {
 	const [wallets, setWallets] = useState<Wallet[]>([]);
 	useEffect(() => {
 		const fetchWallets = async () => {

@@ -1,0 +1,622 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TransactionTable display n transactions should match snapshot 1`] = `
+<div>
+  <div
+    class="ml-6 mr-3 sm:mx-8 sm:flex sm:justify-center pt-12"
+  >
+    <div
+      class="Table__TableWrapper-ck3yk8-0 kEIFJE w-full max-w-screen-xl -mt-3"
+      role="table"
+    >
+      <table
+        cellpadding="0"
+        class="table-auto"
+      >
+        <thead>
+          <tr
+            class="border border-theme-secondary-300"
+            role="row"
+          >
+            <th
+              class="group border text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 m-0 p-3 md:px-5 font-semibold hasBorder"
+              colspan="1"
+              role="columnheader"
+              style="cursor: pointer;"
+              title="Toggle SortBy"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  data-testid="table__th--0"
+                >
+                  Txid
+                </div>
+                <div
+                  class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                >
+                  <div
+                    class="sc-bdfBwQ kJrqvM transition-transform transform rotate-180"
+                    height="5"
+                    role="img"
+                    width="8"
+                  >
+                    <svg>
+                      arrow-down.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </th>
+            <th
+              class="group border text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 m-0 p-3 md:px-5 font-semibold hasBorder"
+              colspan="1"
+              role="columnheader"
+              style="cursor: pointer;"
+              title="Toggle SortBy"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  data-testid="table__th--1"
+                >
+                  Sender
+                </div>
+                <div
+                  class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                >
+                  <div
+                    class="sc-bdfBwQ kJrqvM transition-transform transform rotate-180"
+                    height="5"
+                    role="img"
+                    width="8"
+                  >
+                    <svg>
+                      arrow-down.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </th>
+            <th
+              class="group border text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 m-0 p-3 md:px-5 font-semibold hasBorder"
+              colspan="1"
+              role="columnheader"
+              style="cursor: pointer;"
+              title="Toggle SortBy"
+            >
+              <div
+                class="flex flex-inline align-top"
+              >
+                <div
+                  data-testid="table__th--2"
+                >
+                  Recipient
+                </div>
+                <div
+                  class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-2"
+                >
+                  <div
+                    class="sc-bdfBwQ kJrqvM transition-transform transform rotate-180"
+                    height="5"
+                    role="img"
+                    width="8"
+                  >
+                    <svg>
+                      arrow-down.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </th>
+            <th
+              class="group border text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 m-0 p-3 md:px-5 font-semibold hasBorder"
+              colspan="1"
+              role="columnheader"
+              style="cursor: pointer;"
+              title="Toggle SortBy"
+            >
+              <div
+                class="flex flex-inline align-top justify-end flex-row-reverse"
+              >
+                <div
+                  data-testid="table__th--3"
+                >
+                  Amount
+                </div>
+                <div
+                  class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                >
+                  <div
+                    class="sc-bdfBwQ kJrqvM transition-transform transform rotate-180"
+                    height="5"
+                    role="img"
+                    width="8"
+                  >
+                    <svg>
+                      arrow-down.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </th>
+            <th
+              class="group border text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 m-0 p-3 md:px-5 font-semibold hasBorder"
+              colspan="1"
+              role="columnheader"
+              style="cursor: pointer;"
+              title="Toggle SortBy"
+            >
+              <div
+                class="flex flex-inline align-top justify-end flex-row-reverse"
+              >
+                <div
+                  data-testid="table__th--4"
+                >
+                  Fee
+                </div>
+                <div
+                  class="flex items-center text-theme-secondary-500 dark:text-theme-secondary-700 transition-opacity opacity-0 group-hover:opacity-100 ml-auto mr-2"
+                >
+                  <div
+                    class="sc-bdfBwQ kJrqvM transition-transform transform rotate-180"
+                    height="5"
+                    role="img"
+                    width="8"
+                  >
+                    <svg>
+                      arrow-down.svg
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          role="rowgroup"
+        >
+          <tr
+            class="TableRow__TableRowStyled-sc-1p89o19-0 iRdKeT"
+            data-testid="TableRow"
+          >
+            <td
+              class="md:py-2 md:w-4"
+            >
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hQDHYv justify-end md:justify-start"
+              >
+                <a
+                  class="text-green-dark hover:text-green-darkest active:text-green-light font-semibold hover:underline"
+                  href="https://explorer.ark.io/transaction/6eba34e4513918928313567d5c60fcb9635f75dbb0af0164e58c59216efe6749"
+                >
+                  <span
+                    class="table-cell lg:table-cell md:hidden"
+                  >
+                    6eba3...e6749
+                  </span>
+                  <div
+                    class="sc-bdfBwQ iyevwF hidden lg:hidden md:table-cell"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      txid.svg
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </td>
+            <td>
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hQDHYv justify-end md:justify-start md:border-l border-theme-secondary-300"
+              >
+                <a
+                  class="text-green-dark hover:text-green-darkest active:text-green-light font-semibold hover:underline"
+                  href="https://explorer.ark.io/wallets/AVyqDoLngpCnmqDtEicmYcNbezAKPLhRjv"
+                >
+                  <span
+                    class="hidden sm:block md:hidden"
+                  >
+                    AVyqDoLngpCnmqDtEicmYcNbezAKPLhRjv
+                  </span>
+                  <span
+                    class="block sm:hidden md:block"
+                  >
+                    AVyqD...LhRjv
+                  </span>
+                </a>
+              </div>
+            </td>
+            <td>
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hQDHYv justify-end md:justify-start md:border-l border-theme-secondary-300"
+              >
+                <span
+                  class="hidden sm:block md:hidden"
+                >
+                  AdzbhuDTyhnfAqepZzVcVsgd1Ym6FgETuW
+                </span>
+                <span
+                  class="block sm:hidden md:block"
+                >
+                  Adzbh...FgETuW
+                </span>
+              </div>
+            </td>
+            <td
+              class="hidden xl:table-cell"
+            >
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hQDHYv justify-end md:justify-center md:border-l border-theme-secondary-300"
+              >
+                10.04.2021
+              </div>
+            </td>
+            <td>
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hQDHYv justify-end md:border-l border-theme-secondary-300"
+              >
+                <span
+                  data-testid="transaction__fee__Amount"
+                >
+                  10,043.109 DARK
+                </span>
+              </div>
+            </td>
+            <td
+              class="hidden lg:table-cell"
+            >
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hQDHYv justify-end md:border-l border-theme-secondary-300"
+              >
+                <span
+                  data-testid="transaction__fee__Amount"
+                >
+                  0.01 DARK
+                </span>
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="TableRow__TableRowStyled-sc-1p89o19-0 iRdKeT"
+            data-testid="TableRow"
+          >
+            <td
+              class="md:py-2 md:w-4"
+            >
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hQDHYv justify-end md:justify-start"
+              >
+                <a
+                  class="text-green-dark hover:text-green-darkest active:text-green-light font-semibold hover:underline"
+                  href="https://explorer.ark.io/transaction/b4f53e85e7a6ec275663bfbfc4e4f5a1394a2d6f9b36626b63488f39426bbe19"
+                >
+                  <span
+                    class="table-cell lg:table-cell md:hidden"
+                  >
+                    b4f53...bbe19
+                  </span>
+                  <div
+                    class="sc-bdfBwQ iyevwF hidden lg:hidden md:table-cell"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      txid.svg
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </td>
+            <td>
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hQDHYv justify-end md:justify-start md:border-l border-theme-secondary-300"
+              >
+                <a
+                  class="text-green-dark hover:text-green-darkest active:text-green-light font-semibold hover:underline"
+                  href="https://explorer.ark.io/wallets/AVyqDoLngpCnmqDtEicmYcNbezAKPLhRjv"
+                >
+                  <span
+                    class="hidden sm:block md:hidden"
+                  >
+                    AVyqDoLngpCnmqDtEicmYcNbezAKPLhRjv
+                  </span>
+                  <span
+                    class="block sm:hidden md:block"
+                  >
+                    AVyqD...LhRjv
+                  </span>
+                </a>
+              </div>
+            </td>
+            <td>
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hQDHYv justify-end md:justify-start md:border-l border-theme-secondary-300"
+              >
+                <span
+                  class="hidden sm:block md:hidden"
+                >
+                  AdzbhuDTyhnfAqepZzVcVsgd1Ym6FgETuW
+                </span>
+                <span
+                  class="block sm:hidden md:block"
+                >
+                  Adzbh...FgETuW
+                </span>
+              </div>
+            </td>
+            <td
+              class="hidden xl:table-cell"
+            >
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hQDHYv justify-end md:justify-center md:border-l border-theme-secondary-300"
+              >
+                10.04.2021
+              </div>
+            </td>
+            <td>
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hQDHYv justify-end md:border-l border-theme-secondary-300"
+              >
+                <span
+                  data-testid="transaction__fee__Amount"
+                >
+                  10,461.453 DARK
+                </span>
+              </div>
+            </td>
+            <td
+              class="hidden lg:table-cell"
+            >
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hQDHYv justify-end md:border-l border-theme-secondary-300"
+              >
+                <span
+                  data-testid="transaction__fee__Amount"
+                >
+                  0.01 DARK
+                </span>
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="TableRow__TableRowStyled-sc-1p89o19-0 iRdKeT"
+            data-testid="TableRow"
+          >
+            <td
+              class="md:py-2 md:w-4"
+            >
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hQDHYv justify-end md:justify-start"
+              >
+                <a
+                  class="text-green-dark hover:text-green-darkest active:text-green-light font-semibold hover:underline"
+                  href="https://explorer.ark.io/transaction/3f3f28f3d96b19e3a8424b7d0a1fa13a00d2bd1dca8a564a587c39ea9ec5cccc"
+                >
+                  <span
+                    class="table-cell lg:table-cell md:hidden"
+                  >
+                    3f3f2...5cccc
+                  </span>
+                  <div
+                    class="sc-bdfBwQ iyevwF hidden lg:hidden md:table-cell"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      txid.svg
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </td>
+            <td>
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hQDHYv justify-end md:justify-start md:border-l border-theme-secondary-300"
+              >
+                <a
+                  class="text-green-dark hover:text-green-darkest active:text-green-light font-semibold hover:underline"
+                  href="https://explorer.ark.io/wallets/AVyqDoLngpCnmqDtEicmYcNbezAKPLhRjv"
+                >
+                  <span
+                    class="hidden sm:block md:hidden"
+                  >
+                    AVyqDoLngpCnmqDtEicmYcNbezAKPLhRjv
+                  </span>
+                  <span
+                    class="block sm:hidden md:block"
+                  >
+                    AVyqD...LhRjv
+                  </span>
+                </a>
+              </div>
+            </td>
+            <td>
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hQDHYv justify-end md:justify-start md:border-l border-theme-secondary-300"
+              >
+                <span
+                  class="hidden sm:block md:hidden"
+                >
+                  AdzbhuDTyhnfAqepZzVcVsgd1Ym6FgETuW
+                </span>
+                <span
+                  class="block sm:hidden md:block"
+                >
+                  Adzbh...FgETuW
+                </span>
+              </div>
+            </td>
+            <td
+              class="hidden xl:table-cell"
+            >
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hQDHYv justify-end md:justify-center md:border-l border-theme-secondary-300"
+              >
+                10.04.2021
+              </div>
+            </td>
+            <td>
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hQDHYv justify-end md:border-l border-theme-secondary-300"
+              >
+                <span
+                  data-testid="transaction__fee__Amount"
+                >
+                  10,479.09 DARK
+                </span>
+              </div>
+            </td>
+            <td
+              class="hidden lg:table-cell"
+            >
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hQDHYv justify-end md:border-l border-theme-secondary-300"
+              >
+                <span
+                  data-testid="transaction__fee__Amount"
+                >
+                  0.01 DARK
+                </span>
+              </div>
+            </td>
+          </tr>
+          <tr
+            class="TableRow__TableRowStyled-sc-1p89o19-0 iRdKeT"
+            data-testid="TableRow"
+          >
+            <td
+              class="md:py-2 md:w-4"
+            >
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hQDHYv justify-end md:justify-start"
+              >
+                <a
+                  class="text-green-dark hover:text-green-darkest active:text-green-light font-semibold hover:underline"
+                  href="https://explorer.ark.io/transaction/a446aa06a4f3986c3b042d88c066d798d76a40af9478826f22762e5f91122270"
+                >
+                  <span
+                    class="table-cell lg:table-cell md:hidden"
+                  >
+                    a446a...22270
+                  </span>
+                  <div
+                    class="sc-bdfBwQ iyevwF hidden lg:hidden md:table-cell"
+                    height="20"
+                    width="20"
+                  >
+                    <svg>
+                      txid.svg
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </td>
+            <td>
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hQDHYv justify-end md:justify-start md:border-l border-theme-secondary-300"
+              >
+                <a
+                  class="text-green-dark hover:text-green-darkest active:text-green-light font-semibold hover:underline"
+                  href="https://explorer.ark.io/wallets/AVyqDoLngpCnmqDtEicmYcNbezAKPLhRjv"
+                >
+                  <span
+                    class="hidden sm:block md:hidden"
+                  >
+                    AVyqDoLngpCnmqDtEicmYcNbezAKPLhRjv
+                  </span>
+                  <span
+                    class="block sm:hidden md:block"
+                  >
+                    AVyqD...LhRjv
+                  </span>
+                </a>
+              </div>
+            </td>
+            <td>
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hQDHYv justify-end md:justify-start md:border-l border-theme-secondary-300"
+              >
+                <span
+                  class="hidden sm:block md:hidden"
+                >
+                  AdzbhuDTyhnfAqepZzVcVsgd1Ym6FgETuW
+                </span>
+                <span
+                  class="block sm:hidden md:block"
+                >
+                  Adzbh...FgETuW
+                </span>
+              </div>
+            </td>
+            <td
+              class="hidden xl:table-cell"
+            >
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hQDHYv justify-end md:justify-center md:border-l border-theme-secondary-300"
+              >
+                10.04.2021
+              </div>
+            </td>
+            <td>
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hQDHYv justify-end md:border-l border-theme-secondary-300"
+              >
+                <span
+                  data-testid="transaction__fee__Amount"
+                >
+                  10,543.324 DARK
+                </span>
+              </div>
+            </td>
+            <td
+              class="hidden lg:table-cell"
+            >
+              <div
+                class="TableCell__TableCellInnerWrapper-sc-12y9mmp-0 hQDHYv justify-end md:border-l border-theme-secondary-300"
+              >
+                <span
+                  data-testid="transaction__fee__Amount"
+                >
+                  0.01 DARK
+                </span>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TransactionTable isLoadingTransactions should match snapshot 1`] = `
+<div>
+  <div
+    class="ml-6 mr-3 sm:mx-8 sm:flex sm:justify-center pt-12"
+  >
+    <p
+      data-testid="TransactionTable__Loading"
+    >
+      Loading Transactions ...
+    </p>
+  </div>
+</div>
+`;
+
+exports[`TransactionTable transactions empty for selected address should match snapshot 1`] = `
+<div>
+  <div
+    class="ml-6 mr-3 sm:mx-8 sm:flex sm:justify-center pt-12"
+  >
+    <p
+      data-testid="TransactionTable__No_Transactions"
+    >
+      No transactions were found for this wallet!
+    </p>
+  </div>
+</div>
+`;

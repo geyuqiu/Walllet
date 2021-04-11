@@ -149,12 +149,14 @@ exports[`WalletView should match snapshot 1`] = `
       </div>
     </div>
   </div>
-  <section
+  <div
     class="ml-6 mr-3 sm:mx-8 sm:flex sm:justify-center pt-12"
   >
-    <p>
+    <p
+      data-testid="TransactionTable__Loading"
+    >
       Loading Transactions ...
     </p>
-  </section>
+  </div>
 </div>
 `;
