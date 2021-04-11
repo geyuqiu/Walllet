@@ -37,7 +37,7 @@ export const WalletView = () => {
 			<WalletCard wallets={wallets} wallet={wallet} addressOnSelect={addressOnSelect}/>
 			<section className="ml-6 mr-3 sm:mx-8 sm:flex sm:justify-center pt-12">
 				{(isLoadingTransactions || !wallet) && <p>Loading Transactions ...</p>}
-				{!isLoadingTransactions && !transactions.length && <p>No transactions were found for this wallet!</p>}
+				{!isLoadingTransactions && !transactions.length && wallet && <p>No transactions were found for this wallet!</p>}
 				{!isLoadingTransactions && transactions?.length > 0 && wallet &&
 					<Table columns={tableColumns} data={transactions} hideColumnsAtBreakpoint={hideColumnsAtBreakpoint}>
 						{(transaction: Transaction) => (
