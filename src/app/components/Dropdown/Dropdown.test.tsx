@@ -348,7 +348,7 @@ describe("ClickOutside Hook", () => {
 				fireEvent.click(toggle);
 			});
 
-			expect(getByTestId("dropdown__content")).toHaveAttribute("style", "opacity: 100;");
+			expect(getByTestId("dropdown__content")).toHaveAttribute("style", "z-index: 1; opacity: 100;");
 
 			documentClientHeightSpy.mockRestore();
 			getComputedStyleSpy.mockRestore();
@@ -376,7 +376,7 @@ describe("ClickOutside Hook", () => {
 
 			expect(getByTestId("dropdown__content")).toHaveAttribute(
 				"style",
-				"opacity: 100; height: 60px; overflow-y: scroll;",
+				"z-index: 1; opacity: 100; height: 60px; overflow-y: scroll;",
 			);
 
 			getBoundingClientRectSpy.mockRestore();
@@ -404,7 +404,7 @@ describe("ClickOutside Hook", () => {
 				fireEvent.click(toggle);
 			});
 
-			expect(getByTestId("dropdown__content")).toHaveAttribute("style", "opacity: 100; margin-top: -100px;");
+			expect(getByTestId("dropdown__content")).toHaveAttribute("style", "z-index: 1; opacity: 100; margin-top: -100px;");
 
 			getBoundingClientRectSpy.mockRestore();
 			offsetHeightSpy.mockRestore();

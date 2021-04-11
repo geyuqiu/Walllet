@@ -288,7 +288,7 @@ exports[`WalletCard should open dropdown list with all addresses 1`] = `
               data-testid="dropdown__option--0"
             >
               <span>
-                address1
+                address2
               </span>
             </li>
             <li
@@ -296,7 +296,7 @@ exports[`WalletCard should open dropdown list with all addresses 1`] = `
               data-testid="dropdown__option--1"
             >
               <span>
-                address2
+                address3
               </span>
             </li>
             <li
@@ -304,20 +304,12 @@ exports[`WalletCard should open dropdown list with all addresses 1`] = `
               data-testid="dropdown__option--2"
             >
               <span>
-                address3
-              </span>
-            </li>
-            <li
-              class="group flex items-center space-x-2 py-4 px-5 text-base font-semibold text-left whitespace-nowrap cursor-pointer text-white dark:text-theme-secondary-200 active:bg-green-darkest hover:bg-black-lightest dark:hover:bg-theme-primary-600 dark:hover:text-theme-secondary-200"
-              data-testid="dropdown__option--3"
-            >
-              <span>
                 address4
               </span>
             </li>
             <li
               class="group flex items-center space-x-2 py-4 px-5 text-base font-semibold text-left whitespace-nowrap cursor-pointer text-white dark:text-theme-secondary-200 active:bg-green-darkest hover:bg-black-lightest dark:hover:bg-theme-primary-600 dark:hover:text-theme-secondary-200"
-              data-testid="dropdown__option--4"
+              data-testid="dropdown__option--3"
             >
               <span>
                 address5

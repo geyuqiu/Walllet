@@ -14,7 +14,7 @@ type TransactionRowProps = {
 	address: string;
 };
 
-export const hideTextMiddle = (id: string, prefixLength: number, suffixLength: number) =>
+export const hideTextBetween = (id: string, prefixLength: number, suffixLength: number) =>
 	`${id.substring(0, prefixLength)}...${id.substring(id.length - suffixLength, id.length)}`
 
 export const TransactionRow = ({transaction, address}: TransactionRowProps) => {
@@ -26,7 +26,7 @@ export const TransactionRow = ({transaction, address}: TransactionRowProps) => {
 			           className="md:pt-3 md:pb-3">
 				<Link href={'https://explorer.ark.io/transaction/' + transaction.id}
 				      className={linkClassName}>
-					<span className="table-cell lg:table-cell md:hidden">{hideTextMiddle(transaction.id, 5, 5)}</span>
+					<span className="table-cell lg:table-cell md:hidden">{hideTextBetween(transaction.id, 5, 5)}</span>
 					<Icon name="Txid" width={20} height={20} className="hidden lg:hidden md:table-cell"/>
 				</Link>
 			</TableCell>
@@ -82,5 +82,5 @@ type ResponsiveTextProps = {
 export const ResponsiveText = ({text, prefixLength, suffixLength}: ResponsiveTextProps) =>
 	<>
 		<span className="hidden sm:block md:hidden">{text}</span>
-		<span className="block sm:hidden md:block">{hideTextMiddle(text, prefixLength, suffixLength)}</span>
+		<span className="block sm:hidden md:block">{hideTextBetween(text, prefixLength, suffixLength)}</span>
 	</>

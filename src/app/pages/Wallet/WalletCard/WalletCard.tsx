@@ -14,7 +14,7 @@ import {Circle} from '../../../components/Circle/Circle';
 import {DropdownButton} from '../../../components/DropdownButton/DropdownButton';
 import useViewport from '../../../hooks/useViewport';
 import {Wallet} from '../model';
-import {hideTextMiddle} from '../TransactionRow/TransactionRow';
+import {hideTextBetween} from '../TransactionRow/TransactionRow';
 
 type LogoContainerProps = {
 	width: number;
@@ -29,19 +29,21 @@ const LogoContainer = styled.div<LogoContainerProps>`
 
 const {Logo} = SvgCollection;
 
-export const buildLabelAndValue = (wallets: Wallet[], viewport?: Size | null): DropdownOption[] => {
+export const buildLabelAndValue = (wallets: Wallet[], wallet: Wallet | null, viewport?: Size | null): DropdownOption[] => {
 	const options: DropdownOption[] = [];
 	wallets.forEach(w => {
 		let address = w.address;
-		if (viewport === 'xs') {
-			address = hideTextMiddle(address, 7, 8);
-		} else if(viewport === 'xl') {
-			address = hideTextMiddle(address, 11, 10);
+		if (wallet && wallet.address != address) {
+			if (viewport === 'xs') {
+				address = hideTextBetween(address, 7, 8);
+			} else if(viewport === 'xl') {
+				address = hideTextBetween(address, 11, 10);
+			}
+			options.push({
+				label: address,
+				value: address
+			});
 		}
-		options.push({
-			label: address,
-			value: address
-		});
 	});
 	return options;
 }
@@ -56,7 +58,7 @@ export const WalletCard = ({wallets, wallet, addressOnSelect}: WalletProps) => {
 	const history = useHistory();
 	const viewport = useViewport();
 	const walletDisplayOptions = wallets?.length
-		? buildLabelAndValue(wallets, viewport)
+		? buildLabelAndValue(wallets, wallet, viewport)
 		: [];
 
 	return (
@@ -86,8 +88,8 @@ export const WalletCard = ({wallets, wallet, addressOnSelect}: WalletProps) => {
 								label={
 									<div className="ml-5">
 										<span className="hidden sm:block lg:hidden xl:block">{wallet.address}</span>
-										<span className="block sm:hidden">{hideTextMiddle(wallet.address, 7, 8)}</span>
-										<span className="hidden lg:block xl:hidden">{hideTextMiddle(wallet.address, 11, 10)}</span>
+										<span className="block sm:hidden">{hideTextBetween(wallet.address, 7, 8)}</span>
+										<span className="hidden lg:block xl:hidden">{hideTextBetween(wallet.address, 11, 10)}</span>
 									</div>
 								}
 							/>

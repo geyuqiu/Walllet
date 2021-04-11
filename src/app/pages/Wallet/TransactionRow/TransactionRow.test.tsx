@@ -2,7 +2,7 @@ import {render} from "@testing-library/react";
 import React from "react";
 
 import {Transaction} from './model';
-import {hideTextMiddle, TransactionRow} from "./TransactionRow";
+import {hideTextBetween, TransactionRow} from "./TransactionRow";
 
 describe("Footer", () => {
 	it("should match snapshot", () => {
@@ -25,12 +25,12 @@ describe("Footer", () => {
 
 describe("trimLongText", () => {
 	it("return 5 characters as prefix and 6 characters as suffx", () => {
-		const expected = hideTextMiddle('AdzbhuDTyhnfAqepZzVcVsgd1Ym6FgETuW', 5, 6);
+		const expected = hideTextBetween('AdzbhuDTyhnfAqepZzVcVsgd1Ym6FgETuW', 5, 6);
 
 		expect(expected).toEqual('Adzbh...FgETuW');
 	});
 	it("return same number of characters as prefix and as suffx", () => {
-		const expected = hideTextMiddle('AdzbhuDTyhnfAqepZzVcVsgd1Ym6FgETuW', 5, 5);
+		const expected = hideTextBetween('AdzbhuDTyhnfAqepZzVcVsgd1Ym6FgETuW', 5, 5);
 
 		expect(expected).toEqual('Adzbh...gETuW');
 	});
