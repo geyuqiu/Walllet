@@ -7,7 +7,7 @@ exports[`WalletView should match snapshot 1`] = `
     data-testid="Card"
   >
     <div
-      class="Cardstyles__Wrapper-xnuhyv-0 iAsJMU bg-black-darkest text-white rounded-lg w-full max-w-screen-xl flex justify-center flex-col lg:flex-row"
+      class="Cardstyles__Wrapper-xnuhyv-0 iAsJMU bg-black-darkest text-white rounded-lg w-full max-w-screen-xl flex justify-center items-start lg:items-center flex-col lg:flex-row"
       data-testid="Card"
     >
       <div
@@ -59,7 +59,7 @@ exports[`WalletView should match snapshot 1`] = `
               class="flex items-center"
             >
               <div
-                class="Circle__CircleWrapper-sc-1hq8kv9-0 cqSuMy rounded-l-3xl mr-5 border-r bg-black-dark ring-theme-background"
+                class="Circle__CircleWrapper-sc-1hq8kv9-0 cqSuMy rounded-l-3xl mr-5 border-r bg-black-light ring-theme-background"
               >
                 <div
                   class="sc-bdfBwQ dfWOLJ"
@@ -75,7 +75,7 @@ exports[`WalletView should match snapshot 1`] = `
                 </div>
               </div>
               <span
-                class="hidden sm:block"
+                class="hidden sm:block lg:hidden xl:block"
               >
                 AdzbhuDTyhnfAqepZzVcVsgd1Ym6FgETuW
               </span>
@@ -83,6 +83,11 @@ exports[`WalletView should match snapshot 1`] = `
                 class="block sm:hidden"
               >
                 AdzbhuD...m6FgETuW
+              </span>
+              <span
+                class="hidden lg:block xl:hidden"
+              >
+                AdzbhuDTyhn...1Ym6FgETuW
               </span>
             </div>
             <div
@@ -98,7 +103,7 @@ exports[`WalletView should match snapshot 1`] = `
         </span>
       </div>
       <div
-        class="hidden lg:block"
+        class="hidden lg:contents"
       >
         <div
           class="Divider-sc-10xryrv-0 dCquGe border-black-light dark:border-theme-secondary-600"
@@ -106,7 +111,7 @@ exports[`WalletView should match snapshot 1`] = `
         />
       </div>
       <div
-        class="mt-6 flex flex-row"
+        class="flex flex-row"
       >
         <div
           class="Circle__CircleWrapper-sc-1hq8kv9-0 cqSuMy border rounded-full mr-3 ring-theme-background"

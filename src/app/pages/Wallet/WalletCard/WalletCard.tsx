@@ -44,7 +44,7 @@ export const WalletCard = ({wallets, wallet}: WalletProps) => {
 			{!wallet && <p>Loading ...</p>}
 			{wallet &&
 			<Card className="bg-green-dark sm:flex sm:justify-center">
-				<Card className="bg-black-darkest text-white rounded-lg w-full max-w-screen-xl flex justify-center flex-col lg:flex-row">
+				<Card className="bg-black-darkest text-white rounded-lg w-full max-w-screen-xl flex justify-center items-start lg:items-center flex-col lg:flex-row">
 					<div className="flex items-center my-auto cursor-pointer" onClick={() => history.push('fee')}>
 						<LogoContainer width={57}>
 							<Logo width={44}/>
@@ -62,11 +62,12 @@ export const WalletCard = ({wallets, wallet}: WalletProps) => {
 						toggleContent={
 							<div className="flex justify-between items-center">
 								<div className="flex items-center">
-									<Circle className="rounded-l-3xl mr-5 border-r bg-black-dark" size="lg">
+									<Circle className="rounded-l-3xl mr-5 border-r bg-black-light" size="lg">
 										<Icon name="Address" width={15} height={15} fill='#000000' stroke='#FBC457'/>
 									</Circle>
-									<span className="hidden sm:block">{wallet.address}</span>
+									<span className="hidden sm:block lg:hidden xl:block">{wallet.address}</span>
 									<span className="block sm:hidden">{hideTextMiddle(wallet.address, 7, 8)}</span>
+									<span className="hidden lg:block xl:hidden">{hideTextMiddle(wallet.address, 11, 10)}</span>
 								</div>
 								<Icon name="ChevronDown" width={15} height={15} className="mr-5"/>
 							</div>
@@ -75,10 +76,10 @@ export const WalletCard = ({wallets, wallet}: WalletProps) => {
 						options={walletDisplayOptions}
 						dropdownClass="top-3 text-left"
 					/>
-					<div className="hidden lg:block">
+					<div className="hidden lg:contents">
 						<Divider className="border-black-light dark:border-theme-secondary-600" type="vertical"/>
 					</div>
-					<div className="mt-6 flex flex-row">
+					<div className="flex flex-row">
 						<Circle className="border rounded-full mr-3" size="lg">
 								<Icon name="Balance" width={15} height={15} fill='#000000' stroke='#FBC457'/>
 						</Circle>
