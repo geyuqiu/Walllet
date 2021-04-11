@@ -23,7 +23,7 @@ export const TransactionRow = ({transaction, address}: TransactionRowProps) => {
 		<TableRow className="text-base">
 
 			<TableCell innerClassName="justify-end md:justify-start"
-			           className="md:pt-3 md:pb-3">
+			           className="md:py-2">
 				<Link href={'https://explorer.ark.io/transaction/' + transaction.id}
 				      className={linkClassName}>
 					<span className="table-cell lg:table-cell md:hidden">{hideTextBetween({

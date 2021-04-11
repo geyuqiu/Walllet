@@ -63,8 +63,8 @@ export const WalletCard = ({wallets, wallet, addressOnSelect}: WalletProps) => {
 
 	return (
 		<>
-			<Card className="bg-green-dark sm:flex sm:justify-center">
-				<Card className="bg-black-darkest justify-between text-white rounded-lg w-full max-w-screen-xl flex justify-center lg:items-center flex-col lg:flex-row">
+			<Card className="bg-green-dark sm:flex sm:justify-center py-12 px-8">
+				<Card className="bg-black-darkest p-8 justify-between text-white rounded-lg w-full max-w-screen-xl flex justify-center lg:items-center flex-col lg:flex-row">
 					<div className="flex items-center my-auto cursor-pointer" onClick={() => history.push('fee')}>
 						<LogoContainer width={57}>
 							<Logo width={44}/>
