@@ -1,4 +1,4 @@
-# WalletView
+# Wallet
 
 ```
 ➜  Walllet git:(main) node -v
@@ -14,5 +14,5 @@ v12.22.0
 ```
 
 design decision: 
-* module structure: similar to desktop wallet without barrels and theme
+* module structure: similar to desktop wallet without barrels, i18n, theme etc.
 * use backbutton and logo ark to navigate between `feeInput` and `WalletView`
