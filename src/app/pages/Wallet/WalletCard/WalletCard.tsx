@@ -12,6 +12,7 @@ import {Card} from '../../../components/Card/Card';
 import {Circle} from '../../../components/Circle/Circle';
 import {Wallet} from '../model';
 import {hideTextMiddle} from '../TransactionRow/TransactionRow';
+import useViewport from '../../../hooks/useViewport';
 
 type LogoContainerProps = {
 	width: number;
@@ -26,12 +27,18 @@ const LogoContainer = styled.div<LogoContainerProps>`
 
 const {Logo} = SvgCollection;
 
-export const buildLabelAndValue = (wallets: Wallet[]) => {
+export const buildLabelAndValue = (wallets: Wallet[], viewport?: string) => {
 	const options: any[] = [];
 	wallets.forEach(w => {
+		let address = w.address;
+		if (viewport === 'extra-small') {
+			address = hideTextMiddle(address, 7, 8);
+		} else if(viewport === 'extra-laarge') {
+			address = hideTextMiddle(address, 11, 10);
+		}
 		options.push({
-			label: w.address,
-			value: w.address
+			label: address,
+			value: address
 		});
 	});
 	return options;
@@ -45,8 +52,9 @@ type WalletProps = {
 
 export const WalletCard = ({wallets, wallet, addressOnSelect}: WalletProps) => {
 	const history = useHistory();
+	const viewport = useViewport();
 	const walletDisplayOptions = wallets?.length
-		? buildLabelAndValue(wallets)
+		? buildLabelAndValue(wallets, viewport)
 		: [];
 
 	return (

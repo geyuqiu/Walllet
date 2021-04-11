@@ -59,7 +59,7 @@ export const FeeInput = ({onChange}: Partial<FeeInputProps>) => {
 
 	return (
 		<section className="p-12 w-1/2">
-			<BackButton className="mb-4"/>
+			<BackButton className="mb-4" backToUrl="/"/>
 			<label className="text-black-dark pl-6 leading-relaxed font-semibold"
 			       ref={labelRef}>Fee</label>
 			<section onMouseEnter={onTextBoxHover} onMouseLeave={exitTextBoxHover}>

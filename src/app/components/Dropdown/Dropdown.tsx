@@ -207,7 +207,7 @@ export const Dropdown = ({
 					toggleElement.getBoundingClientRect().top + document.documentElement.scrollTop;
 				const spaceAfter: number = document.body.clientHeight - (spaceBefore + toggleHeight);
 
-				setStyles({ height: null, marginTop: null });
+				setStyles({ height: null, marginTop: null, "z-index": 1 });
 
 				const styles = getComputedStyle(dropdownElement);
 
