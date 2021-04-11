@@ -35,9 +35,9 @@ export const buildLabelAndValue = (wallets: Wallet[], wallet: Wallet | null, vie
 		let address = w.address;
 		if (wallet && wallet.address != address) {
 			if (viewport === 'xs') {
-				address = hideTextBetween(address, 7, 8);
+				address = hideTextBetween({id: address, prefixLength: 7, suffixLength: 8});
 			} else if(viewport === 'xl') {
-				address = hideTextBetween(address, 11, 10);
+				address = hideTextBetween({id: address, prefixLength: 11, suffixLength: 10});
 			}
 			options.push({
 				label: address,
@@ -63,8 +63,6 @@ export const WalletCard = ({wallets, wallet, addressOnSelect}: WalletProps) => {
 
 	return (
 		<>
-			{!wallets.length && <p>Loading Wallets ...</p>}
-			{wallet &&
 			<Card className="bg-green-dark sm:flex sm:justify-center">
 				<Card className="bg-black-darkest text-white rounded-lg w-full max-w-screen-xl flex justify-center lg:items-center flex-col lg:flex-row">
 					<div className="flex items-center my-auto cursor-pointer" onClick={() => history.push('fee')}>
@@ -87,9 +85,17 @@ export const WalletCard = ({wallets, wallet, addressOnSelect}: WalletProps) => {
 								isOpen={isOpen}
 								label={
 									<div className="ml-5">
-										<span className="hidden sm:block lg:hidden xl:block">{wallet.address}</span>
-										<span className="block sm:hidden">{hideTextBetween(wallet.address, 7, 8)}</span>
-										<span className="hidden lg:block xl:hidden">{hideTextBetween(wallet.address, 11, 10)}</span>
+										<span className="hidden sm:block lg:hidden xl:block">{wallet?.address}</span>
+										<span className="block sm:hidden">{hideTextBetween({
+											id: wallet?.address,
+											prefixLength: 7,
+											suffixLength: 8
+										})}</span>
+										<span className="hidden lg:block xl:hidden">{hideTextBetween({
+											id: wallet?.address,
+											prefixLength: 11,
+											suffixLength: 10
+										})}</span>
 									</div>
 								}
 							/>
@@ -109,16 +115,15 @@ export const WalletCard = ({wallets, wallet, addressOnSelect}: WalletProps) => {
 						</div>
 						<div className="flex flex-col">
 							<span className="text-gray-darkest">Balance</span>
-							<Amount
+							{wallet?.balance && <Amount
 								data-testid="balance__amount"
 								value={BigNumber.make(wallet.balance)}
 								className="font-bold"
-							/>
+							/>}
 						</div>
 					</div>
 				</Card>
 			</Card>
-			}
 		</>
 	);
 };

@@ -57,7 +57,7 @@ exports[`App should match snapshot 1`] = `
             data-testid="dropdown__toggle"
           >
             <button
-              class="flex justify-between items-center h-11 w-full"
+              class="flex justify-between items-center h-11 w-full focus:outline-none"
             >
               <div
                 class="flex items-center"
@@ -88,19 +88,13 @@ exports[`App should match snapshot 1`] = `
                 >
                   <span
                     class="hidden sm:block lg:hidden xl:block"
-                  >
-                    AdzbhuDTyhnfAqepZzVcVsgd1Ym6FgETuW
-                  </span>
+                  />
                   <span
                     class="block sm:hidden"
-                  >
-                    AdzbhuD...m6FgETuW
-                  </span>
+                  />
                   <span
                     class="hidden lg:block xl:hidden"
-                  >
-                    AdzbhuDTyhn...1Ym6FgETuW
-                  </span>
+                  />
                 </div>
               </div>
               <div
@@ -155,12 +149,6 @@ exports[`App should match snapshot 1`] = `
             >
               Balance
             </span>
-            <span
-              class="font-bold"
-              data-testid="balance__amount"
-            >
-              10,043.109 DARK
-            </span>
           </div>
         </div>
       </div>
@@ -169,7 +157,7 @@ exports[`App should match snapshot 1`] = `
       class="ml-6 mr-3 sm:mx-8 sm:flex sm:justify-center pt-12"
     >
       <p>
-        Loading!
+        Loading Transactions ...
       </p>
     </section>
   </main>
