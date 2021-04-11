@@ -80,7 +80,7 @@ export const WalletCard = ({wallets, wallet, addressOnSelect}: WalletProps) => {
 					<Dropdown
 						onSelect={(dropdownOption: DropdownOption) => addressOnSelect(dropdownOption.label)}
 						toggleContent={
-							<div className="flex justify-between items-center h-11">
+							<button className="flex justify-between items-center h-11 w-full">
 								<div className="flex items-center">
 									<div className="hidden sm:block">
 										<Circle className="rounded-l-3xl border-r bg-black-light" size="lg">
@@ -94,7 +94,7 @@ export const WalletCard = ({wallets, wallet, addressOnSelect}: WalletProps) => {
 									</div>
 								</div>
 								<Icon name="ChevronDown" width={15} height={15} className="mx-5" data-testid="dropdown__right_icon"/>
-							</div>
+							</button>
 						}
 						className="border border-gray-darkest border-opacity-10 rounded-l-3xl rounded-r-3xl"
 						options={walletDisplayOptions}

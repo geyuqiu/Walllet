@@ -56,8 +56,8 @@ exports[`App should match snapshot 1`] = `
           <span
             data-testid="dropdown__toggle"
           >
-            <div
-              class="flex justify-between items-center h-11"
+            <button
+              class="flex justify-between items-center h-11 w-full"
             >
               <div
                 class="flex items-center"
@@ -113,7 +113,7 @@ exports[`App should match snapshot 1`] = `
                   chevron-down.svg
                 </svg>
               </div>
-            </div>
+            </button>
           </span>
         </div>
         <div
