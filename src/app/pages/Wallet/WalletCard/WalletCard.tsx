@@ -32,15 +32,16 @@ const {Logo} = SvgCollection;
 export const buildLabelAndValue = (wallets: Wallet[], wallet: Wallet | null, viewport?: Size | null): DropdownOption[] => {
 	const options: DropdownOption[] = [];
 	wallets.forEach(w => {
-		let address = w.address;
+		const address = w.address;
+		let label: string;
+		if (viewport === 'xs') {
+			label = hideTextBetween({id: address, prefixLength: 7, suffixLength: 8});
+		} else if(viewport === 'xl') {
+			label = hideTextBetween({id: address, prefixLength: 11, suffixLength: 10});
+		}
 		if (wallet && wallet.address != address) {
-			if (viewport === 'xs') {
-				address = hideTextBetween({id: address, prefixLength: 7, suffixLength: 8});
-			} else if(viewport === 'xl') {
-				address = hideTextBetween({id: address, prefixLength: 11, suffixLength: 10});
-			}
 			options.push({
-				label: address,
+				label: label!,
 				value: address
 			});
 		}
@@ -79,7 +80,7 @@ export const WalletCard = ({wallets, wallet, addressOnSelect}: WalletProps) => {
 						<Divider className="border-black-dark dark:border-theme-secondary-600" type="vertical"/>
 					</div>
 					<Dropdown
-						onSelect={(dropdownOption: DropdownOption) => addressOnSelect(dropdownOption.label)}
+						onSelect={(dropdownOption: DropdownOption) => addressOnSelect(String(dropdownOption.value))}
 						toggleContent={(isOpen: boolean) => (
 							<DropdownButton
 								isOpen={isOpen}
