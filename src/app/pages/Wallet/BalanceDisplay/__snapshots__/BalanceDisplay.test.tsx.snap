@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BalanceDisplay valid wallet should match snapshot 1`] = `
+<div>
+  <div
+    class="flex flex-row mt-6 lg:mt-0"
+  >
+    <div
+      class="hidden sm:block"
+    >
+      <div
+        class="Circle__CircleWrapper-sc-1hq8kv9-0 cqSuMy border rounded-full mr-3 ring-theme-background"
+      >
+        <div
+          class="sc-bdfBwQ dfWOLJ"
+          height="15"
+          width="15"
+        >
+          <svg
+            fill="#000000"
+            stroke="#FBC457"
+          >
+            balance.svg
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex flex-col"
+    >
+      <span
+        class="text-gray-darkest"
+      >
+        Balance
+      </span>
+      <span
+        class="font-bold"
+        data-testid="balance__amount"
+      >
+        0 DARK
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`BalanceDisplay wallet is null, should match snapshot 1`] = `
+<div>
+  <div
+    class="flex flex-row mt-6 lg:mt-0"
+  >
+    <div
+      class="hidden sm:block"
+    >
+      <div
+        class="Circle__CircleWrapper-sc-1hq8kv9-0 cqSuMy border rounded-full mr-3 ring-theme-background"
+      >
+        <div
+          class="sc-bdfBwQ dfWOLJ"
+          height="15"
+          width="15"
+        >
+          <svg
+            fill="#000000"
+            stroke="#FBC457"
+          >
+            balance.svg
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex flex-col"
+    >
+      <span
+        class="text-gray-darkest"
+      >
+        Balance
+      </span>
+    </div>
+  </div>
+</div>
+`;

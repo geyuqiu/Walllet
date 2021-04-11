@@ -1,20 +1,17 @@
-import {BigNumber} from '@arkecosystem/platform-sdk-support';
 import {Divider} from "app/components/Divider/Divider";
 import {Dropdown, DropdownOption} from "app/components/Dropdown/Dropdown";
-import {Icon} from "app/components/Icon/Icon";
 import React from "react";
 import {useHistory} from "react-router-dom";
 import styled from 'styled-components';
 
 import {Size} from '../../../../types';
 import {SvgCollection} from '../../../assets/svg';
-import {Amount} from '../../../components/Amount/Amount';
 import {Card} from '../../../components/Card/Card';
-import {Circle} from '../../../components/Circle/Circle';
 import {DropdownButton} from '../../../components/DropdownButton/DropdownButton';
+import {useViewport} from '../../../hooks/useViewport';
+import {BalanceDisplay} from '../BalanceDisplay/BalanceDisplay';
 import {Wallet} from '../model';
 import {hideTextBetween} from '../TransactionRow/TransactionRow';
-import {useViewport} from '../../../hooks/useViewport';
 
 type LogoContainerProps = {
 	width: number;
@@ -108,21 +105,7 @@ export const WalletCard = ({wallets, wallet, addressOnSelect}: WalletProps) => {
 					<div className="hidden lg:contents">
 						<Divider className="border-black-dark dark:border-theme-secondary-600" type="vertical"/>
 					</div>
-					<div className="flex flex-row mt-6 lg:mt-0">
-						<div className="hidden sm:block">
-							<Circle className="border rounded-full mr-3" size="lg">
-									<Icon name="Balance" width={15} height={15} fill='#000000' stroke='#FBC457'/>
-							</Circle>
-						</div>
-						<div className="flex flex-col">
-							<span className="text-gray-darkest">Balance</span>
-							{wallet?.balance && <Amount
-								data-testid="balance__amount"
-								value={BigNumber.make(wallet.balance)}
-								className="font-bold"
-							/>}
-						</div>
-					</div>
+					<BalanceDisplay wallet={wallet}/>
 				</Card>
 			</Card>
 		</>
