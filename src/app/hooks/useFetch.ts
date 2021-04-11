@@ -19,7 +19,7 @@ export const useFetch = (wallet: Wallet | null, setIsLoadingTransactions: Functi
 			}
 		};
 		fetchWallets();
-	}, [wallet]);
+	}, []);
 
 	const [transactions, setTransactions] = useState<Transaction[]>([]);
 	useEffect(() => {
@@ -33,7 +33,7 @@ export const useFetch = (wallet: Wallet | null, setIsLoadingTransactions: Functi
 			setIsLoadingTransactions(false);
 		};
 		if (wallet) fetchTransaction();
-	}, []);
+	}, [wallet]);
 
 	return { wallets, transactions };
 };

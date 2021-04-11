@@ -1,6 +1,6 @@
 import {BigNumber} from '@arkecosystem/platform-sdk-support';
 import {Divider} from "app/components/Divider/Divider";
-import {Dropdown} from "app/components/Dropdown/Dropdown";
+import {Dropdown, DropdownOption} from "app/components/Dropdown/Dropdown";
 import {Icon} from "app/components/Icon/Icon";
 import React from "react";
 import {useHistory} from "react-router-dom";
@@ -28,8 +28,8 @@ const LogoContainer = styled.div<LogoContainerProps>`
 
 const {Logo} = SvgCollection;
 
-export const buildLabelAndValue = (wallets: Wallet[], viewport?: Size | null) => {
-	const options: any[] = [];
+export const buildLabelAndValue = (wallets: Wallet[], viewport?: Size | null): DropdownOption[] => {
+	const options: DropdownOption[] = [];
 	wallets.forEach(w => {
 		let address = w.address;
 		if (viewport === 'xs') {
@@ -78,7 +78,7 @@ export const WalletCard = ({wallets, wallet, addressOnSelect}: WalletProps) => {
 						<Divider className="border-black-light dark:border-theme-secondary-600" type="vertical"/>
 					</div>
 					<Dropdown
-						onSelect={(value: string) => addressOnSelect(value)}
+						onSelect={(dropdownOption: DropdownOption) => addressOnSelect(dropdownOption.label)}
 						toggleContent={
 							<div className="flex justify-between items-center h-11">
 								<div className="flex items-center">

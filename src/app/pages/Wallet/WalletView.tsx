@@ -27,7 +27,8 @@ export const WalletView = () => {
 	const {wallets, transactions} = useFetch(wallet, setIsLoadingTransactions);
 
 	const addressOnSelect = (address: string) => {
-		setWallet(wallets.find(w => w.address ===  address)!);
+		const next = wallets.find(w => w.address ===  address)!;
+		setWallet(next);
 	}
 
 	return (
