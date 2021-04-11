@@ -1,4 +1,5 @@
 import {Icon} from "app/components/Icon/Icon";
+import cn from 'classnames';
 import React from "react";
 
 import {Circle} from '../Circle/Circle';
@@ -20,8 +21,12 @@ export const DropdownButton = ({isOpen, label}: DropdownButtonProps) => {
 				</div>
 				{label}
 			</div>
-			<Icon width={15} height={15} className="mx-5" data-testid="dropdown__right_icon"
-			      name={isOpen ? "ArrowUp" : "ChevronDown"}
+			<Icon width={15} height={15} data-testid="dropdown__right_icon"
+			      name="ArrowDown"
+			      className={cn("transition-transform", "mx-5", {
+				      "transform rotate-180":
+					      isOpen,
+			      })}
 			/>
 		</button>
 	);
