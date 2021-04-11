@@ -17,12 +17,12 @@ function TestViewportComponent() {
 
 describe('useViewport', () => {
 	it.each([
-			{width: 320, viewport: "extra-small"},
-			{width: 641, viewport: "small"},
-			{width: 800, viewport: "medium"},
-			{width: 1000, viewport: "large"},
-			{width: 1026, viewport: "extra-large"},
-			{width: 1329, viewport: "huge"},
+			{width: 320, viewport: "xs"},
+			{width: 641, viewport: "sm"},
+			{width: 800, viewport: "md"},
+			{width: 1000, viewport: "lg"},
+			{width: 1026, viewport: "xl"},
+			{width: 1329, viewport: "2xl"},
 	])
 		('useViewport listen to window resize and set viewport size responsively',
 		(testCase: any) => {

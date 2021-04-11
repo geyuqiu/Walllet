@@ -1,17 +1,17 @@
+import {BigNumber} from '@arkecosystem/platform-sdk-support';
 import {Icon} from "app/components/Icon/Icon";
 import React from "react";
 
+import {Amount} from '../../../components/Amount/Amount';
 import {Link} from '../../../components/Link/Link';
 import {TableCell} from '../../../components/Table/TableCell';
 import {TableRow} from "../../../components/Table/TableRow";
 import {Transaction} from './model';
-import {BigNumber} from '@arkecosystem/platform-sdk-support';
-import {Amount} from '../../../components/Amount/Amount';
 
 
 type TransactionRowProps = {
 	transaction: Transaction;
-	address: string
+	address: string;
 };
 
 export const hideTextMiddle = (id: string, prefixLength: number, suffixLength: number) =>

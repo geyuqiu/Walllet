@@ -11,6 +11,7 @@ import {SvgCollection} from '../../../assets/svg';
 import {Amount} from '../../../components/Amount/Amount';
 import {Card} from '../../../components/Card/Card';
 import {Circle} from '../../../components/Circle/Circle';
+import {DropdownButton} from '../../../components/DropdownButton/DropdownButton';
 import useViewport from '../../../hooks/useViewport';
 import {Wallet} from '../model';
 import {hideTextMiddle} from '../TransactionRow/TransactionRow';
@@ -79,23 +80,18 @@ export const WalletCard = ({wallets, wallet, addressOnSelect}: WalletProps) => {
 					</div>
 					<Dropdown
 						onSelect={(dropdownOption: DropdownOption) => addressOnSelect(dropdownOption.label)}
-						toggleContent={
-							<button className="flex justify-between items-center h-11 w-full">
-								<div className="flex items-center">
-									<div className="hidden sm:block">
-										<Circle className="rounded-l-3xl border-r bg-black-light" size="lg">
-											<Icon name="Address" width={15} height={15} fill='#000000' stroke='#FBC457' className="ml-2" data-testid="dropdown__left__icon"/>
-										</Circle>
-									</div>
+						toggleContent={(isOpen: boolean) => (
+							<DropdownButton
+								isOpen={isOpen}
+								label={
 									<div className="ml-5">
 										<span className="hidden sm:block lg:hidden xl:block">{wallet.address}</span>
 										<span className="block sm:hidden">{hideTextMiddle(wallet.address, 7, 8)}</span>
 										<span className="hidden lg:block xl:hidden">{hideTextMiddle(wallet.address, 11, 10)}</span>
 									</div>
-								</div>
-								<Icon name="ChevronDown" width={15} height={15} className="mx-5" data-testid="dropdown__right_icon"/>
-							</button>
-						}
+								}
+							/>
+						)}
 						className="border border-gray-darkest border-opacity-10 rounded-l-3xl rounded-r-3xl"
 						options={walletDisplayOptions}
 						dropdownClass="top-3 text-left w-full"
