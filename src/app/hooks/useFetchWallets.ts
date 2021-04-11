@@ -45,7 +45,6 @@ export const useFetchTransactions = (wallet: Wallet | null, setIsLoadingTransact
 };
 
 export const parseWallets = (response: any): Wallet[] => {
-	// console.log('top wallets: ', response);
 	const result: any[] = [];
 	if (response && response.data) {
 		response?.data?.forEach((data: any) => {
@@ -61,7 +60,6 @@ export const parseWallets = (response: any): Wallet[] => {
 };
 
 export const parseTransaction = (response: any): Transaction[] => {
-	// console.log('transactions: ', response);
 	if (response && response.data) {
 		response?.data?.forEach((data: any) => {
 			data.timestamp = moment(data.timestamp.human).format(dateFormat);

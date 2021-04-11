@@ -12,9 +12,9 @@ import {Amount} from '../../../components/Amount/Amount';
 import {Card} from '../../../components/Card/Card';
 import {Circle} from '../../../components/Circle/Circle';
 import {DropdownButton} from '../../../components/DropdownButton/DropdownButton';
-import useViewport from '../../../hooks/useViewport';
 import {Wallet} from '../model';
 import {hideTextBetween} from '../TransactionRow/TransactionRow';
+import {useViewport} from '../../../hooks/useViewport';
 
 type LogoContainerProps = {
 	width: number;
@@ -36,7 +36,7 @@ export const buildLabelAndValue = (wallets: Wallet[], wallet: Wallet | null, vie
 		let label = w.address;
 		if (viewport === 'xs') {
 			label = hideTextBetween({id: address, prefixLength: 7, suffixLength: 8});
-		} else if(viewport === 'xl') {
+		} else if(viewport === 'lg') {
 			label = hideTextBetween({id: address, prefixLength: 11, suffixLength: 10});
 		}
 		if (wallet && wallet.address != address) {

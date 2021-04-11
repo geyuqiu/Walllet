@@ -3,7 +3,7 @@
 exports[`Table should render 1`] = `
 <div>
   <div
-    class="Table__TableWrapper-ck3yk8-0 kRCMwD w-full max-w-screen-xl -mt-3"
+    class="Table__TableWrapper-ck3yk8-0 kEIFJE w-full max-w-screen-xl -mt-3"
     role="table"
   >
     <table
@@ -16,7 +16,7 @@ exports[`Table should render 1`] = `
           role="row"
         >
           <th
-            class="group border text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 m-0 p-3 pl-5 pr-5 font-semibold hasBorder w-1"
+            class="group border text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 m-0 p-3 md:px-5 font-semibold hasBorder w-1"
             colspan="1"
             role="columnheader"
             style="cursor: pointer;"
@@ -47,7 +47,7 @@ exports[`Table should render 1`] = `
             </div>
           </th>
           <th
-            class="group border text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 m-0 p-3 pl-5 pr-5 font-semibold"
+            class="group border text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 m-0 p-3 md:px-5 font-semibold"
             colspan="1"
             role="columnheader"
             style="cursor: pointer;"
@@ -78,7 +78,7 @@ exports[`Table should render 1`] = `
             </div>
           </th>
           <th
-            class="group border text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 m-0 p-3 pl-5 pr-5 font-semibold hasBorder"
+            class="group border text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 m-0 p-3 md:px-5 font-semibold hasBorder"
             colspan="1"
             role="columnheader"
             style="cursor: pointer;"
@@ -130,7 +130,7 @@ exports[`Table should render 1`] = `
 exports[`Table should render empty rows if template not provided 1`] = `
 <div>
   <div
-    class="Table__TableWrapper-ck3yk8-0 kRCMwD w-full max-w-screen-xl -mt-3"
+    class="Table__TableWrapper-ck3yk8-0 kEIFJE w-full max-w-screen-xl -mt-3"
     role="table"
   >
     <table
@@ -143,7 +143,7 @@ exports[`Table should render empty rows if template not provided 1`] = `
           role="row"
         >
           <th
-            class="group border text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 m-0 p-3 pl-5 pr-5 font-semibold hasBorder w-1"
+            class="group border text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 m-0 p-3 md:px-5 font-semibold hasBorder w-1"
             colspan="1"
             role="columnheader"
             style="cursor: pointer;"
@@ -174,7 +174,7 @@ exports[`Table should render empty rows if template not provided 1`] = `
             </div>
           </th>
           <th
-            class="group border text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 m-0 p-3 pl-5 pr-5 font-semibold"
+            class="group border text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 m-0 p-3 md:px-5 font-semibold"
             colspan="1"
             role="columnheader"
             style="cursor: pointer;"
@@ -205,7 +205,7 @@ exports[`Table should render empty rows if template not provided 1`] = `
             </div>
           </th>
           <th
-            class="group border text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 m-0 p-3 pl-5 pr-5 font-semibold hasBorder"
+            class="group border text-sm text-left select-none text-theme-secondary-500 border-theme-secondary-300 m-0 p-3 md:px-5 font-semibold hasBorder"
             colspan="1"
             role="columnheader"
             style="cursor: pointer;"

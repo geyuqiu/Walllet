@@ -7,11 +7,11 @@ exports[`App should match snapshot 1`] = `
     role="main"
   >
     <div
-      class="Cardstyles__Wrapper-xnuhyv-0 iAsJMU bg-green-dark sm:flex sm:justify-center"
+      class="Cardstyles__Wrapper-xnuhyv-0 fNkVcc bg-green-dark sm:flex sm:justify-center py-12 px-8"
       data-testid="Card"
     >
       <div
-        class="Cardstyles__Wrapper-xnuhyv-0 iAsJMU bg-black-darkest text-white rounded-lg w-full max-w-screen-xl flex justify-center lg:items-center flex-col lg:flex-row"
+        class="Cardstyles__Wrapper-xnuhyv-0 fNkVcc bg-black-darkest p-8 justify-between text-white rounded-lg w-full max-w-screen-xl flex justify-center lg:items-center flex-col lg:flex-row"
         data-testid="Card"
       >
         <div
@@ -38,7 +38,7 @@ exports[`App should match snapshot 1`] = `
           class="lg:hidden"
         >
           <div
-            class="Divider-sc-10xryrv-0 ijsPwK border-black-light dark:border-theme-secondary-600"
+            class="Divider-sc-10xryrv-0 ijsPwK border-black-dark dark:border-theme-secondary-600"
             type="horizontal"
           />
         </div>
@@ -46,7 +46,7 @@ exports[`App should match snapshot 1`] = `
           class="lg:contents hidden"
         >
           <div
-            class="Divider-sc-10xryrv-0 dCquGe border-black-light dark:border-theme-secondary-600"
+            class="Divider-sc-10xryrv-0 dCquGe border-black-dark dark:border-theme-secondary-600"
             type="vertical"
           />
         </div>
@@ -114,7 +114,7 @@ exports[`App should match snapshot 1`] = `
           class="hidden lg:contents"
         >
           <div
-            class="Divider-sc-10xryrv-0 dCquGe border-black-light dark:border-theme-secondary-600"
+            class="Divider-sc-10xryrv-0 dCquGe border-black-dark dark:border-theme-secondary-600"
             type="vertical"
           />
         </div>
@@ -162,7 +162,7 @@ exports[`App should match snapshot 1`] = `
     </section>
   </main>
   <footer
-    class="bg-gray-light flex items-center justify-center p-4 fixed bottom-0 w-full z-100 text-black-dark"
+    class="bg-gray-light flex items-center justify-center p-4 fixed bottom-0 w-full z-100 text-black-lightest text-sm"
   >
     <span>
       2020 © ARK.io | All rights reserved

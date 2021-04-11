@@ -2,8 +2,7 @@ import {render} from "@testing-library/react";
 import React from 'react'
 
 import {feeAccessor, timestampAccessor} from '../pages/Wallet/TransactionRow/TableColumns';
-import useViewport, {toggleColumn} from './useViewport'
-import {HideColumnsResponsive} from '../pages/Wallet/WalletView';
+import {toggleColumn, useViewport} from './useViewport'
 
 function fireResize(width: number) {
 	window.innerWidth = width;
@@ -11,18 +10,19 @@ function fireResize(width: number) {
 }
 
 function TestViewportComponent() {
-	const viewport = useViewport((columnName: string, hide: boolean, hideColumnsAtBreakpoint: HideColumnsResponsive[]) => {});
+	const viewport = useViewport();
 	return <span>{viewport}</span>;
 }
 
 describe('useViewport', () => {
 	it.each([
 			{width: 320, viewport: "xs"},
-			{width: 641, viewport: "sm"},
-			{width: 800, viewport: "md"},
-			{width: 1000, viewport: "lg"},
-			{width: 1026, viewport: "xl"},
-			{width: 1329, viewport: "2xl"},
+			{width: 639, viewport: "xs"},
+			{width: 640, viewport: "sm"},
+			{width: 768, viewport: "md"},
+			{width: 1024, viewport: "lg"},
+			{width: 1280, viewport: "xl"},
+			{width: 1360, viewport: "2xl"},
 	])
 		('useViewport listen to window resize and set viewport size responsively',
 		(testCase: any) => {

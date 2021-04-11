@@ -94,10 +94,10 @@ describe("buildLabelAndValue", () => {
 		]);
 	});
 
-	it("hide middle part in address for xl viewport", () => {
+	it("hide middle part in address for lg viewport: >=1024", () => {
 		wallet = crytoWallets[0];
 
-		expect(buildLabelAndValue(crytoWallets, wallet, 'xl')).toEqual([
+		expect(buildLabelAndValue(crytoWallets, wallet, 'lg')).toEqual([
 			{label: 'DEyaFhDuaoQ...kB6umyrEUj', value: 'DEyaFhDuaoQyKbFH4gJtYZvKkB6umyrEUj'}
 		]);
 	});

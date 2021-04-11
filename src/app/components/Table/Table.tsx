@@ -3,7 +3,7 @@ import React, {useMemo} from "react";
 import {useSortBy, useTable} from "react-table";
 import {styled} from "twin.macro";
 
-import useViewport from '../../hooks/useViewport';
+import {useViewportTable} from '../../hooks/useViewport';
 import {HideColumnsResponsive} from '../../pages/Wallet/WalletView';
 import {Icon} from "../Icon/Icon";
 import {tableStyle} from "./Table.styles";
@@ -37,7 +37,7 @@ export const Table = ({children, data, columns, hideHeader, className, initialSt
 		useSortBy,
 	);
 
-	useViewport(toggleHideColumn, hideColumnsAtBreakpoint);
+	useViewportTable(toggleHideColumn, hideColumnsAtBreakpoint);
 
 	const renderChildNode = (data: any, index: number) => {
 		if (typeof children === "function") {

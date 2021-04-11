@@ -7,6 +7,7 @@ import {clickOutsideHandler} from '../../hooks/click-outside';
 import {Divider} from '../Divider/Divider';
 import {Icon} from '../Icon/Icon';
 import {defaultClasses, getStyles} from "./Dropdown.styles";
+import {useViewportDropdown} from '../../hooks/useViewport';
 
 export type DropdownOption = {
 	icon?: string;
@@ -183,75 +184,8 @@ export const Dropdown = ({
 		}
 	};
 
-	const ref = useRef(null);
-
-	useEffect(() => {
-		const handleResize = () => {
-			const numberFromPixels = (value: string): number => (value ? parseInt(value.replace("px", "")) : 0);
-
-			const OFFSET = 30;
-
-			const parent = (ref.current as unknown) as HTMLElement;
-
-			const toggleElement: HTMLElement | null = parent.querySelector('[data-testid="dropdown__toggle"]');
-			const dropdownElement: HTMLElement | null = parent.querySelector('[data-testid="dropdown__content"]');
-
-			if (toggleElement && dropdownElement) {
-				const setStyles = (styles: Record<string, any>) => {
-					Object.assign(dropdownElement.style, styles);
-				};
-
-				const toggleHeight: number = toggleElement.parentElement!.offsetHeight;
-
-				const spaceBefore: number =
-					toggleElement.getBoundingClientRect().top + document.documentElement.scrollTop;
-				const spaceAfter: number = document.body.clientHeight - (spaceBefore + toggleHeight);
-
-				setStyles({ height: null, marginTop: null, "z-index": 1 });
-
-				const styles = getComputedStyle(dropdownElement);
-
-				if (
-					spaceAfter < dropdownElement.offsetHeight + numberFromPixels(styles.marginTop) + OFFSET &&
-					spaceBefore > dropdownElement.offsetHeight + numberFromPixels(styles.marginTop) + OFFSET
-				) {
-					setStyles({
-						opacity: 100,
-						marginTop: `-${
-							dropdownElement.offsetHeight + toggleHeight + numberFromPixels(styles.marginTop)
-						}px`,
-					});
-				} else if(dropdownElement.firstElementChild) {
-					const newHeight = spaceAfter - numberFromPixels(styles.marginTop) - OFFSET;
-
-					const newStyles =
-						newHeight >=
-						dropdownElement.firstElementChild.clientHeight +
-							numberFromPixels(styles.paddingTop) +
-							numberFromPixels(styles.paddingBottom)
-							? {
-									height: null,
-									overflowY: null,
-							  }
-							: {
-									height: `${newHeight}px`,
-									marginTop: null,
-									overflowY: "scroll",
-							  };
-
-					setStyles({ opacity: 100, ...newStyles });
-				}
-			}
-		};
-
-		if (isOpen) {
-			window.addEventListener("resize", handleResize);
-		}
-
-		handleResize();
-
-		return () => window.removeEventListener("resize", handleResize);
-	}, [isOpen]);
+	const ref = useRef<any>(null);
+	useViewportDropdown(isOpen, ref);
 
 	useEffect(() => {
 		clickOutsideHandler(ref, hide);

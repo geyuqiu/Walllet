@@ -288,7 +288,7 @@ exports[`WalletCard should open dropdown list with all addresses 1`] = `
               data-testid="dropdown__option--0"
             >
               <span>
-                address2
+                address2...address2
               </span>
             </li>
             <li
@@ -296,7 +296,7 @@ exports[`WalletCard should open dropdown list with all addresses 1`] = `
               data-testid="dropdown__option--1"
             >
               <span>
-                address3
+                address3...address3
               </span>
             </li>
             <li
@@ -304,7 +304,7 @@ exports[`WalletCard should open dropdown list with all addresses 1`] = `
               data-testid="dropdown__option--2"
             >
               <span>
-                address4
+                address4...address4
               </span>
             </li>
             <li
@@ -312,7 +312,7 @@ exports[`WalletCard should open dropdown list with all addresses 1`] = `
               data-testid="dropdown__option--3"
             >
               <span>
-                address5
+                address5...address5
               </span>
             </li>
           </ul>
