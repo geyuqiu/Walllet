@@ -56,7 +56,7 @@ const renderOptionGroup = ({ key, hasDivider, title, options }: DropdownOptionGr
 			)}
 			<ul>
 				{title && (
-					<li className="block px-8 text-xs font-bold text-left uppercase whitespace-nowrap text-theme-secondary-500 dark:text-theme-secondary-600">
+					<li className="block px-5 text-xs font-bold text-left uppercase whitespace-nowrap text-theme-secondary-500 dark:text-theme-secondary-600">
 						{title}
 					</li>
 				)}
@@ -90,10 +90,10 @@ const renderOptions = (options: DropdownOption[] | DropdownOptionGroup[], onSele
 			{(options as DropdownOption[]).map((option: DropdownOption, index: number) => (
 				<li
 					aria-disabled={option.disabled}
-					className={`group flex items-center space-x-2 py-4 px-8 text-base font-semibold text-left whitespace-nowrap ${
+					className={`group flex items-center space-x-2 py-4 px-5 text-base font-semibold text-left whitespace-nowrap ${
 						option.disabled
 							? "cursor-not-allowed select-none bg-theme-secondary-100 text-theme-secondary-400 dark:bg-theme-secondary-700 dark:text-theme-secondary-500"
-							: "cursor-pointer text-white dark:text-theme-secondary-200 hover:bg-theme-secondary-200 dark:hover:bg-theme-primary-600 hover:text-theme-primary-600 dark:hover:text-theme-secondary-200"
+							: "cursor-pointer text-white dark:text-theme-secondary-200 active:bg-green-darkest hover:bg-black-lightest dark:hover:bg-theme-primary-600 dark:hover:text-theme-secondary-200"
 					}`}
 					key={index}
 					data-testid={`dropdown__option--${key ? `${key}-` : ""}${index}`}
