@@ -19,11 +19,10 @@ const hideColumnsAtBreakpoint: HideColumnsResponsive[] = [
 ];
 
 export const WalletView = () => {
-	const [isLoadingWallets, setIsLoadingWallets] = useState(true);
 	const [isLoadingTransactions, setIsLoadingTransactions] = useState(false);
 
 	const [wallet, setWallet] = useState<Wallet | null>(null);
-	const {wallets} = useFetchWallets(setIsLoadingWallets, setWallet);
+	const {wallets} = useFetchWallets(setWallet);
 	const {transactions} = useFetchTransactions(wallet, setIsLoadingTransactions);
 
 	const addressOnSelect = (address: string) => {
